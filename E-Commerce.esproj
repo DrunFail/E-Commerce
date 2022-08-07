@@ -16,6 +16,7 @@
     <Folder Include="src\components\footer\" />
     <Folder Include="src\components\favCategories\" />
     <Folder Include="src\components\promoSlider\" />
+    <Folder Include="src\components\popProduct\" />
     <Folder Include="src\pages\" />
   </ItemGroup>
 </Project>
