@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Смартфон REALME 8 6/128Gb, серебристый",
+    "img": "/popProductImg/realme.jpg",
+    "price": "9900"
+  },
+  {
+    "title": "Ультрабук Huawei MateBook X Pro 13.9",
+    "img": "/popProductImg/huawei.jpg",
+    "price": "52000"
+  },
+  {
+    "title": "Tелевизор Samsung UE50TU7002UXRU",
+    "img": "/popProductImg/samsung.jpg",
+    "price": "15000"
+  },
+  {
+    "title": "Чайник электрический SunWind SUN-K-001",
+    "img": "/popProductImg/sunwind.jpg",
+    "price": "500"
+  },
+  {
+    "title": "Холодильник Beko CNMV5335E20VXR двухкамерный",
+    "img": "/popProductImg/beko.jpg",
+    "price": "50000"
+  },
+  {
+    "title": "Летние шины КАМА Нк-132 Кама Breeze",
+    "img": "/popProductImg/kama.jpg",
+    "price": "8555"
+  },
+  {
+    "title": "Дрель-шуруповерт Вихрь ДА-18Л-2КА 1.5Ач",
+    "img": "/popProductImg/vihr.jpg",
+    "price": "1555"
+  },
+  {
+    "title": "Триммер электрический Huter GET-1450В ",
+    "img": "/popProductImg/huter.jpg",
+    "price": "8555"
+  }
+]
