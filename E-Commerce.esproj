@@ -12,6 +12,8 @@
     <Folder Include="src\components\logo\" />
     <Folder Include="src\components\profilecard\" />
     <Folder Include="src\components\header\" />
+    <Folder Include="src\components\Layout\" />
+    <Folder Include="src\components\footer\" />
     <Folder Include="src\pages\" />
     <Folder Include="src\data\" />
   </ItemGroup>

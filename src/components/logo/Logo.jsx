@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
+
 export default function Logo() {
     return (
-        <a href='/'>Logo</a>
+        <Link to='/'>Logo</Link>
         );
 }
