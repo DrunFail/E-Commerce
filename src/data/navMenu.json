@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Акции",
+    "link": "/promo"
+  },
+  {
+    "title": "Услуги",
+    "link": "/services"
+  },
+  {
+    "title": "Доставка",
+    "link": "/delivery"
+  },
+  {
+    "title": "Магазины",
+    "link": "/shops"
+  },
+  {
+    "title": "Форум",
+    "link": "/forum"
+  }
+]
