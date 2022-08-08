@@ -1,2 +1,27 @@
-{
-}
+[
+  {
+    "title": "Смартфон Apple iPhone 13 128GB Blue",
+    "price": "80999",
+    "img": "https://img.mvideo.ru/Pdb/small_pic/200/30063538b.jpg"
+  },
+  {
+    "title": "Смартфон Xiaomi 11 Lite 5G NE 8+128GB Black",
+    "price": "24555",
+    "img": "https://img.mvideo.ru/Pdb/small_pic/200/30059673b.jpg"
+  },
+  {
+    "title": "Смартфон realme 8 6+128GB Punk Black (RMX3085)",
+    "price": "45555",
+    "img": "https://img.mvideo.ru/Pdb/small_pic/200/30056562b.jpg"
+  },
+  {
+    "title": "Смартфон Tecno Spark 8c 4+64 Diamond Grey",
+    "price": "14555",
+    "img": "https://img.mvideo.ru/Pdb/small_pic/200/30063681b.jpg"
+  },
+  {
+    "title": "Смартфон Samsung Galaxy A23 64GB Black",
+    "price": "45555",
+    "img": "https://img.mvideo.ru/Pdb/small_pic/200/30063300b.jpg"
+  }
+]
