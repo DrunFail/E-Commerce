@@ -1,0 +1,20 @@
+.container {
+    grid-area: promo;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.active {
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.offscreen {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,5 @@
+#fav {
+    grid-area: fav;
+    display: grid;
+    grid-template-columns: repeat(10, 0.2fr);
+}

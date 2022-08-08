@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Delivery from './pages/Delivery';
+import './styles/index.scss';
 
 import Home from './pages/Home';
 import Promo from './pages/Promo';

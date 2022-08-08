@@ -1,0 +1,52 @@
+.footer {
+    grid-area: footer;
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "sell buis about cont";
+    justify-items: center;
+    .sell
+
+{
+    grid-area: sell;
+    display: grid;
+    justify-items: center;
+    text-transform: capitalize;
+    align-content: start;
+}
+
+.title {
+    text-transform: capitalize;
+    font-size: 24px;
+    margin-bottom: .5em;
+}
+
+.buis {
+    grid-area: buis;
+    display: grid;
+    justify-items: center;
+    text-transform: capitalize;
+    align-content: start;
+}
+
+.about {
+    grid-area: about;
+    text-transform: capitalize;
+    display: grid;
+    justify-items: center;
+    align-content: start;
+}
+
+.cont {
+    grid-area: cont;
+    text-transform: capitalize;
+    display: grid;
+    justify-items: center;
+    align-content: start;
+}
+
+.link {
+    text-decoration: none;
+}
+}

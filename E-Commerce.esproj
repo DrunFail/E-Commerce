@@ -11,12 +11,8 @@
     <Folder Include="src\components\navbar\" />
     <Folder Include="src\components\logo\" />
     <Folder Include="src\components\profilecard\" />
-    <Folder Include="src\components\header\" />
     <Folder Include="src\components\Layout\" />
-    <Folder Include="src\components\footer\" />
     <Folder Include="src\components\favCategories\" />
-    <Folder Include="src\components\promoSlider\" />
-    <Folder Include="src\components\popProduct\" />
     <Folder Include="src\pages\" />
   </ItemGroup>
 </Project>

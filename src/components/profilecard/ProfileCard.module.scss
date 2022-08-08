@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "1 img user"
+        "1 img bonus";
+
+    .profileImg {
+        grid-area: img;
+        height: 40px;
+        width: 60px;
+        border-radius: 40%;
+    }
+    .user {
+        grid-area: user;
+    }
+    .bonus {
+        grid-area: bonus;
+    }
+}

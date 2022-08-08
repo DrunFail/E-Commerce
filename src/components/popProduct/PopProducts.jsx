@@ -1,15 +1,16 @@
 import popProduct from '../../data/popProduct.json';
+import styles from './PopProduct.module.scss';
 
 export default function PopProduct() {
     return (
-        <>
-            {popProduct.map(product =>
-                <div>
-                    <img src={process.env.PUBLIC_URL + `${product.img}` } />
-                    <p>{product.title}</p>
-                    <p>{product.price}</p>
+        <div className={styles.container }>
+            {popProduct.map((product, index) =>
+                <div className={styles.wrapper} key={index }>
+                    <img className={styles.img} src={process.env.PUBLIC_URL + `${product.img}` } />
+                    <p className={styles.title }>{product.title}</p>
+                    <p className={styles.price }>{product.price}</p>
                 </div>
 )}
-            </>
+            </div>
         );
 }

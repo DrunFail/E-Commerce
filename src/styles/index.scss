@@ -1,0 +1,17 @@
+@import '_reset.scss';
+
+#root{
+    display: grid;
+    height: 100vh;
+    max-width: 980px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.5fr 2.5fr 1.8fr 1fr;
+    grid-template-areas: 
+        "header "
+        "fav "
+        "promo "
+        "pop "
+        "footer ";
+    grid-row-gap: 2em;
+}
