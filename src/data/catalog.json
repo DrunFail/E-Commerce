@@ -1,0 +1,52 @@
+[
+  {
+    "title": "смартфоны и гаджеты",
+    "img": "",
+    "link": "smartfony-i-gadzhety"
+  },
+  {
+    "title": "телевизоры",
+    "img": "",
+    "link": "televizory"
+  },
+  {
+    "title": "крупная бытовая техника",
+    "img": "",
+    "link": "krupnaya-bytovaja-tehnika"
+  },
+  {
+    "title": "ноутбуки",
+    "img": "",
+    "link": "notebooks"
+  },
+  {
+    "title": "автотовары",
+    "img": "",
+    "link": "avtotovary"
+  },
+  {
+    "title": "строительный инструмент",
+    "img": "",
+    "link": "stroitelny-instrument"
+  },
+  {
+    "title": "садовая техника",
+    "img": "",
+    "link": "sadovaja-tehnika"
+  },
+  {
+    "title": "мелкая бытовая техника",
+    "img": "",
+    "link": "melkaja-bytovaja-tehnika"
+  },
+  {
+    "title": "книги",
+    "img": "",
+    "link": "books"
+  },
+  {
+    "title": "посуда",
+    "img": "",
+    "link": "posuda"
+  }
+]

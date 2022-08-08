@@ -5,7 +5,7 @@ import styles from './Navbar.module.scss';
 export default function Navbar() {
     return (
         <nav className={styles.nav }>
-            {navMenu.map(nav => <Link className={styles.link} to={nav.link}>{nav.title}</Link>)}
+            {navMenu.map((nav, index) => <Link key={index} className={styles.link} to={nav.link}>{nav.title}</Link>)}
         </nav>
     );
 }

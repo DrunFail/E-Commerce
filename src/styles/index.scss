@@ -5,13 +5,13 @@
     height: 100vh;
     max-width: 980px;
     margin: 0 auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100px 1fr;
     grid-template-rows: 0.2fr 0.5fr 2.5fr 1.8fr 1fr;
     grid-template-areas: 
-        "header "
-        "fav "
-        "promo "
-        "pop "
-        "footer ";
+        "header header"
+        "cat fav"
+        "promo promo"
+        "pop pop"
+        "footer footer";
     grid-row-gap: 2em;
 }
