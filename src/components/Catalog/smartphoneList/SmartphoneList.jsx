@@ -1,19 +1,16 @@
-import smartphoneList from '../../../data/smartphoneList.json';
-import './list.css';
+import mproducts from '../../../data/mproducts.json';
+import styles from './SmartphoneList.module.scss';
+import ProductCard from '../productCard/ProductCard';
 
 export default function SmartphoneList() {
     return (
-        <div className='containerr'>
+        <div className={styles.container }>
             {
-                smartphoneList.map((smart, index) =>
-                    <div className='product-card' key={index}>
-                        <img className='product-img'src={smart.img} alt='image' />
-                        <p className='product-title'>{smart.title}</p>
-                        <p className='product-price'>{smart.price}</p>
-                        <button className='in-cart'>v korzinu</button>
-                    </div>
+                mproducts.map((smart, index) =>
+                    <ProductCard key={index} smart={smart }/>
                 )
             }
         </div>
+        
     );
 }

@@ -1,0 +1,36 @@
+.product_card {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: repeat(6, 0.2fr);
+    grid-template-areas:
+        "img title" 
+        "img dis"
+        "img dis"
+        "img dis" 
+        "img price" 
+        "img cart";
+    text-align: center;
+}
+
+.product_img {
+    grid-area: img;
+    justify-self: end;
+    width: 10em;
+}
+
+.product_title {
+    grid-area: title;
+}
+
+.product_price {
+    grid-area: price;
+}
+
+.in_cart {
+    grid-area: cart;
+
+}
+.properties {
+    grid-area: dis;
+}

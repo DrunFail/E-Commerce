@@ -6,7 +6,7 @@ export default function PopProduct() {
         <div className={styles.container }>
             {popProduct.map((product, index) =>
                 <div className={styles.wrapper} key={index }>
-                    <img className={styles.img} src={process.env.PUBLIC_URL + `${product.img}` } />
+                    <img className={styles.img} alt='image' src={process.env.PUBLIC_URL + `${product.img}` } />
                     <p className={styles.title }>{product.title}</p>
                     <p className={styles.price }>{product.price}</p>
                 </div>

@@ -1,0 +1,7 @@
+.container {
+    display: grid;
+    width: inherit;
+    grid-row-gap: 2em;
+    justify-items: center;
+    grid-column-start: 2;
+}

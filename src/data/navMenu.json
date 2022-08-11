@@ -18,5 +18,9 @@
   {
     "title": "Форум",
     "link": "/forum"
+  },
+  {
+    "title": "корзина",
+    "link": "/cart"
   }
 ]

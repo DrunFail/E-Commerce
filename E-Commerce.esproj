@@ -8,11 +8,14 @@
     <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="src\components\cart\CartItem\" />
+    <Folder Include="src\components\cart\Order\" />
+    <Folder Include="src\components\Catalog\productCard\" />
+    <Folder Include="src\components\Catalog\productDescr\" />
     <Folder Include="src\components\navbar\" />
     <Folder Include="src\components\logo\" />
     <Folder Include="src\components\profilecard\" />
     <Folder Include="src\components\Layout\" />
     <Folder Include="src\components\favCategories\" />
-    <Folder Include="src\components\Catalog\smartphoneList\" />
   </ItemGroup>
 </Project>

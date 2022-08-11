@@ -7,7 +7,7 @@ export default function PromoSlider() {
 
 
     const nextPromo = () => {
-        imgActiveIndex == promoSlider.length - 1 ? setImgActiveIndex(0) :
+        imgActiveIndex === promoSlider.length - 1 ? setImgActiveIndex(0) :
             setImgActiveIndex(prev => prev + 1)
     }
 

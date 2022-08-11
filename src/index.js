@@ -25,6 +25,10 @@ import Planshety from './pages/Catalog/smartgadzhets/Planshety';
 import AksForPlansh from './pages/Catalog/smartgadzhets/AksForPlansh';
 import AksForSmart from './pages/Catalog/smartgadzhets/AksForSmart';
 import SmartClock from './pages/Catalog/smartgadzhets/SmartClock';
+import ProductPage from './pages/Catalog/ProductPage';
+import Cart from './pages/Cart';
+import Order from './components/cart/Order/Order';
+import NotFound from './pages/NotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -38,9 +42,16 @@ root.render(
                     <Route path='delivery' element={<Delivery />} />
                     <Route path='shops' element={<Shops />} />
                     <Route path='forum' element={<Forum />} />
-                    <Route path='smartfony-i-gadzhety' >
+                    <Route path='cart' >
+                        <Route index element={<Cart />} />
+                        <Route path='order' element={<Order /> }/>
+                        </Route>
+                    <Route path='smartfony-i-gadzhety'  >
                         <Route index element={<SmartGadzhet />}/>
-                        <Route path='smartfony' element={<Smartphones />} />
+                        <Route path='smartfony' >
+                            <Route index element={<Smartphones />}/>
+                            <Route path=':smartfonyId' element={<ProductPage />} />
+                            </Route>
                         <Route path='planshety' element={<Planshety/> } />
                         <Route path='smart-chasy' element={<SmartClock /> } />
                         <Route path='aksess-dlja-smartfonov' element={<AksForSmart/> } />
@@ -55,7 +66,9 @@ root.render(
                     <Route path='melkaja-bytovaja-tehnika' element={<MBT />} />
                     <Route path='books' element={<Books />} />
                     <Route path='posuda' element={<Posuda />} />
+                    <Route path="*" element={<NotFound />} />
                 </Route>
+                
             </Routes>
         </React.StrictMode>
     </BrowserRouter>
