@@ -26,6 +26,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
+    box-sizing: border-box;
+    width: 100vw;
 }
 
 ol, ul {

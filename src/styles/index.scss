@@ -2,16 +2,16 @@
 
 #root{
     display: grid;
-    height: 100vh;
     max-width: 980px;
+    min-height: 100vh;
     margin: 0 auto;
     grid-template-columns: 100px 1fr;
-    grid-template-rows: 0.2fr 0.5fr 2.5fr 1.8fr 1fr;
+    grid-template-rows: 0.08fr 0.08fr 0.35fr .5fr 0.2fr;
     grid-template-areas: 
         "header header"
         "cat fav"
         "promo promo"
         "pop pop"
         "footer footer";
-    grid-row-gap: 2em;
+    grid-row-gap: 1em;
 }

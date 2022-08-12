@@ -3,6 +3,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 2em;
+    .main_title{
+        font-size: 2em;
+        font-weight: 700;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        text-transform: uppercase;
+    }
     .wrapper{
         height: 100%;
         display: grid;

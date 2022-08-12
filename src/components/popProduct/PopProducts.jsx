@@ -3,7 +3,8 @@ import styles from './PopProduct.module.scss';
 
 export default function PopProduct() {
     return (
-        <div className={styles.container }>
+        <div className={styles.container}>
+            <h1 className={styles.main_title }>популярные товары</h1>
             {popProduct.map((product, index) =>
                 <div className={styles.wrapper} key={index }>
                     <img className={styles.img} alt='image' src={process.env.PUBLIC_URL + `${product.img}` } />

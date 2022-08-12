@@ -1,18 +1,21 @@
 .container {
+    grid-row-start: 3;
     display: grid;
     grid-column-start: 1;
     grid-column-end: 5;
+    width: 80%;
+    margin: 0 auto;
     row-gap: 1em;
+    
     .title{
         justify-self: center;
         text-transform: uppercase;
-        font-size: 2em;
         font-weight: 700;
-        margin-bottom: .5em;
+        font-size: 2em;
+
     }
     .total{
         justify-self: end;
-        margin-right: 2em;
         text-transform: uppercase;
         font-size: 1em;
         font-weight: 700;
@@ -24,7 +27,6 @@
         background: blue;
         color: white;
         justify-self: end;
-        margin-right: 2em;
         border-radius: 1em;
         
     }

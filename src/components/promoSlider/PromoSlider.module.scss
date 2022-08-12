@@ -1,18 +1,18 @@
 .container {
     grid-area: promo;
     width: 100%;
-    height: 100%;
     overflow: hidden;
+    height: 100%;
 }
 .active {
     opacity: 1;
+    width: 60em;
+    height: 60em;
     position: relative;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 .offscreen {
-    opacity: 0;
+    display: none;
     position: absolute;
     width: 100%;
     height: 100%;
