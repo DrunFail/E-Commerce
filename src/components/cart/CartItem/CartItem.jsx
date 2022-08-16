@@ -1,25 +1,14 @@
 import { useState } from 'react';
 import styles from './CartItem.module.scss';
-
-export default function CartList({ elem, data, setData, id }) {
-    const [count, setCount] = useState(+elem.count);
-
-    const nextCount = () => {
-       
-        setCount(prev => prev + 1)
-        const update = data.map(dat => dat.id == id ? {...dat, count: count + 1} : dat)
-       
-        
-        setData(update)
-    }
-
-    const prevCount = () => {
-        count == 1 ? setCount(1) : setCount(prev => prev - 1)
-        const update = data.map(dat => dat.id == id ? { ...dat, count: count - 1 } : dat)
+import { useDispatch } from 'react-redux';
+import { deleteCart, changeCountIncr, changeCountDecr } from '../../../features/cart/cartSlice';
 
 
-        setData(update)
-    }
+export default function CartList({ elem, id }) {
+    const dispatch = useDispatch();
+    console.log(id)
+
+   
 
     return (
         <div className={styles.container }>
@@ -27,11 +16,12 @@ export default function CartList({ elem, data, setData, id }) {
             <p className={styles.title }>{elem.title}</p>
             <p className={styles.price}>{elem.price}</p>
             <div className={styles.count }>
-            <button onClick={prevCount}>-</button>
-            <p >{count}</p>
-                <button onClick={nextCount}>+</button>
+                <button onClick={() => dispatch(changeCountDecr(id)) } >-</button>
+            <p >{elem.count}</p>
+                <button onClick={() => dispatch(changeCountIncr(id)) }>+</button>
                 </div>
-            <p className={styles.total_price }>{count * elem.price }</p>
+            <p className={styles.total_price}>{elem.count * elem.price}</p>
+            <button onClick={() => dispatch(deleteCart(id )) }>delete</button>
         </div>
         );
 }

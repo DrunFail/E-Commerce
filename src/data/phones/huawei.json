@@ -1,0 +1,975 @@
+[
+  {
+    "success": true,
+    "messages": [],
+    "body": {
+      "productId": "30063297",
+      "price": "18890",
+      "name": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+      "nameTranslit": "smartfon-huawei-nova-y70-midnight-black-mga-lx9n",
+      "brandName": "HUAWEI",
+      "materialSource": "ERP",
+      "productType": "DIG",
+      "images": [
+        "Pdb/30063297.jpg",
+        "Pdb/30063297b.jpg",
+        "Pdb/30063297b1.jpg",
+        "Pdb/30063297b2.jpg",
+        "Pdb/30063297b3.jpg",
+        "Pdb/30063297b4.jpg",
+        "Pdb/30063297b5.jpg",
+        "Pdb/30063297s.jpg"
+      ],
+      "vendorCatalog": null,
+      "partnerType": null,
+      "usedProductType": null,
+      "category": {
+        "id": "761",
+        "name": "Смартфоны"
+      },
+      "materialCisNumber": "30063297",
+      "description": "Смартфон Huawei Nova Y70 оборудован 6,75-дюймовым LCD-дисплеем, способным автоматически затемнить экран в зависимости от окружающей обстановки, а также подстроиться под режим чтения. При габаритах 168,3 х 77,7 х 8,98 мм весит 199 г.\n\nВ основе гаджета — восьмиядерный HiSilicon Kirin 710, дополненный 4 Гб ОЗУ и 128 Гб встроенной памяти, расширяемой картой до 512 Гб. Питается от аккумулятора на 6000 мА*ч с поддержкой быстрой зарядки через разъем Type-C. Камера состоит из трех сенсоров — основного на 48 мп, сверхширокоугольного на 5 Мп и двухмегапиксельного для глубины. Установлены модули Bluetooth 5.1, GPS, 4G LTE, OTG.",
+      "modelName": "nova Y70 Midnight Black (MGA-LX9N)",
+      "properties": {
+        "key": [
+          {
+            "name": "Экран",
+            "priority": 1,
+            "properties": [
+              {
+                "id": 30848201,
+                "name": "Экран",
+                "value": "6.75\"/1600x720 Пикс",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 1,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Процессор",
+            "priority": 3,
+            "properties": [
+              {
+                "id": 619180,
+                "name": "Процессор",
+                "value": "HiSilicon Kirin 710",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 3,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Оперативная память",
+            "priority": 5,
+            "properties": [
+              {
+                "id": 30852805,
+                "name": "Оперативная память (RAM)",
+                "value": "4",
+                "nameDescription": "Часть системной памяти, от которой зависят скорость выполнения всех операций и быстродействие девайса в целом.",
+                "valueDescription": null,
+                "priority": 5,
+                "measure": "ГБ",
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Встроенная память",
+            "priority": 6,
+            "properties": [
+              {
+                "id": 613463,
+                "name": "Встроенная память (ROM)",
+                "value": "128",
+                "nameDescription": "Встроенная память используется для хранения приложений (программ) и информации.",
+                "valueDescription": null,
+                "priority": 6,
+                "measure": "ГБ",
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Основная камера",
+            "priority": 7,
+            "properties": [
+              {
+                "id": 30848204,
+                "name": "Основная камера МПикс",
+                "value": "48/5/2",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 7,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Фронтальная камера",
+            "priority": 8,
+            "properties": [
+              {
+                "id": 30852958,
+                "name": "Фронтальная камера МПикс",
+                "value": "8",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 8,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Передача данных",
+            "priority": 12,
+            "properties": [
+              {
+                "id": 30852925,
+                "name": "Поддержка стандартов",
+                "value": "4G LTE",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 12,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "SIM карта",
+            "priority": 14,
+            "properties": [
+              {
+                "id": 30852858,
+                "name": "SIM карта",
+                "value": "2 nano-SIM",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 14,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Электропитание",
+            "priority": 16,
+            "properties": [
+              {
+                "id": 11908,
+                "name": "Емкость аккумулятора",
+                "value": "6000",
+                "nameDescription": "Параметр, указывающий на возможность аккумулятора прибора поддерживать его автономную работу. Чем выше ёмкость, тем дольше устройство сможет функционировать без подключения к сети, но тем дольше придётся его заряжать.",
+                "valueDescription": null,
+                "priority": 16,
+                "measure": "мАч",
+                "iconPath": null
+              },
+              {
+                "id": 30852685,
+                "name": "Поддержка быстрой зарядки",
+                "value": "Да",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 17,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Безопасность",
+            "priority": 22,
+            "properties": [
+              {
+                "id": 30852901,
+                "name": "Сканер отпечатка пальца на боковой грани",
+                "value": "Да",
+                "nameDescription": "Сканер отпечатка пальца расположен в кнопке, либо боковой грани смартфона.",
+                "valueDescription": null,
+                "priority": 22,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          }
+        ],
+        "all": [
+          {
+            "name": "Заводские данные",
+            "priority": 1,
+            "properties": [
+              {
+                "id": 5552,
+                "name": "Гарантия",
+                "value": "1 год",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 1,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 5554,
+                "name": "Страна",
+                "value": "Китай",
+                "nameDescription": "Допускается отличие страны-изготовителя, указанной в характеристиках.\nЛинии производства могут находиться в нескольких государствах. \nЭто не влияет на качество изготовления техники: все заводы данного бренда работают по общим стандартам, а готовые изделия проходят соответствующий контроль.",
+                "valueDescription": null,
+                "priority": 3,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 827,
+                "name": "Год выпуска",
+                "value": "2022",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 5,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Серия модели",
+            "priority": 6,
+            "properties": [
+              {
+                "id": 46,
+                "name": "Серия",
+                "value": "nova",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 6,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 752,
+                "name": "Модель",
+                "value": "Y70",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 7,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Операционная система",
+            "priority": 13,
+            "properties": [
+              {
+                "id": 30851850,
+                "name": "Операционная система",
+                "value": "Android",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 13,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Экран",
+            "priority": 15,
+            "properties": [
+              {
+                "id": 30848201,
+                "name": "Экран",
+                "value": "6.75\"/1600x720 Пикс",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 15,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 30852907,
+                "name": "Технология экрана",
+                "value": "TFT LCD",
+                "nameDescription": "Технология получения изображения, на которой построен экран девайса. На данный момент выделяют TFT-, OLED-, AMOLED- и IPS-дисплеи, которые различаются яркостью, качеством изображения и энергопотреблением.",
+                "valueDescription": "Жидкокристаллический дисплей с активной матрицей. Может быть изготовлен с применением разных технологий, конкретные плюсы и минусы определяются технологией, которую выбрал производитель.",
+                "priority": 18,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 8890,
+                "name": "Безрамочный",
+                "value": "Да",
+                "nameDescription": "Экран с минимальными или полностью отсутствующими по краям рамками.",
+                "valueDescription": null,
+                "priority": 20,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 833,
+                "name": "Тип стекла",
+                "value": "2.5D",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 22,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Процессор",
+            "priority": 25,
+            "properties": [
+              {
+                "id": 619180,
+                "name": "Процессор",
+                "value": "HiSilicon Kirin 710",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 25,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 30852972,
+                "name": "Количество ядер",
+                "value": "8",
+                "nameDescription": "Влияет на производительность процессора и возможность одновременной обработки нескольких потоков данных.",
+                "valueDescription": null,
+                "priority": 27,
+                "measure": null,
+                "iconPath": "/media/Assets/pdp-icon/pc/8core.gif"
+              }
+            ]
+          },
+          {
+            "name": "Оперативная память",
+            "priority": 28,
+            "properties": [
+              {
+                "id": 30852805,
+                "name": "Оперативная память (RAM)",
+                "value": "4",
+                "nameDescription": "Часть системной памяти, от которой зависят скорость выполнения всех операций и быстродействие девайса в целом.",
+                "valueDescription": null,
+                "priority": 28,
+                "measure": "ГБ",
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Встроенная память",
+            "priority": 29,
+            "properties": [
+              {
+                "id": 613463,
+                "name": "Встроенная память (ROM)",
+                "value": "128",
+                "nameDescription": "Встроенная память используется для хранения приложений (программ) и информации.",
+                "valueDescription": null,
+                "priority": 29,
+                "measure": "ГБ",
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Основная камера",
+            "priority": 30,
+            "properties": [
+              {
+                "id": 30848204,
+                "name": "Основная камера МПикс",
+                "value": "48/5/2",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 30,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 30848501,
+                "name": "Количество основных камер",
+                "value": "3",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 31,
+                "measure": "шт",
+                "iconPath": null
+              },
+              {
+                "id": 30852865,
+                "name": "Вспышка",
+                "value": "Да",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 39,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Фронтальная камера",
+            "priority": 41,
+            "properties": [
+              {
+                "id": 30852914,
+                "name": "Количество фронтальных камер",
+                "value": "1",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 41,
+                "measure": "шт",
+                "iconPath": null
+              },
+              {
+                "id": 30852958,
+                "name": "Фронтальная камера МПикс",
+                "value": "8",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 42,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Карта памяти",
+            "priority": 45,
+            "properties": [
+              {
+                "id": 601934,
+                "name": "Максимальная емкость карты памяти",
+                "value": "512",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 45,
+                "measure": "ГБ",
+                "iconPath": null
+              },
+              {
+                "id": 332,
+                "name": "Тип карты памяти",
+                "value": "microSD",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 46,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "SIM карта",
+            "priority": 47,
+            "properties": [
+              {
+                "id": 30852858,
+                "name": "SIM карта",
+                "value": "2 nano-SIM",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 47,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Передача данных",
+            "priority": 52,
+            "properties": [
+              {
+                "id": 30852925,
+                "name": "Поддержка стандартов",
+                "value": "4G LTE",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 52,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 210,
+                "name": "Поддержка Wi-Fi",
+                "value": "Да",
+                "nameDescription": "Технология беспроводной локальной сети. Используется для выхода в интернет.\nВ настоящее время развивается целое семейство стандартов передачи цифровых потоков данных по радиоканалам.",
+                "valueDescription": null,
+                "priority": 55,
+                "measure": null,
+                "iconPath": "/media/Assets/pdp-icon/posuda2/15.gif"
+              },
+              {
+                "id": 135,
+                "name": "Встроенный модуль Bluetooth",
+                "value": "5.1",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 58,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Функции",
+            "priority": 61,
+            "properties": [
+              {
+                "id": 4629,
+                "name": "Поддержка GPS",
+                "value": "Да",
+                "nameDescription": "Встроенный GPS-приёмник принимает сигналы от спутников, входящих в систему определения местонахождения GPS. Используется для навигации: пользователь может видеть на карте своё местоположение.",
+                "valueDescription": null,
+                "priority": 61,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 2380,
+                "name": "Поддержка ГЛОНАСС",
+                "value": "Да",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 62,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 30853126,
+                "name": "Датчики",
+                "value": "ориентации экрана",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 63,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 832,
+                "name": "Поддержка USB Host (OTG)",
+                "value": "Да",
+                "nameDescription": "Обеспечивает возможность подключения к прибору внешних носителей информации напрямую, без каких-либо переходников.",
+                "valueDescription": null,
+                "priority": 66,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 30853127,
+                "name": "Функции",
+                "value": "Wi-Fi точка доступа, поддержка USB Host (OTG), FM-тюнер",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 67,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 750,
+                "name": "Встроенный FM-тюнер",
+                "value": "Да",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 68,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 761,
+                "name": "Wi-Fi точка доступа",
+                "value": "Да",
+                "nameDescription": "Возможность устройства работать в качестве роутера, «раздавая» интернет другим приборам.",
+                "valueDescription": null,
+                "priority": 69,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Безопасность",
+            "priority": 75,
+            "properties": [
+              {
+                "id": 30852901,
+                "name": "Сканер отпечатка пальца на боковой грани",
+                "value": "Да",
+                "nameDescription": "Сканер отпечатка пальца расположен в кнопке, либо боковой грани смартфона.",
+                "valueDescription": null,
+                "priority": 75,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Интерфейсы",
+            "priority": 78,
+            "properties": [
+              {
+                "id": 263,
+                "name": "Порт USB",
+                "value": "USB Type-C",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 78,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Корпус",
+            "priority": 81,
+            "properties": [
+              {
+                "id": 83,
+                "name": "Материал корпуса",
+                "value": "пластик",
+                "nameDescription": null,
+                "valueDescription": "Прочный, гигиеничный материал, рассчитанный на длительную эксплуатацию и не требующий сложного ухода.",
+                "priority": 81,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Комплектация",
+            "priority": 94,
+            "properties": [
+              {
+                "id": 30852918,
+                "name": "Кабель Micro-USB - USB тип А",
+                "value": "Да",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 94,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Электропитание",
+            "priority": 102,
+            "properties": [
+              {
+                "id": 267,
+                "name": "Тип аккумулятора",
+                "value": "несъемный",
+                "nameDescription": "Тип батарей, которые после разряда могут быть заново заряжены с помощью зарядного устройства.",
+                "valueDescription": null,
+                "priority": 102,
+                "measure": null,
+                "iconPath": null
+              },
+              {
+                "id": 11908,
+                "name": "Емкость аккумулятора",
+                "value": "6000",
+                "nameDescription": "Параметр, указывающий на возможность аккумулятора прибора поддерживать его автономную работу. Чем выше ёмкость, тем дольше устройство сможет функционировать без подключения к сети, но тем дольше придётся его заряжать.",
+                "valueDescription": null,
+                "priority": 106,
+                "measure": "мАч",
+                "iconPath": null
+              },
+              {
+                "id": 30852685,
+                "name": "Поддержка быстрой зарядки",
+                "value": "Да",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 109,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Цвет",
+            "priority": 111,
+            "properties": [
+              {
+                "id": 89,
+                "name": "Цвет",
+                "value": "черный",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 111,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Вес",
+            "priority": 112,
+            "properties": [
+              {
+                "id": 11929,
+                "name": "Вес",
+                "value": "200",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 112,
+                "measure": "г",
+                "iconPath": null
+              }
+            ]
+          },
+          {
+            "name": "Габаритные размеры",
+            "priority": 113,
+            "properties": [
+              {
+                "id": 30852910,
+                "name": "Габаритные размеры (В*Ш*Г)",
+                "value": "180*91*59 мм",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 113,
+                "measure": null,
+                "iconPath": null
+              }
+            ]
+          }
+        ]
+      },
+      "image": "Pdb/30063297b.jpg",
+      "images3d": [
+        "3dPics/30063297/001.jpg",
+        "3dPics/30063297/002.jpg",
+        "3dPics/30063297/003.jpg",
+        "3dPics/30063297/004.jpg",
+        "3dPics/30063297/005.jpg",
+        "3dPics/30063297/006.jpg",
+        "3dPics/30063297/007.jpg",
+        "3dPics/30063297/008.jpg",
+        "3dPics/30063297/009.jpg",
+        "3dPics/30063297/010.jpg",
+        "3dPics/30063297/011.jpg",
+        "3dPics/30063297/012.jpg",
+        "3dPics/30063297/013.jpg",
+        "3dPics/30063297/014.jpg",
+        "3dPics/30063297/015.jpg",
+        "3dPics/30063297/016.jpg",
+        "3dPics/30063297/017.jpg",
+        "3dPics/30063297/018.jpg",
+        "3dPics/30063297/019.jpg",
+        "3dPics/30063297/020.jpg",
+        "3dPics/30063297/021.jpg",
+        "3dPics/30063297/022.jpg",
+        "3dPics/30063297/023.jpg",
+        "3dPics/30063297/024.jpg",
+        "3dPics/30063297/025.jpg",
+        "3dPics/30063297/026.jpg",
+        "3dPics/30063297/027.jpg",
+        "3dPics/30063297/028.jpg",
+        "3dPics/30063297/029.jpg",
+        "3dPics/30063297/030.jpg",
+        "3dPics/30063297/031.jpg",
+        "3dPics/30063297/032.jpg",
+        "3dPics/30063297/033.jpg",
+        "3dPics/30063297/034.jpg",
+        "3dPics/30063297/035.jpg",
+        "3dPics/30063297/036.jpg",
+        "3dPics/30063297/s_001.jpg",
+        "3dPics/30063297/s_002.jpg",
+        "3dPics/30063297/s_003.jpg",
+        "3dPics/30063297/s_004.jpg",
+        "3dPics/30063297/s_005.jpg",
+        "3dPics/30063297/s_006.jpg",
+        "3dPics/30063297/s_007.jpg",
+        "3dPics/30063297/s_008.jpg",
+        "3dPics/30063297/s_009.jpg",
+        "3dPics/30063297/s_010.jpg",
+        "3dPics/30063297/s_011.jpg",
+        "3dPics/30063297/s_012.jpg",
+        "3dPics/30063297/s_013.jpg",
+        "3dPics/30063297/s_014.jpg",
+        "3dPics/30063297/s_015.jpg",
+        "3dPics/30063297/s_016.jpg",
+        "3dPics/30063297/s_017.jpg",
+        "3dPics/30063297/s_018.jpg",
+        "3dPics/30063297/s_019.jpg",
+        "3dPics/30063297/s_020.jpg",
+        "3dPics/30063297/s_021.jpg",
+        "3dPics/30063297/s_022.jpg",
+        "3dPics/30063297/s_023.jpg",
+        "3dPics/30063297/s_024.jpg",
+        "3dPics/30063297/s_025.jpg",
+        "3dPics/30063297/s_026.jpg",
+        "3dPics/30063297/s_027.jpg",
+        "3dPics/30063297/s_028.jpg",
+        "3dPics/30063297/s_029.jpg",
+        "3dPics/30063297/s_030.jpg",
+        "3dPics/30063297/s_031.jpg",
+        "3dPics/30063297/s_032.jpg",
+        "3dPics/30063297/s_033.jpg",
+        "3dPics/30063297/s_034.jpg",
+        "3dPics/30063297/s_035.jpg",
+        "3dPics/30063297/s_036.jpg"
+      ],
+      "imagesBig": [
+        "Big/30063297bb.jpg",
+        "Big/30063297bb1.jpg",
+        "Big/30063297bb2.jpg",
+        "Big/30063297bb3.jpg",
+        "Big/30063297bb4.jpg",
+        "Big/30063297bb5.jpg"
+      ],
+      "brandNameTranslit": "huawei",
+      "brandId": "1801",
+      "brandUrl": "https://www.mvideo.ru/promo/tovary-huawei?from=homepage",
+      "brandLogoUrl": "jcr:c49f51f7-6122-4177-9827-b160633aa61a",
+      "isBrandVisible": true,
+      "groups": [
+        {
+          "name": "Смартфоны и связь",
+          "groupId": "16430",
+          "seoId": "10",
+          "translitName": "smartfony-i-svyaz",
+          "level": 0
+        },
+        {
+          "name": "Смартфоны",
+          "groupId": "16433",
+          "seoId": "205",
+          "translitName": "smartfony",
+          "level": 1
+        },
+        {
+          "name": "Смартфоны",
+          "groupId": "16434",
+          "seoId": "761",
+          "translitName": "smartfony",
+          "level": 2
+        }
+      ],
+      "certificates": [
+        "sertificates/Certificates/30063297.pdf"
+      ],
+      "instructions": [],
+      "videos": [],
+      "status": {
+        "showCase": false,
+        "availableOnlyInRetailStore": false,
+        "soldOut": false,
+        "isCannotBeExchanged": false
+      },
+      "supplier": null,
+      "rating": {
+        "star": 4.619047619047619,
+        "count": 21,
+        "percent": 91
+      },
+      "sublicense": false,
+      "customNotifications": [],
+      "variants": [
+        [
+          {
+            "attributeId": 89,
+            "attributeName": "Цвет",
+            "values": [
+              {
+                "value": "черный",
+                "productState": "CURRENT",
+                "productId": "30063297",
+                "translitName": "smartfon-huawei-nova-y70-midnight-black-mga-lx9n",
+                "code": [
+                  "#333333"
+                ]
+              },
+              {
+                "value": "синий",
+                "productState": "COMPATIBLE",
+                "productId": "30063298",
+                "translitName": "smartfon-huawei-nova-y70-crystal-blue-mga-lx9n",
+                "code": [
+                  "#2354D4"
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "preorder": null,
+      "isWatchOnlineBtnVisible": false,
+      "watchOnlineBtnId": null,
+      "isMprimeSubscription": false,
+      "blocksOrder": {
+        "mobile": {
+          "aboutProduct": 1,
+          "usefulToYou": 2,
+          "promoCover": 3,
+          "specifications": 4,
+          "services": 14,
+          "reviews": 6,
+          "advantagesKit": 7,
+          "accessories": 8,
+          "fastDelivery": 8,
+          "togetherGoods": 8,
+          "availabilityPickup": 9,
+          "productCompare": 10,
+          "ourAdvantages": 11,
+          "mMag": 12,
+          "youWatched": 13,
+          "otherOffers": 15
+        },
+        "desktop": {
+          "aboutProduct": 1,
+          "usefulToYou": 1,
+          "promoCover": 2,
+          "specifications": 3,
+          "services": 13,
+          "reviews": 5,
+          "advantagesKit": 6,
+          "accessories": 7,
+          "fastDelivery": 7,
+          "togetherGoods": 7,
+          "availabilityPickup": 8,
+          "productCompare": 9,
+          "ourAdvantages": 10,
+          "mMag": 11,
+          "youWatched": 12,
+          "otherOffers": 14
+        },
+        "tablet": {
+          "aboutProduct": 1,
+          "usefulToYou": 2,
+          "promoCover": 3,
+          "specifications": 4,
+          "services": 14,
+          "reviews": 6,
+          "advantagesKit": 7,
+          "accessories": 8,
+          "fastDelivery": 8,
+          "togetherGoods": 8,
+          "availabilityPickup": 9,
+          "productCompare": 10,
+          "ourAdvantages": 11,
+          "mMag": 12,
+          "youWatched": 13,
+          "otherOffers": 15
+        }
+      }
+    }
+  }
+]

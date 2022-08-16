@@ -8,6 +8,8 @@
     <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="src\components\authenticate\login\" />
+    <Folder Include="src\components\authenticate\registration\" />
     <Folder Include="src\components\cart\CartItem\" />
     <Folder Include="src\components\cart\Order\" />
     <Folder Include="src\components\Catalog\productCard\" />
@@ -17,5 +19,9 @@
     <Folder Include="src\components\profilecard\" />
     <Folder Include="src\components\Layout\" />
     <Folder Include="src\components\favCategories\" />
+    <Folder Include="src\data\phones\" />
+    <Folder Include="src\features\cart\" />
+    <Folder Include="src\pages\authenticate\" />
+    <Folder Include="src\store\" />
   </ItemGroup>
 </Project>

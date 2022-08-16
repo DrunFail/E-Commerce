@@ -1,15 +1,12 @@
 .cont {
-    grid-area: cat;
     position: relative;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    
+    grid-column: 1;
 }
-
 
 .offscreen {
     display: none;
 }
+
 .visible {
     background-color: whitesmoke;
     position: absolute;
@@ -21,16 +18,19 @@
     border-radius: 1em;
     
 }
+
 .cat-link{
     text-decoration: none;
     color: black;
     font-size: 1.3em;
 
 }
+
 .cat-link:hover{
     background: black;
     color: white;
 }
+
 .cat-link:nth-last-child(n-2){
     padding: .5em ;
 }

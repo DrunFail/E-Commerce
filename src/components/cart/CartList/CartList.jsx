@@ -3,16 +3,19 @@ import { useState } from 'react';
 import cart from '../../../data/cart.json';
 import CartItem from '../CartItem/CartItem';
 import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 export default function CartList() {
-    const [data, setData] = useState(cart);
+    
     const [total, setTotal] = useState(0);
+    const cart = useSelector(state => state.cart)
+    console.log(cart)
 
     useEffect(() => {
-        let totalPrice = data.reduce((sum, elem) => sum += Number(elem.price * elem.count), 0)
+        let totalPrice = cart.reduce((sum, elem) => sum += Number(elem.price * elem.count), 0)
         setTotal(totalPrice)
         console.log(total)
-    }, [data])
+    }, [cart])
    
     
     
@@ -20,13 +23,13 @@ export default function CartList() {
     return (
         <div className={styles.container }>
             <h1 className={styles.title}>Cart</h1>
-            {cart.map((elem, index) => 
+            {cart.map((elem) => 
                 <CartItem
-                    key={index}
+                    key={elem.id}
                     elem={elem}
-                    data={data}
-                    setData={setData}
-                    id={elem.id }
+                    cart={cart }
+                    
+                    id={elem.id}
                 />
                 )}
             

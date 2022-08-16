@@ -4,31 +4,31 @@
     "links": [
       {
         "name": "оформление заказа",
-        "link": ""
+        "link": "create"
       },
       {
         "name": "доставка",
-        "link": ""
+        "link": "delivery"
       },
       {
         "name": "услуги",
-        "link": ""
+        "link": "services"
       },
       {
         "name": "гарантия",
-        "link": ""
+        "link": "warranty"
       },
       {
         "name": "акции",
-        "link": ""
+        "link": "promo"
       },
       {
         "name": "кредит и рассрочка",
-        "link": ""
+        "link": "credit"
       },
       {
         "name": "бонусная программа",
-        "link": ""
+        "link": "bonus"
       }
     ]
   },

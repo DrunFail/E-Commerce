@@ -6,12 +6,10 @@
     min-height: 100vh;
     margin: 0 auto;
     grid-template-columns: 100px 1fr;
-    grid-template-rows: 0.08fr 0.08fr 0.35fr .5fr 0.25fr;
-    grid-template-areas: 
-        "header header"
-        "cat fav"
-        "promo promo"
-        "pop pop"
-        "footer footer";
+    grid-template-rows: minmax(5em, auto)
+                        minmax(4em, auto)
+                        minmax(20em, auto)
+                        minmax(30em, auto)
+                        minmax(5em, auto);
     grid-row-gap: 1em;
 }

@@ -9,7 +9,7 @@ export default function Footer() {
                 <div key={index} className={styles.sell}>
                     <p className={styles.title}>{menu.title}</p>
                     {menu.links.map((lin, index) =>
-                        <Link key={index} className={styles.link} to='#'>{lin.name}</Link>
+                        <Link key={index} className={styles.link} to={lin.link}>{lin.name}</Link>
                     )}
                 </div>
             )}
