@@ -1,5 +1,5 @@
 import styles from './ProductCard.module.scss';
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addCart } from '../../../features/cart/cartSlice';
 import { nanoid } from '@reduxjs/toolkit';
 
@@ -11,6 +11,8 @@ export default function ProductCard({ smart }) {
     const memory = proper.find(obj => obj.id == 30852805)
 
     const dispatch = useDispatch()
+    const cart = useSelector(state => state.cart)
+    const cartComp = cart.find(elem => elem.title === smart.name)
 
 
     
@@ -45,7 +47,9 @@ export default function ProductCard({ smart }) {
                     title: smart.name,
                     count: 1,
                     price: 5000
-                })) } className={styles.in_cart}>v korzinu</button>
+                }))}
+                    className={styles.in_cart}>
+                    {cartComp ? 'добавлен' : 'в корзину'}</button>
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 .cont {
     position: relative;
     grid-column: 1;
+    width: 400px;
 }
 
 .offscreen {

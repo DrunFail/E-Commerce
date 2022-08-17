@@ -1,6 +1,5 @@
 import styles from './CartList.module.scss';
 import { useState } from 'react';
-import cart from '../../../data/cart.json';
 import CartItem from '../CartItem/CartItem';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
@@ -21,8 +20,10 @@ export default function CartList() {
     
   
     return (
-        <div className={styles.container }>
+        <div className={styles.container}>
+            
             <h1 className={styles.title}>Cart</h1>
+            {!cart.length && <p>empthy</p>}
             {cart.map((elem) => 
                 <CartItem
                     key={elem.id}

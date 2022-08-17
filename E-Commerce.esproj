@@ -21,6 +21,7 @@
     <Folder Include="src\components\favCategories\" />
     <Folder Include="src\data\phones\" />
     <Folder Include="src\features\cart\" />
+    <Folder Include="src\features\fav\" />
     <Folder Include="src\pages\authenticate\" />
     <Folder Include="src\store\" />
   </ItemGroup>
