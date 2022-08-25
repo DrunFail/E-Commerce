@@ -1,0 +1,15 @@
+.container {
+    border: 1px solid;
+    text-align: center;
+
+    .header {
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 1em;
+    }
+
+    .addForm {
+        display: inline-flex;
+        flex-direction: column;
+    }
+}

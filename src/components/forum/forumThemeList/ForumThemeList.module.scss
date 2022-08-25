@@ -1,0 +1,10 @@
+.container{
+    grid-column: 1/3;
+    grid-row: 2/5;
+    text-align: center;
+   
+    & h1 {
+        font-size: 3em;
+        margin-bottom: 1em;
+    }
+}

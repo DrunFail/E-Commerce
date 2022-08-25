@@ -33,6 +33,7 @@ import Order from './components/cart/Order/Order';
 import NotFound from './pages/NotFound';
 import LoginPage from './pages/authenticate/LoginPage';
 import RegistrationPage from './pages/authenticate/RegistrationPage';
+import ForumThemeDetail from './components/forum/forumThemeDetail/ForumThemeDetail';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -48,7 +49,10 @@ root.render(
                         <Route path='services' element={<Services />} />
                         <Route path='delivery' element={<Delivery />} />
                         <Route path='shops' element={<Shops />} />
-                        <Route path='forum' element={<Forum />} />
+                        <Route path='forum'>
+                            <Route index element={<Forum />} />
+                            <Route path=':forumId' element={<ForumThemeDetail /> } />
+                        </Route> 
                         <Route path='cart' >
                             <Route index element={<Cart />} />
                             <Route path='order' element={<Order />} />

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "1",
+    "name": "правила пользования форумом",
+    "name_translit": "pravila-polzovanija-forumom",
+    "value": "правила поведения на форуме fjdksjf jsadjfkj faskjfkl fjakfj kasjdfl;as djfklasfj lasfkj lkafjsdklfj laskfj ;afkjask lfjaslfkj laskdfjlasdkfj lkdfj  lorem",
+    "create": "admin",
+    "date_create": "24.08.2022",
+    "messages": [
+      {
+        "id": 1,
+        "value": "hi there",
+        "author": "user",
+        "date_create": "24.08.2022"
+      }
+    ]
+
+  },
+  {
+    "id": "2",
+    "name": "вопросы и пожелания",
+    "name_translit": "voprosi-i-pozhelanija",
+    "value": "вопросы и пожелания",
+    "create": "admin",
+    "date_create": "24.08.2022",
+    "messages": [
+      {
+        "id": 1,
+        "value": "hi there",
+        "author": "user2",
+        "date_create": "24.08.2022"
+      }
+    ]
+
+  },
+  {
+    "id": "3",
+    "name": "новости компании",
+    "name_translit": "novosti-kompanii",
+    "value": "новости компании",
+    "create": "admin",
+    "date_create": "24.08.2022",
+    "messages": [
+      {
+        "id": 1,
+        "value": "hi there",
+        "author": "user3",
+        "date_create": "24.08.2022"
+      }
+    ]
+
+  }
+]

@@ -14,6 +14,10 @@
     <Folder Include="src\components\cart\Order\" />
     <Folder Include="src\components\Catalog\productCard\" />
     <Folder Include="src\components\Catalog\productDescr\" />
+    <Folder Include="src\components\forum\forumThemeCard\" />
+    <Folder Include="src\components\forum\forumThemeDetail\" />
+    <Folder Include="src\components\forum\forumMessage\" />
+    <Folder Include="src\components\forum\forumAddMessage\" />
     <Folder Include="src\components\navbar\" />
     <Folder Include="src\components\logo\" />
     <Folder Include="src\components\profilecard\" />
