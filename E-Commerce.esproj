@@ -20,16 +20,20 @@
     <Folder Include="src\components\forum\forumAddMessage\" />
     <Folder Include="src\components\navbar\" />
     <Folder Include="src\components\logo\" />
+    <Folder Include="src\components\orders\ordersList\" />
+    <Folder Include="src\components\orders\ordersCard\" />
     <Folder Include="src\components\profilecard\" />
     <Folder Include="src\components\Layout\" />
     <Folder Include="src\components\favCategories\" />
     <Folder Include="src\components\notFoundPage\" />
     <Folder Include="src\components\promo\promoCard\" />
     <Folder Include="src\components\promo\promoListDetails\" />
+    <Folder Include="src\components\profileSettings\" />
     <Folder Include="src\data\phones\" />
     <Folder Include="src\features\cart\" />
     <Folder Include="src\features\fav\" />
     <Folder Include="src\pages\authenticate\" />
+    <Folder Include="src\pages\profile\" />
     <Folder Include="src\store\" />
   </ItemGroup>
 </Project>

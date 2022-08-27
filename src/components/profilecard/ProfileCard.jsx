@@ -10,8 +10,9 @@ export default function ProfileCard() {
             <p className={styles.user }>User Name</p>
             <p className={styles.bonus}>1500 b.</p>
             <div className={styles[visible ? 'active' : 'offscreen'] }>
-                <a href='/orders'>order</a>
-                <p>profile</p>
+                <a href='/orders'>заказы</a>
+                <a href='/profile'>профиль</a>
+                <a href=''>выйти</a>
             </div>
             </div>
         );

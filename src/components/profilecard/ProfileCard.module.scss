@@ -24,8 +24,18 @@
     }
     .active{
         position: absolute;
+        display: grid;
         right: 1em;
         top: 4em;
+        z-index: 3;
+        & a{
+            padding: .2em 0;
+            margin: .2em 0;
+        }
+        & a:hover{
+            background-color: black;
+            color: white;
+        }
     }
     &:hover{
         background-color: lightgrey;

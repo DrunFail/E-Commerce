@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './CartItem.module.scss';
 import { useDispatch } from 'react-redux';
 import { deleteCart, changeCountIncr, changeCountDecr } from '../../../features/cart/cartSlice';
@@ -6,9 +5,6 @@ import { deleteCart, changeCountIncr, changeCountDecr } from '../../../features/
 
 export default function CartList({ elem, id }) {
     const dispatch = useDispatch();
-    console.log(id)
-
-   
 
     return (
         <div className={styles.container }>

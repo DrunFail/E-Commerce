@@ -36,6 +36,7 @@ import RegistrationPage from './pages/authenticate/RegistrationPage';
 import ForumThemeDetail from './components/forum/forumThemeDetail/ForumThemeDetail';
 import PromoDetails from './pages/PromoDetails';
 import ProfileOrder from './pages/profile/ProfileOrder';
+import ProfileSettings from './pages/profile/ProfileSettings';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -60,9 +61,11 @@ root.render(
                     </Route>
                     <Route path='cart' >
                         <Route index element={<Cart />} />
-                        <Route path='order' element={<Order />} />
+                            <Route path='order' element={<Order />} />
+                            
                         </Route>
-                        <Route path='orders' element={<ProfileOrder /> } />
+                        <Route path='orders' element={<ProfileOrder />} />
+                        <Route path='profile' element={<ProfileSettings />} />
                     <Route path='smartfony-i-gadzhety'  >
                         <Route index element={<SmartGadzhet />} />
                         <Route path='smartfony' >
