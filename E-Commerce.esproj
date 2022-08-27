@@ -24,6 +24,8 @@
     <Folder Include="src\components\Layout\" />
     <Folder Include="src\components\favCategories\" />
     <Folder Include="src\components\notFoundPage\" />
+    <Folder Include="src\components\promo\promoCard\" />
+    <Folder Include="src\components\promo\promoListDetails\" />
     <Folder Include="src\data\phones\" />
     <Folder Include="src\features\cart\" />
     <Folder Include="src\features\fav\" />
