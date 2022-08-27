@@ -5,6 +5,7 @@
     grid-template-areas: 
         "1 img user"
         "1 img bonus";
+    position: relative;
 
     .profileImg {
         grid-area: img;
@@ -17,5 +18,16 @@
     }
     .bonus {
         grid-area: bonus;
+    }
+    .offscreen{
+        display: none;
+    }
+    .active{
+        position: absolute;
+        right: 1em;
+        top: 4em;
+    }
+    &:hover{
+        background-color: lightgrey;
     }
 }
