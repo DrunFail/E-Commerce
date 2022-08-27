@@ -12,7 +12,7 @@ export default function Catalog() {
             <button onClick={() => setVisibleCatalog(!visibleCatalog)} className='container'>catalog</button>
             <nav className={visibleCatalog ? 'visible' : 'offscreen'}>
                 {catalog.map((cat, index) =>
-                    <div key={index}>
+                    <div key={index} className='wrapper'>
                         <a className='cat-link' href={cat.link}>{cat.title}</a>
                         <button
                             onClick={() => dispatch(addFav({
