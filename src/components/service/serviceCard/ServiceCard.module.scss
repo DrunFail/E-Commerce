@@ -1,0 +1,30 @@
+.container{
+    border: 1px solid;
+    border-radius: 1em;
+    margin: 0 auto 1em;
+    width: 70%;
+    
+
+    & > h1 {
+        text-align: center;
+        margin-bottom: 1.5em;
+        font:{
+            size: 1em;
+            weight: 700;
+        };
+         text-transform: uppercase;
+         padding-top: 1em;
+    }
+    .details{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        .title{
+            justify-self: center;
+            padding-bottom: 1em;
+        }
+        .price{
+            justify-self: center;
+        }
+    }
+}
