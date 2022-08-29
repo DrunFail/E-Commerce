@@ -3,13 +3,44 @@
     grid-column: 1;
     
 }
+.cont > button{
+    width: 7em;
+}
+.addFav{
+   width: 3em;
+   height: 3em;
+   
+   
+  
+ 
+   
+   
+
+
+}
+.addFav:hover{
+   fill:red;
+   stroke: red;
+    
+    
+}
 
 .offscreen {
     display: none;
 }
 .wrapper{
     display: flex;
+    align-items: center;
+    
 }
+button{
+    padding: 0;
+    width: 3em;
+    height: 3em;
+    border: none;
+    
+}
+
 
 .visible {
     background-color: whitesmoke;
@@ -38,6 +69,4 @@
     color: white;
 }
 
-.cat-link:nth-last-child(n-2){
-    padding: .5em ;
-}
+

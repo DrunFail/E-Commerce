@@ -29,11 +29,13 @@
     <Folder Include="src\components\promo\promoCard\" />
     <Folder Include="src\components\promo\promoListDetails\" />
     <Folder Include="src\components\profileSettings\" />
+    <Folder Include="src\components\iconsBlock\" />
+    <Folder Include="src\components\favorite\" />
     <Folder Include="src\data\phones\" />
-    <Folder Include="src\features\cart\" />
-    <Folder Include="src\features\fav\" />
+    <Folder Include="src\redux\slices\cart\" />
+    <Folder Include="src\redux\slices\fav\" />
+    <Folder Include="src\redux\slices\favorite\" />
     <Folder Include="src\pages\authenticate\" />
     <Folder Include="src\pages\profile\" />
-    <Folder Include="src\store\" />
   </ItemGroup>
 </Project>

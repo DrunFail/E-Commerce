@@ -1,18 +1,55 @@
 .container {
-    grid-column: 1/5;
+    grid-column: 1/3;
     grid-row: 2/5;
-    .form{
-        display: grid;
-        row-gap: 1em;
-        justify-items: center;
+    text-align: center;
+    margin-top: 2em;
+
+
+
+    .form {
+        border: 1px solid;
+        border-radius: 1em;
+        width: 30%;
         margin: 0 auto;
-        width: 50%;
-        .title{
+        padding: 1em 2em;
+
+        .title {
             text-transform: uppercase;
-            font-size: 2em;
             font-weight: 700;
-            text-align: center;
-            margin-bottom: 3em;
+            font-size: 1em;
+            margin-bottom: 1.5em;
+        }
+
+
+        & div label {
+            text-transform: capitalize;
+            display: inline-block;
+            margin: 0.5em 0;
+        }
+
+        & div input {
+            height: 1.9em;
+            border-radius: .5em;
+            border: 1px solid;
+            padding: 0 1em;
+        }
+
+        & button {
+            width: 50%;
+            margin: 1em 0 1em;
+            border-radius: 1em;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1em;
+
+            &:hover {
+                background-color: orange;
+                color: white;
+            }
+        }
+
+        & a {
+            display: inline-block;
         }
     }
 }

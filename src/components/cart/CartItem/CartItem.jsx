@@ -1,6 +1,6 @@
 import styles from './CartItem.module.scss';
 import { useDispatch } from 'react-redux';
-import { deleteCart, changeCountIncr, changeCountDecr } from '../../../features/cart/cartSlice';
+import { deleteCart, changeCountIncr, changeCountDecr } from '../../../redux/slices/cart/cartSlice';
 
 
 export default function CartList({ elem, id }) {

@@ -3,17 +3,16 @@ import { useState } from 'react';
 import CartItem from '../CartItem/CartItem';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 export default function CartList() {
     
     const [total, setTotal] = useState(0);
     const cart = useSelector(state => state.cart)
-    console.log(cart)
 
     useEffect(() => {
         let totalPrice = cart.reduce((sum, elem) => sum += Number(elem.price * elem.count), 0)
         setTotal(totalPrice)
-        console.log(total)
     }, [cart])
    
     
@@ -22,8 +21,8 @@ export default function CartList() {
     return (
         <div className={styles.container}>
             
-            <h1 className={styles.title}>Cart</h1>
-            {!cart.length && <p>empthy</p>}
+            <h1 className={styles.title}>корзина</h1>
+            {!cart.length && <p>в корзине пока ничего нет</p>}
             {cart.map((elem) => 
                 <CartItem
                     key={elem.id}
@@ -35,7 +34,7 @@ export default function CartList() {
                 )}
             
             <p className={styles.total}>Итого: {total}</p>
-            <a className={styles.link} href='cart/order'>create order</a>
+            <Link className={styles.link} to='order'>перейти к оформлению заказа</Link>
         </div>
     );
 }
