@@ -39,6 +39,7 @@ import ProfileOrder from './pages/profile/ProfileOrder';
 import ProfileSettings from './pages/profile/ProfileSettings';
 import Favorite from './pages/Favorite';
 import Compare from './pages/Compare';
+import OrderHead from './components/cart/orderHead/OrderHead';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -63,9 +64,10 @@ root.render(
                             <Route index element={<Forum />} />
                             <Route path=':forumId' element={<ForumThemeDetail />} />
                         </Route>
+                        <Route path='order' element={<OrderHead />} />
                         <Route path='cart' >
                             <Route index element={<Cart />} />
-                            <Route path='order' element={<Order />} />
+                            
 
                         </Route>
                         <Route path='orders' element={<ProfileOrder />} />

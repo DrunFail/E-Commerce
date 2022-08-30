@@ -1,15 +1,21 @@
 import styles from './Order.module.scss';
 
+
 export default function Order() {
     return (
         <div className={styles.container} >
-            <h1 className={styles.title}>Оформление заказа</h1>
             
-            <input className={styles.fname }placeholder="name" />
-            <input className={styles.lname }placeholder="last name" />
-            <input className={styles.phone }placeholder="phone" />
-            <input className={styles.email } placeholder="email" />
-            <button className={styles.confirm }>подтвердить заказ</button>
+            <label htmlFor='name'>имя</label> 
+            <input id='name' placeholder="name" />
+            <label htmlFor='last_name'>фамилия</label> 
+            <input id='last_name'placeholder="last name" />
+            <label htmlFor='phone'>телефон</label> 
+            <input id='phone'placeholder="phone" />
+            <label htmlFor='email'>email</label> 
+            <input id='email' placeholder="email" />
+            
+            
+            
         </div>
     );
 }

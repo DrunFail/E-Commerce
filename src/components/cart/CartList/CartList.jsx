@@ -28,13 +28,12 @@ export default function CartList() {
                     key={elem.id}
                     elem={elem}
                     cart={cart }
-                    
                     id={elem.id}
                 />
                 )}
             
             <p className={styles.total}>Итого: {total}</p>
-            <Link className={styles.link} to='order'>перейти к оформлению заказа</Link>
+            <Link className={styles.link} to='/order'>перейти к оформлению заказа</Link>
         </div>
     );
 }

@@ -1,18 +1,16 @@
-.container{
+.container {
     display: grid;
-    
     grid-template-columns: 0.3fr 0.7fr;
-    
     width: 50%;
     margin: 0 auto;
-    
     height: 20%;
-    
-    
-    & input, label{
-       height: 2em;
+
+
+    & input, label {
+        height: 2em;
     }
-    & label{
+
+    & label {
         align-self: center;
     }
 }
