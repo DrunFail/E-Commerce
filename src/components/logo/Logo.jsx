@@ -3,6 +3,6 @@ import styles from './Logo.module.scss';
 
 export default function Logo() {
     return (
-        <Link className={styles.logo} to='/'>Logo</Link>
+        <Link className={styles.logo} to='/'>E-commerce</Link>
         );
 }

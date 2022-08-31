@@ -1,9 +1,9 @@
-import SmartGadzhetMenu from "../../../components/smartGadzhetMenu/SmartGadzhetMenu";
+import SubCategoryMenu from "../../../components/Catalog/subCategoryMenu/SubCategoryMenu";
 
 export default function SmartGadzhet() {
     return (
         <>
-            <SmartGadzhetMenu />
+            <SubCategoryMenu />
             </>
         );
 

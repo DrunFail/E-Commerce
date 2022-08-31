@@ -1,0 +1,42 @@
+.container {
+
+    & button {
+        text-transform: uppercase;
+        font-weight: 700;
+        background-color: blue;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 1em;
+
+        &:hover {
+            background-color: orange;
+        }
+    }
+
+    .visible {
+        background-color: whitesmoke;
+        position: absolute;
+        opacity: 1;
+        z-index: 6;
+        display: grid;
+        padding: 1em 2em;
+        border-radius: 1em;
+
+        & a {
+            text-decoration: none;
+            font-size: 1.3em;
+            color: black;
+            padding: 0.2em 0.4em;
+
+            &:hover {
+                background-color: orange;
+                color: white;
+                border-radius: 1em;
+            }
+        }
+    }
+
+    .offscreen {
+        display: none;
+    }
+}

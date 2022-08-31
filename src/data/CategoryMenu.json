@@ -1,0 +1,277 @@
+[
+  {
+    "title": "смартфоны и гаджеты",
+    "img": "",
+    "link": "smartfony-i-gadzhety",
+    "subcategory": [
+      {
+        "title": "смартфоны",
+        "img": "",
+        "link": "smartfony"
+      },
+      {
+        "title": "планшеты",
+        "img": "",
+        "link": "planshety"
+      },
+      {
+        "title": "смарт часы",
+        "img": "",
+        "link": "smart-chasy"
+      },
+      {
+        "title": "аксессуары для смартфонов",
+        "img": "",
+        "link": "aksess-dlja-smartfonov"
+      },
+      {
+        "title": "аксессуары для планшетов",
+        "img": "",
+        "link": "aksess-dlja-planshetov"
+      }
+    ]
+  },
+  {
+    "title": "телевизоры",
+    "img": "",
+    "link": "televizory",
+    "subcategory": [
+      {
+        "title": "телевизоры",
+        "img": "",
+        "link": "televizory"
+      },
+      {
+        "title": "кронштейны",
+        "img": "",
+        "link": "kronshteiny"
+      },
+      {
+        "title": "кабели",
+        "img": "",
+        "link": "kabeli"
+      },
+      {
+        "title": "антенны",
+        "img": "",
+        "link": "antenny"
+      }
+    ]
+  },
+  {
+    "title": "крупная бытовая техника",
+    "img": "",
+    "link": "krupnaya-bytovaja-tehnika",
+    "subcategory": [
+      {
+        "title": "холодильники",
+        "img": "",
+        "link": "holodilniki"
+      },
+      {
+        "title": "стиралки",
+        "img": "",
+        "link": "stiralki"
+      },
+      {
+        "title": "посудомойки",
+        "img": "",
+        "link": "posudomoiki"
+      },
+      {
+        "title": "плиты",
+        "img": "",
+        "link": "plity"
+      }
+    ]
+  },
+  {
+    "title": "ноутбуки и компьютеры",
+    "img": "",
+    "link": "notebooks",
+    "subcategory": [
+      {
+        "title": "ноутбуки",
+        "img": "",
+        "link": "noutbuki"
+      },
+      {
+        "title": "компьютеры",
+        "img": "",
+        "link": "kompjutery"
+      },
+      {
+        "title": "комплектующие",
+        "img": "",
+        "link": "komplektujischie"
+      },
+      {
+        "title": "оргтехника",
+        "img": "",
+        "link": "orgtehnika"
+      }
+    ]
+  },
+  {
+    "title": "автотовары",
+    "img": "",
+    "link": "avtotovary",
+    "subcategory": [
+      {
+        "title": "шины",
+        "img": "",
+        "link": "shiny"
+      },
+      {
+        "title": "диски",
+        "img": "",
+        "link": "diski"
+      },
+      {
+        "title": "масло",
+        "img": "",
+        "link": "maslo"
+      },
+      {
+        "title": "фильтры",
+        "img": "",
+        "link": "filtry"
+      }
+    ]
+  },
+  {
+    "title": "строительный инструмент",
+    "img": "",
+    "link": "stroitelny-instrument",
+    "subcategory": [
+      {
+        "title": "рубанки",
+        "img": "",
+        "link": "rubanki"
+      },
+      {
+        "title": "измерительный инструмент",
+        "img": "",
+        "link": "izmeritelnyi-instrument"
+      },
+      {
+        "title": "лобзики",
+        "img": "",
+        "link": "lobziki"
+      },
+      {
+        "title": "болгарки",
+        "img": "",
+        "link": "bolgarki"
+      }
+    ]
+  },
+  {
+    "title": "садовая техника",
+    "img": "",
+    "link": "sadovaja-tehnika",
+    "subcategory": [
+      {
+        "title": "садовые триммеры",
+        "img": "",
+        "link": "sadovye-trimmery"
+      },
+      {
+        "title": "бензопилы",
+        "img": "",
+        "link": "benzopily"
+      },
+      {
+        "title": "воздуходувки",
+        "img": "",
+        "link": "vozduhoduvki"
+      },
+      {
+        "title": "кусторезы",
+        "img": "",
+        "link": "kustorezy"
+      }
+    ]
+  },
+  {
+    "title": "мелкая бытовая техника",
+    "img": "",
+    "link": "melkaja-bytovaja-tehnika",
+    "subcategory": [
+      {
+        "title": "пылесосы",
+        "img": "",
+        "link": "pylesosy"
+      },
+      {
+        "title": "утюги",
+        "img": "",
+        "link": "utjugi"
+      },
+      {
+        "title": "чайники",
+        "img": "",
+        "link": "chainiki"
+      },
+      {
+        "title": "микроволоновки",
+        "img": "",
+        "link": "mikrovolnovki"
+      }
+    ]
+  },
+  {
+    "title": "книги",
+    "img": "",
+    "link": "books",
+    "subcategory": [
+      {
+        "title": "учебная литература",
+        "img": "",
+        "link": "uchebnaja-literatura"
+      },
+      {
+        "title": "детские",
+        "img": "",
+        "link": "detskie"
+      },
+      {
+        "title": "художественная литература",
+        "img": "",
+        "link": "hudozhestvennaja-literatura"
+      },
+      {
+        "title": "психология",
+        "img": "",
+        "link": "psihologija"
+      }
+    ]
+  },
+  {
+    "title": "посуда",
+    "img": "",
+    "link": "posuda",
+    "subcategory": [
+      {
+        "title": "кастрюли",
+        "img": "",
+        "link": "kastruli"
+      },
+      {
+        "title": "тарелки",
+        "img": "",
+        "link": "tarelki"
+      },
+      {
+        "title": "ложки",
+        "img": "",
+        "link": "lozhki"
+      },
+      {
+        "title": "вилки",
+        "img": "",
+        "link": "vilki"
+      }
+    ]
+  }
+]

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './ProfileCard.module.scss';
+import { Link } from 'react-router-dom';
 
 
 export default function ProfileCard() {
@@ -10,9 +11,9 @@ export default function ProfileCard() {
             <p className={styles.user }>User Name</p>
             <p className={styles.bonus}>1500 b.</p>
             <div className={styles[visible ? 'active' : 'offscreen'] }>
-                <a href='/orders'>заказы</a>
-                <a href='/profile'>профиль</a>
-                <a href=''>выйти</a>
+                <Link to='/orders'>заказы</Link>
+                <Link to='/profile'>профиль</Link>
+                <Link to=''>выйти</Link>
             </div>
             </div>
         );
