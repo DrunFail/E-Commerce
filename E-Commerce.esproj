@@ -13,7 +13,6 @@
     <Folder Include="src\components\cart\CartItem\" />
     <Folder Include="src\components\cart\Order\" />
     <Folder Include="src\components\product\productCard\" />
-    <Folder Include="src\components\product\productDescr\" />
     <Folder Include="src\components\forum\forumThemeCard\" />
     <Folder Include="src\components\forum\forumThemeDetail\" />
     <Folder Include="src\components\forum\forumMessage\" />
@@ -22,6 +21,9 @@
     <Folder Include="src\components\logo\" />
     <Folder Include="src\components\orders\ordersList\" />
     <Folder Include="src\components\orders\ordersCard\" />
+    <Folder Include="src\components\product\productDescr\imageBlock\" />
+    <Folder Include="src\components\product\productDescr\menuChoices\" />
+    <Folder Include="src\components\product\productDescr\productDetails\" />
     <Folder Include="src\components\profilecard\" />
     <Folder Include="src\components\Layout\" />
     <Folder Include="src\components\favCategories\" />

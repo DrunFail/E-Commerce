@@ -1,0 +1,38 @@
+.container{
+    grid-column: 1/5;
+    grid-row: 2/3;
+}
+
+
+.properties {
+    grid-column: 1 / 5;
+    grid-row: 2/3;
+}
+
+.propName {
+    margin-bottom: .5em;
+}
+
+.block_properties {
+    margin: 1.5em 1em;
+}
+
+.prop_name {
+    margin-bottom: 0.2em;
+    
+}
+
+
+
+.contain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em;
+
+    .dots {
+        display: block;
+        border-bottom: 1px dashed;
+        width: 100%;
+    }
+}
