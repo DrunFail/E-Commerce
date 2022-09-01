@@ -6,12 +6,12 @@ export const favSlice = createSlice({
         [
             {
             "title": "смартфоны",
-            "link": "/",
+                "link": "smartfony-i-gadzhety/smartfony",
             "img": "/"
         },
             {
                 "title": "телевизоры",
-                "link": "/",
+                "link": "televizory",
                 "img": "/"
             }
         ]

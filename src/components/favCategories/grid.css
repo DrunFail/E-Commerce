@@ -4,4 +4,32 @@
     display: grid;
     position: relative;
     grid-template-columns: repeat(10, 0.2fr);
+    border: 1px solid;
+    border-radius: 1em;
+    
 }
+#fav h6 {
+    
+    
+    background-color: blue;
+    color: white;
+    border-radius: 1em;
+    border: 1px solid;
+    padding: 1em 1em;
+    
+    
+}
+    #fav a {
+        background-color: orange;
+        color: white;
+        border-radius: 1em;
+        border: 1px solid;
+        padding: 1em 1em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    #fav a:hover{
+        background-color: orangered;
+        cursor: pointer;
+    }

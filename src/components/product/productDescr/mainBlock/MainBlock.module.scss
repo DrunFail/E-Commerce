@@ -1,26 +1,50 @@
 .container {
-  
     display: grid;
     justify-content: center;
     justify-items: center;
-    & h1{
+
+    & h1 {
         font-size: 1.5em;
-        & + p{
+
+        & + p {
             font-size: 3em;
             font-weight: 700;
         }
     }
-    .buttons button:first-child{
-        font-size: 2em;
-        border-radius: 1em;
-        padding: 0.2em 0.4em;
-        text-transform: uppercase;
-        background-color: blue;
-        color: white;
-        &:hover{
-            background-color: orange;
-            cursor: pointer;
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        justify-content: space-around;
+
+        & button:first-child {
+            font-size: 2em;
+            border-radius: 1em;
+            padding: 0.2em 0.4em;
+            text-transform: uppercase;
+            background-color: deeppink;
+            color: white;
+
+            &:hover {
+                background-color: orange;
+                cursor: pointer;
+            }
+        }
+
+        .icons {
+            height: 4em;
+            width: 4em;
+            padding: 0.2em 0.4em;
+            background-color: deeppink;
+            fill: white;
+            border-radius: 1em;
+
+            &:hover {
+                background-color: orange;
+                cursor: pointer;
+                
+            }
         }
     }
-    
 }

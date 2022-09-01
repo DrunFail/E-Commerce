@@ -39,5 +39,6 @@
     <Folder Include="src\redux\slices\favorite\" />
     <Folder Include="src\pages\authenticate\" />
     <Folder Include="src\pages\profile\" />
+    <Folder Include="src\redux\slices\compare\" />
   </ItemGroup>
 </Project>

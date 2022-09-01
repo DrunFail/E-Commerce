@@ -2,14 +2,13 @@
     display: grid;
     width: 80%;
     grid-template-columns: 1fr 3fr;
-    
     text-align: center;
     border: 2px solid;
     padding: 1em 2em;
     border-radius: 1em;
-    
-    &:hover{
-       border: 2px solid orange;
+
+    &:hover {
+        border: 2px solid orange;
     }
 
     & > img {
@@ -20,7 +19,7 @@
     .container {
         display: grid;
         justify-items: center;
-        
+
         & a {
             text-decoration: none;
             font-size: 1.1em;
@@ -28,33 +27,55 @@
             color: black;
             margin-bottom: 1em;
         }
-        & p + button{
-            margin-top: 1em;
-            width: 80%;
-            font-size: 2em;
-            border-radius: 1em;
-            &:hover{
-                background-color: orange;
-                color: white;
-                cursor: pointer;
-            }
-           
-        }
-        .prop{
+
+
+
+
+        .prop {
             position: relative;
             top: 0;
             right: 0;
         }
-        
     }
-    p{
-        font-weight:600;
+
+    p {
+        font-weight: 600;
     }
-    span{
+
+    span {
         font-weight: 500;
     }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+
+        & button:first-child {
+            font-size: 2em;
+            border-radius: 1em;
+            padding: 0.2em 0.4em;
+            text-transform: uppercase;
+            background-color: blue;
+            color: white;
+
+            &:hover {
+                background-color: orange;
+                cursor: pointer;
+            }
+        }
+
+        .icons {
+            height: 4em;
+            width: 4em;
+            padding: 0.2em 0.4em;
+            background-color: blue;
+            fill: white;
+            border-radius: 1em;
+
+            &:hover {
+                background-color: orange;
+                cursor: pointer;
+            }
+        }
+    }
 }
-
-
-
-

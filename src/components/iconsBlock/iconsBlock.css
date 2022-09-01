@@ -13,6 +13,9 @@ a{
 }
 
 span{
+    background-color: orange;
+    border-radius: 50%;
+    padding: 0.1em 0.4em;
     position: absolute;
     top: -0.4em;
     left: 1.8em;
