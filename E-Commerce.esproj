@@ -31,7 +31,6 @@
     <Folder Include="src\components\promo\promoCard\" />
     <Folder Include="src\components\promo\promoListDetails\" />
     <Folder Include="src\components\profileSettings\" />
-    <Folder Include="src\components\iconsBlock\" />
     <Folder Include="src\components\favorite\" />
     <Folder Include="src\data\phones\" />
     <Folder Include="src\redux\slices\cart\" />
