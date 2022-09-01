@@ -23,14 +23,5 @@
             border-radius: 0.5em;
         }
     }
-    .cart{
-        position: relative;
-        & > span{
-            position: absolute;
-            color: red;
-            font-weight: 700;
-            top: -5px;
-            right: -15px;
-        }
-    }
+   
 }

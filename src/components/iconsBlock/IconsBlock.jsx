@@ -12,9 +12,9 @@ export default function IconsBlock() {
 
     return (
         <div className={styles.container }>
-            <Link to='cart'><CartSvg className={styles.svg } /><span>{cart.length }</span>   </Link>
-            <Link to='favorite'> <FavoriteSvg className={styles.svg} /><span>{favorite.length}</span> </Link>
-            <Link to='compare'><CompareSvg className={styles.svg} /><span>{compare.length}</span>  </Link>
+            <Link to='cart'><CartSvg /><span>{cart.length }</span>   </Link>
+            <Link to='favorite'> <FavoriteSvg /><span>{favorite.length}</span> </Link>
+            <Link to='compare'><CompareSvg /><span>{compare.length}</span>  </Link>
         </div>
         );
 }

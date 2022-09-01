@@ -41,5 +41,7 @@
     <Folder Include="src\pages\authenticate\" />
     <Folder Include="src\pages\profile\" />
     <Folder Include="src\redux\slices\compare\" />
+    <Folder Include="src\ui\forms\" />
+    <Folder Include="src\ui\buttons\" />
   </ItemGroup>
 </Project>
