@@ -1,0 +1,44 @@
+.container {
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 1em;
+    padding: 0.8em 0.2em;
+    
+
+    & img {
+        height: 10vh;
+    }
+
+    & a {
+    }
+
+    & p {
+
+        &:after {
+            content: 'P';
+            margin-left: 0.2em;
+        }
+    }
+
+    & button {
+        height: 2em;
+        background-color: orange;
+        padding: 0.4em 0.6em;
+        border-radius: 1em;
+        display: flex;
+        align-items: center;
+
+
+        & svg {
+            height: 1.5em;
+        }
+
+        &:hover {
+            background-color: orangered;
+        }
+    }
+}

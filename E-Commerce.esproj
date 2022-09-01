@@ -12,6 +12,7 @@
     <Folder Include="src\components\authenticate\registration\" />
     <Folder Include="src\components\cart\CartItem\" />
     <Folder Include="src\components\cart\Order\" />
+    <Folder Include="src\components\popProduct\popProductCard\" />
     <Folder Include="src\components\product\productCard\" />
     <Folder Include="src\components\forum\forumThemeCard\" />
     <Folder Include="src\components\forum\forumThemeDetail\" />
