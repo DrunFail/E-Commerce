@@ -1,0 +1,13 @@
+.wrapper {
+    border: 1px solid;
+    width: 60%;
+    min-height: 10em;
+    margin-bottom: 1em;
+    text-align: center;
+
+    & h2 {
+        font-size: 1.3em;
+        font-weight: 700;
+        margin-bottom: 1em;
+    }
+}

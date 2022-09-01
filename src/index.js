@@ -9,7 +9,6 @@ import { Provider } from 'react-redux';
 import Home from './pages/Home';
 import Promo from './pages//Promo';
 import Services from './pages/Services';
-import Shops from './pages/Shops';
 import Forum from './pages/Forum';
 import Layout from './components/Layout/Layout';
 import Smartphones from './pages/Catalog/smartgadzhets/Smartphones';
@@ -29,6 +28,7 @@ import Compare from './pages/Compare';
 import OrderHead from './components/cart/orderHead/OrderHead';
 import SubCategoryMenu from './components/Catalog/subCategoryMenu/SubCategoryMenu'
 import ProductDescr from './components/product/productDescr/ProductDescr';
+import ShopsList from './components/shopsList/shopsList/ShopsList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -46,7 +46,7 @@ root.render(
                         </Route>
                         <Route path='services' element={<Services />} />
                         <Route path='delivery' element={<Delivery />} />
-                        <Route path='shops' element={<Shops />} />
+                        <Route path='shops' element={<ShopsList />} />
                         <Route path='favorite' element={<Favorite />} />
                         <Route path='compare' element={<Compare />} />
                         <Route path='forum'>
