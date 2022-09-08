@@ -1,0 +1,12 @@
+.container{
+   border: 1px solid;
+   padding: 0 1em;
+   background-color: orange;
+   border-radius: 1em;
+    & legend{
+        text-transform: uppercase;
+        font-size: .8em;
+        font-weight: 700;
+        margin-bottom: 1em;
+    }
+}

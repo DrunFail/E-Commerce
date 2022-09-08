@@ -1,0 +1,40 @@
+.wrapper {
+
+
+    & label div {
+        padding: .4em .6em;
+        border: 1px solid;
+        border-radius: 1em;
+        height: 6em;
+        margin-bottom: 1em;
+        background-color: white;
+
+        & h2 {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.9em;
+            margin-bottom: .5em;
+        }
+
+        & p {
+            font-style: italic;
+            font-size: 0.9em;
+
+            & span {
+                font-style: initial;
+                font-weight: 700;
+            }
+        }
+    }
+
+
+
+    & input {
+        display: none;
+    }
+
+    & input:checked + label div {
+        color: green;
+        background-color: aqua;
+    }
+}

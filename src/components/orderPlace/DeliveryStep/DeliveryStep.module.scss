@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    margin-bottom: 1em;
+    justify-content: center;
+
+    & legend {
+        text-transform: uppercase;
+        margin-bottom: 1em;
+        text-align: center;
+        font-weight: 700;
+
+        & + div {
+            margin-right: 2em;
+        }
+    }
+
+    & input {
+        display: none;
+
+        &:checked + label {
+            background-color: aqua;
+        }
+    }
+
+    & label {
+        padding: 0.5em 1em;
+        border-radius: 0.8em;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.8em;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

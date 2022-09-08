@@ -25,10 +25,11 @@ import ProfileOrder from './pages/profile/ProfileOrder';
 import ProfileSettings from './pages/profile/ProfileSettings';
 import Favorite from './pages/Favorite';
 import Compare from './pages/Compare';
-import OrderHead from './components/cart/orderHead/OrderHead';
+import OrderStepper from './components/orderPlace/orderStepper/OrderStepper';
 import SubCategoryMenu from './components/Catalog/subCategoryMenu/SubCategoryMenu'
 import ProductDescr from './components/product/productDescr/ProductDescr';
 import ShopsList from './components/shopsList/shopsList/ShopsList';
+import PaymentForm from './components/orderPlace/PaymentStep/PaymentForm/PaymentForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -53,7 +54,8 @@ root.render(
                             <Route index element={<Forum />} />
                             <Route path=':forumId' element={<ForumThemeDetail />} />
                         </Route>
-                        <Route path='order' element={<OrderHead />} />
+                        <Route path='order' element={<OrderStepper />} />
+                        <Route path='payment' element={<PaymentForm /> } />
                         <Route path='cart' >
                             <Route index element={<Cart />} />
                             
