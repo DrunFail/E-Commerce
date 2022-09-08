@@ -31,7 +31,7 @@ export default function PaymentStep({payment, newOrderData, setNewOrderData }) {
                     value='card'
                     name="payment" />
                 <label htmlFor='card'>картой онлайн</label>
-                {payment.payment_method === 'card' && <p>обратите внимание, что при выбранном методе оплаты получить заказ может только указанный получателем человек при предъявлении документа, удостоверяющего личность</p> }
+                {payment === 'card' && <p className={styles.alert }>обратите внимание, что при выбранном методе оплаты получить заказ может только указанный получателем человек при предъявлении документа, удостоверяющего личность</p> }
             </div>
             <div>
 

@@ -5,11 +5,14 @@ import DeliveryStep from '../DeliveryStep/DeliveryStep';
 import PaymentStep from '../PaymentStep/PaymentStep';
 import SuccessOrder from '../successOrder/SuccessOrder';
 import styles from './OrderStepper.module.scss';
+import { useSelector } from 'react-redux';
 
 export default function OrderHead() {
     const links = ['метод оплаты', 'контакты', 'доставка и самовывоз',  'проверка данных', 'подтвердить заказ']
     const [step, setStep] = useState(0);
-    
+
+    const cart = useSelector(state => state.cart)
+    console.log(cart)
     const [newOrderData, setNewOrderData] = useState({
         contacts: {
             name: '',
@@ -32,7 +35,13 @@ export default function OrderHead() {
     })
 
     const { contacts, delivery, payment } = newOrderData
- 
+
+    const addCartOrder = () => {
+        if (step === 3) {
+            console.log(step)
+            setNewOrderData({...newOrderData, order: cart})
+        }
+    }
 
     const textNextButton = () => {
         if (step === 2) {
@@ -49,60 +58,72 @@ export default function OrderHead() {
     }
 
     return (
-        <div className={styles.container}>
-            <div className={styles.head}>
-                {links.slice(0, links.length-1).map((link, id) => 
-                   
-                        <p key={id}
-                            onClick={() => setStep(id)}
-                            className={styles[id < step ? 'active' : id === step ? 'current' : 'non_active']}>{link}</p>
+        <>
+
+    
+        { step === 4 && <SuccessOrder />}
+
+        {
+            step< 4 &&
+                <div className={styles.container}>
+                    <div className={styles.head}>
+                        {links.slice(0, links.length - 1).map((link, id) =>
+
+                            <p key={id}
+                                onClick={() => setStep(id)}
+                                className={styles[id < step ? 'active' : id === step ? 'current' : 'non_active']}>{link}</p>
+
+                        )}
+                    </div>
+
+                    <form className={styles.wrapper} onSubmit={(e) => {
+                        e.preventDefault()
+
+                        setStep(step => ++step)
+                    }}>
+
+                        {step === 1 && <ContactStep
+                            newOrderData={newOrderData}
+                            setNewOrderData={setNewOrderData}
+                            contacts={contacts}
+                        />}
+
+                        {step === 2 && <DeliveryStep
+                            delivery={delivery}
+                            newOrderData={newOrderData}
+                            setNewOrderData={setNewOrderData}
+
+                        />}
+
+                        {step === 0 && <PaymentStep
+                            payment={payment}
+                            setNewOrderData={setNewOrderData}
+                            newOrderData={newOrderData}
+                        />}
+
+                        {step === 3 && <CheckoutOrder
+                            contacts={contacts}
+                            payment={payment}
+                            delivery={delivery}
+                        />}
+
+
+
+                        <div className={styles.buttons}>
+
+                            {step === 0 || step === 4 || <button onClick={() => setStep(step => --step)}>{textPrevButton(links)}</button>}
+
+                            {step === 4 || <button type='submit'
+                                onClick={addCartOrder}
+
+                                className={styles.next} id='btn2' >{textNextButton(links)}</button>}
+
+                        </div>
+                    </form>
+
                     
-                )}
-            </div>
-
-            <form className={styles.wrapper}  onSubmit={(e) => {
-                e.preventDefault()
-                
-                setStep(step => ++step)
-            }}>
-
-                {step === 1 && <ContactStep
-                    newOrderData={newOrderData}
-                    setNewOrderData={setNewOrderData}
-                    contacts={contacts }
-                />}
-
-                {step === 2 && <DeliveryStep
-                    delivery={delivery }
-                    newOrderData={newOrderData}
-                    setNewOrderData={setNewOrderData}
-                   
-                />}
-
-                {step === 0 && <PaymentStep
-                    payment={payment }
-                    setNewOrderData={setNewOrderData}
-                    newOrderData={newOrderData }
-                    />}
-
-                {step === 3 && <CheckoutOrder
-                    contacts={contacts}
-                    payment={payment}
-                    delivery={delivery }
-                />}
-
-                {step === 4 && <SuccessOrder  />}
-
-                <div className={styles.buttons}>
-
-                    {step === 0 || step === 4 || <button onClick={() => setStep(step => --step)}>{textPrevButton(links)}</button>}
-
-                {step === 4 || <button type='submit'  className={styles.next} id='btn2' >{textNextButton(links)}</button>}
-
                 </div>
-            </form>
-
-            
-        </div>
+        }
+    </>
     );
 }
