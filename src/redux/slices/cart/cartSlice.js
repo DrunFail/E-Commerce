@@ -15,7 +15,7 @@ export const cartSlice = createSlice({
         },
         changeCountIncr(state, action) {
             const ch = state.find(elem => elem.id == action.payload)
-            ch.count = ch.count + 1
+            ch.count += 1
         },
         changeCountDecr(state, action) {
             const ch = state.find(elem => elem.id == action.payload)
@@ -25,6 +25,11 @@ export const cartSlice = createSlice({
                 ch.count -= 1
             }
             
+        },
+        changeCountAmount(state, action) {
+            const ch = state.find(elem => elem.id == action.payload.id)
+            
+            ch.count = action.payload.amount
         }
         
     },
@@ -33,6 +38,6 @@ export const cartSlice = createSlice({
 
 })
 
-export const { addCart, deleteCart, changeCountIncr, changeCountDecr } = cartSlice.actions
+export const { addCart, deleteCart, changeCountIncr, changeCountDecr, changeCountAmount } = cartSlice.actions
 
 export default cartSlice.reducer

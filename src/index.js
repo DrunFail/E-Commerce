@@ -7,7 +7,7 @@ import store from './redux/store/store';
 import { Provider } from 'react-redux';
 
 import Home from './pages/Home';
-import Promo from './pages//Promo';
+import Promo from './pages/Promo';
 import Services from './pages/Services';
 import Forum from './pages/Forum';
 import Layout from './components/Layout/Layout';
@@ -15,7 +15,6 @@ import Smartphones from './pages/Catalog/smartgadzhets/Smartphones';
 import AksForPlansh from './pages/Catalog/smartgadzhets/AksForPlansh';
 import AksForSmart from './pages/Catalog/smartgadzhets/AksForSmart';
 import SmartClock from './pages/Catalog/smartgadzhets/SmartClock';
-import Cart from './pages/Cart';
 import NotFound from './pages/NotFound';
 import LoginPage from './pages/authenticate/LoginPage';
 import RegistrationPage from './pages/authenticate/RegistrationPage';
@@ -30,6 +29,7 @@ import SubCategoryMenu from './components/Catalog/subCategoryMenu/SubCategoryMen
 import ProductDescr from './components/product/productDescr/ProductDescr';
 import ShopsList from './components/shopsList/shopsList/ShopsList';
 import PaymentForm from './components/orderPlace/PaymentStep/PaymentForm/PaymentForm';
+import CartList from './components/cart/CartList/CartList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -57,7 +57,7 @@ root.render(
                         <Route path='order' element={<OrderStepper />} />
                         <Route path='payment' element={<PaymentForm /> } />
                         <Route path='cart' >
-                            <Route index element={<Cart />} />
+                            <Route index element={<CartList />} />
                             
 
                         </Route>

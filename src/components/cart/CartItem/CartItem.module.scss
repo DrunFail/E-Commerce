@@ -1,28 +1,73 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 0.1fr 0.7fr 0.15fr 0.1fr 0.15fr 0.1fr;
+    column-gap: 0.4em;
+    align-items: center;
+    justify-items: center;
     background-color: whitesmoke;
-    padding: 2em;
+    padding: 1em;
     border-radius: 1em;
     margin-bottom: 2em;
 
-    .price{
-        &:after{
+
+    & img {
+        width: 6em;
+        border-radius: 1em;
+    }
+
+    & .title {
+    }
+
+    .price {
+        &:after {
             content: ' P'
         }
     }
 
-    .count{
+    .count {
         display: flex;
-        align-items: center;
+        justify-content: space-around;
+        width: 5em;
+
+        & input {
+            width: 1.9em;
+            border-radius: 0.4em;
+            border: 1px solid;
+        }
+
         button {
-            margin: 0 5px;
+            width: 1.5em;
+            border: 1px solid;
+            border-radius: 0.4em;
+
+            &:hover {
+                background-color: orange;
+                color: white;
+            }
         }
     }
 
-    .total_price{
-        &:after{
-            content: ' P'
+    .total_price {
+
+        &:after {
+            content: ' P';
+            
+               
+        }
+    }
+
+    & > button {
+        align-self: center;
+        width: 2em;
+        border: none;
+
+        & svg {
+            height: 1.5em;
+            opacity: 0.6;
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 }
