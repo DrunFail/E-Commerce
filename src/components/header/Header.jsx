@@ -1,3 +1,4 @@
+import SignInButton from "../../ui/buttons/signInButton/SignInButton";
 import IconsBlock from "../iconsBlock/IconsBlock";
 import Logo from "../logo/Logo";
 import Navbar from "../navbar/Navbar";
@@ -17,7 +18,7 @@ export default function Header() {
             <Navbar />
             <IconsBlock />
             {check === 'true' && <ProfileCard />}
-            {check === 'true' || <a href='/login'>sign in</a>}
+            {check === 'true' || <SignInButton text='войти' />}
         </header>
     );
 }

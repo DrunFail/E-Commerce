@@ -1,0 +1,12 @@
+.button{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1em ;
+    background-color: blue;
+    color: white;
+    border-radius: 1em;
+    text-align: center;
+    &:hover{
+        background-color: orange;
+    }
+}
