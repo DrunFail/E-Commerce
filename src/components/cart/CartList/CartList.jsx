@@ -4,6 +4,7 @@ import CartItem from '../CartItem/CartItem';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import EmptyCart from '../emptyCart/EmptyCart';
 
 export default function CartList() {
 
@@ -23,7 +24,7 @@ export default function CartList() {
         <div className={styles.container}>
             <h1 className={styles.title}>корзина</h1>
 
-            {!cart.length && <p>в корзине пока ничего нет</p>}
+            {!cart.length && <EmptyCart />}
 
             {!cart.length || <>
                 <div className={styles.header }>

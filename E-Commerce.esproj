@@ -13,6 +13,7 @@
     <Folder Include="src\components\authenticate\registration\phoneRegistration\" />
     <Folder Include="src\components\cart\CartItem\" />
     <Folder Include="src\components\favoriteProducts\FavoriteProductsList\" />
+    <Folder Include="src\components\favoriteProducts\emptyFavoriteProducts\" />
     <Folder Include="src\components\orderPlace\DeliveryStep\deliveryShopsList\" />
     <Folder Include="src\components\orderPlace\DeliveryStep\deliveryShopsCard\" />
     <Folder Include="src\components\orderPlace\checkoutOrder\" />
@@ -38,6 +39,7 @@
     <Folder Include="src\components\profileSettings\" />
     <Folder Include="src\components\favorite\" />
     <Folder Include="src\components\shopsList\shopsCard\" />
+    <Folder Include="src\components\compare\" />
     <Folder Include="src\data\phones\" />
     <Folder Include="src\redux\slices\cart\" />
     <Folder Include="src\redux\slices\fav\" />
