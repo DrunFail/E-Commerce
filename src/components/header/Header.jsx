@@ -5,12 +5,19 @@ import ProfileCard from "../profilecard/ProfileCard";
 import styles from './Header.module.scss';
 
 export default function Header() {
+    
+     const check = localStorage.getItem('user')
+      
+    
+    
+
     return (
         <header className={styles.header }>
             <Logo />
             <Navbar />
             <IconsBlock />
-            <ProfileCard />
+            {check === 'true' && <ProfileCard />}
+            {check === 'true' || <a href='/login'>sign in</a>}
         </header>
     );
 }

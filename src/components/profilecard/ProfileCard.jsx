@@ -3,8 +3,10 @@ import styles from './ProfileCard.module.scss';
 import { Link } from 'react-router-dom';
 
 
+
 export default function ProfileCard() {
     const [visible, setVisible] = useState(false);
+  
     return (
         <div onClick={() => setVisible(!visible)} className={styles.container }>
             <img className={styles.profileImg} src={process.env.PUBLIC_URL + `/cat.jpeg`} alt='profile img' />
@@ -13,7 +15,7 @@ export default function ProfileCard() {
             <div className={styles[visible ? 'active' : 'offscreen'] }>
                 <Link to='/orders'>заказы</Link>
                 <Link to='/profile'>профиль</Link>
-                <Link to=''>выйти</Link>
+                <a href='/' onClick={() => localStorage.removeItem('user') }>выйти</a>
             </div>
             </div>
         );
