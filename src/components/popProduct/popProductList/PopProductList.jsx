@@ -6,7 +6,8 @@ export default function PopProduct() {
     return (
         <div className={styles.container}>
             <h1>популярные товары</h1>
-            <PopProductCard popProduct={popProduct }/>
+            {popProduct.map((product, index) =>
+                <PopProductCard key={index} product={product} />)}
         </div>
     );
 }

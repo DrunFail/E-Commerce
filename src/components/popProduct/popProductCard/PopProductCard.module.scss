@@ -1,44 +1,76 @@
 .container {
-    height: 100%;
     display: grid;
+    grid-template-rows: minmax(1em) minmax(1em);
+    grid-row-gap: 0.8em;
     justify-items: center;
-    justify-content: center;
     text-align: center;
     border: 1px solid;
     border-radius: 1em;
     padding: 0.8em 0.2em;
-    
+    width: 12em;
 
     & img {
         height: 10vh;
     }
 
     & a {
+        text-decoration: none;
+        color: black;
+        opacity: 80%;
+        font-size: 1.2rem;
+        display: block;
+        height: 5em;
+        
+        font-weight: 300;
+        
     }
 
     & p {
+        font-size: 1.4em;
+        opacity: 80%;
+        font-weight: 500;
 
         &:after {
-            content: 'P';
-            margin-left: 0.2em;
+            content: ' P';
+            
         }
     }
 
-    & button {
-        height: 2em;
-        background-color: orange;
-        padding: 0.4em 0.6em;
-        border-radius: 1em;
+    .buttons {
         display: flex;
-        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+
+        & button {
+            height: 2em;
+            background-color: orange;
+            border-radius: .7em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 5em;
 
 
-        & svg {
-            height: 1.5em;
+
+            & svg {
+                height: 1.3em;
+            }
+
+            &:hover {
+                background-color: lightblue;
+            }
         }
 
-        &:hover {
-            background-color: orangered;
+
+
+        & div svg {
+            height: 1.5em;
+            width: 1.5em;
+            opacity: 0.4;
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 }
