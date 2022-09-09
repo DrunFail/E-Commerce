@@ -6,7 +6,6 @@
     max-width: 980px;
     min-height: 100vh;
     margin: 0 auto;
-    grid-template-columns: 100px 1fr;
     grid-template-rows: minmax(5em, auto) minmax(4em, auto) minmax(20em, auto) minmax(30em, auto) minmax(5em, auto);
     grid-row-gap: 1em;
     font-family: 'Roboto', 'Montserrat', sans-serif;

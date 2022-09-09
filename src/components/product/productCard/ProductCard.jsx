@@ -6,10 +6,11 @@ import { addCompare } from '../../../redux/slices/compare/compareSlice';
 import { nanoid } from '@reduxjs/toolkit';
 import { ReactComponent as FavoriteSvg } from '../../../assets/svg/favorite.svg';
 import { ReactComponent as CompareSvg } from '../../../assets/svg/compare.svg';
+import { useLocation } from 'react-router-dom';
 
 export default function ProductCard({ smart }) {
     const { propertiesPortion } = smart;
-
+    const location = useLocation();
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cart)
 
@@ -24,7 +25,7 @@ export default function ProductCard({ smart }) {
             />
             <div className={styles.container}>
                 <a
-                    href={`smartfony/${smart.nameTranslit}`}
+                    href={`${location.pathname}/${smart.nameTranslit}`}
                     className={styles.product_title} >
                     {smart.name}
                 </a>
@@ -34,7 +35,7 @@ export default function ProductCard({ smart }) {
                 )}
 
 
-                <div className={styles.buttons }>
+                <div className={styles.buttons}>
 
                     <button onClick={() => dispatch(addCart({
                         id: nanoid(),
@@ -47,17 +48,21 @@ export default function ProductCard({ smart }) {
 
                     <button className={styles.icons}
                         onClick={() => dispatch(addFavorite({
-                        id: nanoid(),
-                        title: smart.name
+                            id: nanoid(),
+                            title: smart.name,
+                            img: `http://img.mvideo.ru/${smart.image}`,
+                            link: `${location.pathname}/${smart.nameTranslit}`
+                        }
 
-                    }))}
+
+                        ))}
 
                     ><FavoriteSvg /></button>
                     <button className={styles.icons}
                         onClick={() => dispatch(addCompare({
-                        id: nanoid(),
-                        title: smart.name
-                    })) } ><CompareSvg /></button>
+                            id: nanoid(),
+                            title: smart.name
+                        }))} ><CompareSvg /></button>
                 </div>
             </div>
         </div>

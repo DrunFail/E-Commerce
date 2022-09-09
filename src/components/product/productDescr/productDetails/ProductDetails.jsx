@@ -12,8 +12,8 @@ export default function ProductDetails({ keys, all }) {
                 <div className={styles.block_properties} key={index}>
                     <p className={styles.propName}>{prop.name}</p>
 
-                    {prop.properties.map((item) =>
-                        <div className={styles.contain}>
+                    {prop.properties.map((item, index) =>
+                        <div key={index} className={styles.contain}>
                             <p className={styles.prop_name}> {item.name} </p>
                             <span className={styles.dots}></span>
                             <p> {item.value}</p>

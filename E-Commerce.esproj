@@ -11,6 +11,7 @@
     <Folder Include="src\components\authenticate\login\" />
     <Folder Include="src\components\authenticate\registration\" />
     <Folder Include="src\components\cart\CartItem\" />
+    <Folder Include="src\components\favoriteProducts\FavoriteProductsList\" />
     <Folder Include="src\components\orderPlace\DeliveryStep\deliveryShopsList\" />
     <Folder Include="src\components\orderPlace\DeliveryStep\deliveryShopsCard\" />
     <Folder Include="src\components\orderPlace\checkoutOrder\" />
