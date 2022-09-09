@@ -1,32 +1,8 @@
 @mixin form_main {
-    
-        width: 50%;
-        margin: 0 auto;
-        
+    width: 50%;
+    margin: 0 auto;
 
-        & section {
-            display: grid;
-            margin-bottom: 1em;
-            row-gap: 0.5em;
 
-            & label {
-                
-                text-transform: uppercase;
-                font-weight: 700;
-                opacity: 80%;
-            }
-            & input{
-                border-radius: 1em;
-                height: 2em;
-                padding-left: 1em;
-                
-               
-            }
-        }
-    
-}
-
-@mixin form_section {
     & section {
         display: grid;
         margin-bottom: 1em;
@@ -43,5 +19,23 @@
             height: 2em;
             padding-left: 1em;
         }
+    }
+}
+
+@mixin form_section {
+    display: grid;
+    margin-bottom: 1em;
+    row-gap: 0.5em;
+
+    & label {
+        text-transform: uppercase;
+        font-weight: 700;
+        opacity: 80%;
+    }
+
+    & input {
+        border-radius: 1em;
+        height: 2em;
+        padding-left: 1em;
     }
 }

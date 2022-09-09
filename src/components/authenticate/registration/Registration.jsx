@@ -1,43 +1,42 @@
 import styles from './Registration.module.scss';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import EmailRegistration from './emailRegistr/EmailRegistration';
+import PhoneRegistration from './phoneRegistration/PhoneRegistration';
 
 export default function Registration() {
+    const [method, setMethod] = useState('emailMethod');
+
     return (
         <div className={styles.container}>
             <form className={styles.form}>
                 <h1 className={styles.title}> регистрация</h1>
+                <fieldset  onChange={(e) => setMethod(e.target.value) }>
+                    <legend>выберите способ регистрации</legend>
+                    <div>
+                        <input
+                            type='radio'
+                            id='emailMethod'
+                            value='emailMethod'
+                            name='methodRegistration'
+                            defaultChecked
+                        />
+                        <label htmlFor='emailMethod'>электронная почта</label>
 
-                <label htmlFor='first_name'>имя</label>
-                <input
-                    type='text'
-                    id='first_name'
-                    placeholder='имя' />
-                <label htmlFor='last_name'>фамилия</label>
-                <input
-                    type='text'
-                    id='last_name'
-                    placeholder='фамилия' />
-                <label htmlFor='email'>почта</label>
-                <input
-                    type='email'
-                    id='email'
-                    placeholder='почта' />
-                <label htmlFor='phone'>телефон</label>
-                <input
-                    type='tel'
-                    id='phone'
-                    placeholder='телефон' />
-                <label htmlFor='password'>пароль</label>
-                <input
-                    type='password'
-                    id='password'
-                    placeholder='пароль' />
-                <label htmlFor='repeat_password'>повторить пароль</label>
-                <input
-                    type='password'
-                    id='repeat_password'
-                    placeholder='повторите пароль' />
-                <button>зарегистрироваться</button>
+                        <input
+                            type='radio'
+                            id='phoneMethod'
+                            value='phoneMethod'
+                            name='methodRegistration'
+                        />
+                        <label htmlFor='phoneMethod'>телефон</label>
+                    </div>
+                   
+                </fieldset>
+                {method === 'phoneMethod' && <PhoneRegistration />}
+                {method === 'emailMethod' && <EmailRegistration/> }
+               
+                <button type='submit'>зарегистрироваться</button>
                 <Link to='/login'>есть аккаунт? войти</Link>
             </form>
         </div>

@@ -9,7 +9,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="src\components\authenticate\login\" />
-    <Folder Include="src\components\authenticate\registration\" />
+    <Folder Include="src\components\authenticate\registration\emailRegistr\" />
+    <Folder Include="src\components\authenticate\registration\phoneRegistration\" />
     <Folder Include="src\components\cart\CartItem\" />
     <Folder Include="src\components\favoriteProducts\FavoriteProductsList\" />
     <Folder Include="src\components\orderPlace\DeliveryStep\deliveryShopsList\" />

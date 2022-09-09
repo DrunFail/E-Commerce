@@ -1,54 +1,75 @@
-.container {
-    grid-column: 1/3;
-    grid-row: 2/5;
+.form {
+    display: grid;
+    grid-row-gap: 2em;
+    justify-items: center;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 1em;
+    border: 1px solid;
+    padding: 1em 0 3em;
 
-    .form {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: .5em;
+    & h1 {
+        text-transform: uppercase;
+        font-size: 2em;
+    }
+
+    & fieldset {
         border: 1px solid;
         border-radius: 1em;
-        width: 40%;
-        margin: 0 auto;
-        padding: 1em 2em;
+        padding: 1em;
 
-        .title {
-            grid-column: 1/3;
-            text-align: center;
+
+
+        & legend {
             text-transform: uppercase;
-            font-weight: 700;
-            font-size: 1em;
-            margin-bottom: 1.5em;
+
+            & + div {
+                display: flex;
+                justify-content: center;
+            }
         }
 
         & label {
-            text-transform: capitalize;
-            justify-self: start;
+            padding: 0.4em 1em;
+            border-radius: .5em;
+            text-transform: uppercase;
         }
 
         & input {
-            height: 1.5em;
-            border-radius: .5em;
-            border: 1px solid;
+            display: none;
         }
 
-        button {
-            grid-column: 1/3;
-            justify-self: center;
-            width: 70%;
-            border-radius: 1em;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 1em;
+        & input:checked + label {
+            background-color: orange;
+        }
 
-            &:hover {
-                color: white;
-                background-color: orange;
+        & + section {
+            width: 50%;
+            margin: 0 auto;
+
+            & + button {
+                width: 50%;
+                margin: 0 auto;
+                height: 4em;
+                border-radius: 1em;
+                text-transform: uppercase;
+                font-weight: 700;
+
+                &:hover {
+                    background-color: orange;
+                    color: white;
+                }
             }
         }
-        & a{
-            grid-column: 1/3;
-            text-align: center;
+    }
+
+    & a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &:hover {
+            color: blue;
         }
     }
 }

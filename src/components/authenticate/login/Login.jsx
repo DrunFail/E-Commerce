@@ -2,10 +2,9 @@ import styles from './Login.module.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import users from '../../../data/users.json';
-import { useNavigate } from 'react-router-dom';
+
 
 export default function Login() {
-    const navigate = useNavigate();
 
     const [loginData, setLoginData] = useState(
         {
@@ -32,11 +31,12 @@ export default function Login() {
     }
 
     return (
-        <div className={styles.container}>
-
+      
+            
+            
             <form  className={styles.form}>
                 <h1 className={styles.title}>вход в личный кабинет</h1>
-                <div>
+                <section>
                     <label htmlFor='username' >логин</label>
                     <input
                         type='text'
@@ -47,8 +47,8 @@ export default function Login() {
                         value={loginData.username}
                         onChange={(e) => setLoginData({...loginData, username: e.target.value}) }
                     />
-                </div>
-                <div>
+                </section>
+                <section>
                     <label htmlFor='password'>пароль</label>
                     <input
                         type='password'
@@ -59,12 +59,12 @@ export default function Login() {
                         value={loginData.password}
                         onChange={(e) => setLoginData({...loginData, password: e.target.value}) }
                     />
-                </div>
+                </section>
                 <button type='submit'
                     onClick={checkUser }                >войти</button>
                 <Link to='/registration'>нет аккаунта? зарегистрироваться</Link>
             </form>
-
-        </div>
+       
+       
     );
 }
