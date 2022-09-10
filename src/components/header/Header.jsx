@@ -1,4 +1,5 @@
 import SignInButton from "../../ui/buttons/signInButton/SignInButton";
+import CatalogMenu from "../Catalog/CatalogMenu/CatalogMenu";
 import IconsBlock from "../iconsBlock/IconsBlock";
 import Logo from "../logo/Logo";
 import Navbar from "../navbar/Navbar";
@@ -15,6 +16,7 @@ export default function Header() {
     return (
         <header className={styles.header }>
             <Logo />
+            <CatalogMenu />
             <Navbar />
             <IconsBlock />
             {check === 'true' && <ProfileCard />}

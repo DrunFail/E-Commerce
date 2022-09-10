@@ -1,0 +1,16 @@
+.catalog {
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: blue;
+    color: white;
+    padding: 0.3em 1em;
+    border-radius: 1em;
+    width: 100%;
+    height: 60%;
+    pointer-events: auto;
+    
+
+    &:hover {
+        background-color: orange;
+    }
+}
