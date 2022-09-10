@@ -1,0 +1,22 @@
+.container {
+    text-align: center;
+
+    & p {
+        font-size: 2em;
+    }
+
+    & a {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: blue;
+        color: white;
+        padding: 1em 2em;
+        border-radius: 1em;
+        margin-top: 4em;
+
+        &:hover {
+            background-color: orange;
+        }
+    }
+}

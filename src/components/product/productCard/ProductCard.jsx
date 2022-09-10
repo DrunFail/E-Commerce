@@ -10,6 +10,7 @@ import { useLocation } from 'react-router-dom';
 
 export default function ProductCard({ smart }) {
     const { propertiesPortion } = smart;
+    console.log(propertiesPortion)
     const location = useLocation();
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cart)
@@ -52,6 +53,7 @@ export default function ProductCard({ smart }) {
                             title: smart.name,
                             img: `http://img.mvideo.ru/${smart.image}`,
                             link: `${location.pathname}/${smart.nameTranslit}`
+                            
                         }
 
 
@@ -61,7 +63,11 @@ export default function ProductCard({ smart }) {
                     <button className={styles.icons}
                         onClick={() => dispatch(addCompare({
                             id: nanoid(),
-                            title: smart.name
+                            title: smart.name,
+                            img: `http://img.mvideo.ru/${smart.image}`,
+                            link: `${location.pathname}/${smart.nameTranslit}`,
+                            
+
                         }))} ><CompareSvg /></button>
                 </div>
             </div>

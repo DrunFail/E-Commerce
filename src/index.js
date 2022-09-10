@@ -31,6 +31,7 @@ import ShopsList from './components/shopsList/shopsList/ShopsList';
 import PaymentForm from './components/orderPlace/PaymentStep/PaymentForm/PaymentForm';
 import CartList from './components/cart/CartList/CartList';
 import FavoriteProductsList from './components/favoriteProducts/FavoriteProductsList/FavoriteProductsList';
+import CompareList from './components/compare/compareList/CompareList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -50,7 +51,7 @@ root.render(
                         <Route path='delivery' element={<Delivery />} />
                         <Route path='shops' element={<ShopsList />} />
                         <Route path='favorite' element={<FavoriteProductsList />} />
-                        <Route path='compare' element={<Compare />} />
+                        <Route path='compare' element={<CompareList />} />
                         <Route path='forum'>
                             <Route index element={<Forum />} />
                             <Route path=':forumId' element={<ForumThemeDetail />} />
