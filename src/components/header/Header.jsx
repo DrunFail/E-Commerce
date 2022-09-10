@@ -15,14 +15,17 @@ export default function Header() {
     
 
     return (
-        <header className={styles.header }>
-            <Logo />
-            <CatalogMenu />
-            <Search />
-            <Navbar />
-            <IconsBlock />
-            {check === 'true' && <ProfileCard />}
-            {check === 'true' || <SignInButton text='войти' />}
+        <header className={styles.header}>
+            <div>
+                <Logo />
+                <CatalogMenu />
+                <Search />
+                <Navbar />
+                <IconsBlock />
+                {check === 'true' && <ProfileCard />}
+                {check === 'true' || <SignInButton text='войти' />}
+            </div>
+           
         </header>
     );
 }

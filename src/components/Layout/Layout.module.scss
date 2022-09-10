@@ -1,11 +1,13 @@
-.main{
-    
+.main {
     grid-row: 2/5;
-    display: grid;
-    grid-row-gap: 4em;
-    width: 980px;
-    min-height: 60em;
-    grid-auto-rows: min-content;
-    
-   
+    width: 100vw;
+
+
+    & > div {
+        display: grid;
+        grid-row-gap: 4em;
+        min-height: 60em;
+        grid-auto-rows: min-content;
+        padding: 0 calc((100vw - 1500px)/2);
+    }
 }

@@ -1,16 +1,16 @@
 .container {
-    
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 2em;
     padding: 0 2em;
+    
 
-    & h1 {
+    &  h1 {
+        grid-column: 1/7;
         font-size: 2em;
         font-weight: 700;
-        grid-column-start: 1;
-        grid-column-end: 5;
+        
         text-transform: uppercase;
+        
     }
 }

@@ -7,8 +7,10 @@ export default function Layout() {
     return (
         <>
             <Header />
-            <main className={styles.main }>
-                <Outlet />
+            <main className={styles.main}>
+                <div>
+                    <Outlet />
+                </div>
             </main>
             <Footer />
         </>
