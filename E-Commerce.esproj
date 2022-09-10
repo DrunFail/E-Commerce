@@ -51,5 +51,6 @@
     <Folder Include="src\redux\slices\compare\" />
     <Folder Include="src\ui\buttons\signInButton\" />
     <Folder Include="src\ui\buttons\catalogMenuButton\" />
+    <Folder Include="src\ui\search\" />
   </ItemGroup>
 </Project>
