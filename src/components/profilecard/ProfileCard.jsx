@@ -8,7 +8,8 @@ export default function ProfileCard() {
     const [visible, setVisible] = useState(false);
   
     return (
-        <div onClick={() => setVisible(!visible)} className={styles.container }>
+        <div onClick={() => setVisible(!visible)}
+            className={styles[visible ? 'active-cont' : 'container']}>
             <img className={styles.profileImg} src={process.env.PUBLIC_URL + `/cat.jpeg`} alt='profile img' />
             <p className={styles.user }>User Name</p>
             <p className={styles.bonus}>1500 b.</p>
