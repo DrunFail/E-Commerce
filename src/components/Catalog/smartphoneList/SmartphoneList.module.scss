@@ -1,9 +1,19 @@
-.container {
+.main {
     display: grid;
-    width: inherit;
-    grid-row-gap: 2em;
     justify-items: center;
-    grid-column-start: 2;
+    
 
+    .container {
+        display: grid;
+        grid-template-columns: 0.8fr .2fr;
+        width: 100%;
+        justify-items: center;
+        margin: 0 auto;
+
+        .wrapper {
+            display: grid;
+            grid-row-gap: 2em;
+            justify-self: end;
+        }
+    }
 }
-
