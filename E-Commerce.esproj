@@ -20,6 +20,7 @@
     <Folder Include="src\components\orderPlace\DeliveryStep\deliveryShopsList\" />
     <Folder Include="src\components\orderPlace\DeliveryStep\deliveryShopsCard\" />
     <Folder Include="src\components\orderPlace\checkoutOrder\" />
+    <Folder Include="src\components\orders\ordersDetails\" />
     <Folder Include="src\components\popProduct\popProductCard\" />
     <Folder Include="src\components\product\productCard\" />
     <Folder Include="src\components\forum\forumThemeCard\" />
