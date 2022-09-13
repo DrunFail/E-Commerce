@@ -2,6 +2,314 @@
   {
     "id": "1",
     "username": "test",
-    "password":  "test"
+    "password": "test",
+    "info": [
+      {
+        "id": 1,
+        "name": "Персональные данные",
+        "data": [
+          {
+            "name": "firstName",
+            "value": "Вася",
+            "description": "Имя"
+          },
+          {
+            "name": "LastName",
+            "value": "Пупкин",
+            "description": "Фамилия"
+          }
+         
+          
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Контактная информация",
+        "data": [
+          {
+            "name": "phone",
+            "value": "985554455",
+            "description": "Телефон"
+          },
+          {
+            "name": "email",
+            "value": "dkjfsk@@@@@@",
+            "description": "email"
+          }
+
+        ]
+         
+        
+      }
+    ],
+    "cart": [
+      {
+        "id": "fzpDsCExZD1wmLdwDOaNA",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "count": 1,
+        "price": 5000
+      },
+      {
+        "id": "2zPXFYK6V4v3F1BzkGGCV",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "count": 1,
+        "price": 5000
+      },
+      {
+        "id": "p_DyV8ZFUxjEKOHxhkH5D",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "count": 1,
+        "price": 5000
+      },
+      {
+        "id": "8fNFZHTr6f8xdwRAQ1QwK",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "count": 1,
+        "price": 5000
+      },
+      {
+        "id": "CZwk9g4r0BvWgVwdQaDND",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "count": 1,
+        "price": 5000
+      }
+    ],
+    "favorite": [
+      {
+        "id": "uI4EoqTkIMWZ3HzYmso0H",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "TImg2YGzIRD0MXY5dPzLg",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "-lDZa-YNfu9VEvr97ztc-",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "nrHt4fbyY4g5DrL1eiKQe",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "2shIOTqrfopo_nkqqHd6I",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "YZB7PZe8UASQJ2uL077G6",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "6GoKokJ9kwfaQ7NzL160s",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      }
+    ],
+    "compare": [
+      {
+        "id": "u3NbZi6OdVyGLXRp5cZAs",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "EvpwBU9iJU1fOq4loO3PR",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "o3aQiCGsMDtumqatmM9jG",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "kVEAvr2BwmQlioshkNqu8",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "BZnoHhwaR71drdnGQB_E4",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "3cagNG1_5EVk9abXnh80s",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "OiuVGHT_ZBAuE5f0Rztke",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "-YbEU0OS384kZW0Nt34QO",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      }
+    ]
+    
+      
+    
+
+    
+  },
+  {
+    "id": "2",
+    "username": "test2",
+    "password": "test2",
+    "info": {
+      "personal": {
+        "first_name": "попугай",
+        "last_name": "кеша"
+      },
+      "contacts": {
+        "phone": "+798555555",
+        "email": "оааыоао@аораыо"
+      }
+
+    },
+
+    "cart": [
+      {
+        "id": "fzpDsCExZD1wmLdwDOaNA",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "count": 1,
+        "price": 5000
+      },
+      {
+        "id": "2zPXFYK6V4v3F1BzkGGCV",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "count": 1,
+        "price": 5000
+      },
+      {
+        "id": "p_DyV8ZFUxjEKOHxhkH5D",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "count": 1,
+        "price": 5000
+      },
+      {
+        "id": "8fNFZHTr6f8xdwRAQ1QwK",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "count": 1,
+        "price": 5000
+      },
+      {
+        "id": "CZwk9g4r0BvWgVwdQaDND",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "count": 1,
+        "price": 5000
+      }
+    ],
+    "favorite": [
+      {
+        "id": "TImg2YGzIRD0MXY5dPzLg",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "-lDZa-YNfu9VEvr97ztc-",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "nrHt4fbyY4g5DrL1eiKQe",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "2shIOTqrfopo_nkqqHd6I",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "YZB7PZe8UASQJ2uL077G6",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "6GoKokJ9kwfaQ7NzL160s",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      }
+    ],
+    "compare": [
+      {
+        "id": "u3NbZi6OdVyGLXRp5cZAs",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "EvpwBU9iJU1fOq4loO3PR",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "o3aQiCGsMDtumqatmM9jG",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "kVEAvr2BwmQlioshkNqu8",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "BZnoHhwaR71drdnGQB_E4",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "3cagNG1_5EVk9abXnh80s",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "OiuVGHT_ZBAuE5f0Rztke",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      },
+      {
+        "id": "-YbEU0OS384kZW0Nt34QO",
+        "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+        "img": "http://img.mvideo.ru/Pdb/small_pic/480/30063297b.jpg",
+        "link": "/smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n"
+      }
+    ]
   }
+
 ]

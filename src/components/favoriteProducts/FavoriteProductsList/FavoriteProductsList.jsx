@@ -5,6 +5,7 @@ import EmptyFavoriteProducts from '../emptyFavoriteProducts/EmptyFavoriteProduct
 
 export default function FavoriteProductsList() {
     const favorite = useSelector(state => state.favorite)
+    
 
     return (
         <div className={styles.container }>

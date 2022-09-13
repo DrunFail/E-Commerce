@@ -1,21 +1,34 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+const getInitialState = () => {
+    let item = localStorage.getItem('cart')
+    if (item) {
+        return JSON.parse(localStorage.cart)
+    } else {
+        return []
+    }
+}
+
 export const cartSlice = createSlice({
     name: 'cart',
     initialState: 
-          []
+          getInitialState()
         
     ,
     reducers: {
         addCart(state, action) {
             state.push(action.payload)
+            localStorage.setItem('cart', JSON.stringify(state))
         },
         deleteCart(state, action) {
-            return state.filter((elem) => elem.id !== action.payload)
+            const newState = state.filter((elem) => elem.id !== action.payload)
+            localStorage.setItem('cart', JSON.stringify(newState))
+            return newState
         },
         changeCountIncr(state, action) {
             const ch = state.find(elem => elem.id == action.payload)
             ch.count += 1
+            localStorage.setItem('cart', JSON.stringify(state))
         },
         changeCountDecr(state, action) {
             const ch = state.find(elem => elem.id == action.payload)
@@ -24,6 +37,7 @@ export const cartSlice = createSlice({
             } else {
                 ch.count -= 1
             }
+            localStorage.setItem('cart', JSON.stringify(state))
             
         },
         changeCountAmount(state, action) {
@@ -38,6 +52,12 @@ export const cartSlice = createSlice({
 
 })
 
-export const { addCart, deleteCart, changeCountIncr, changeCountDecr, changeCountAmount } = cartSlice.actions
+export const { addCart,
+    deleteCart,
+    changeCountIncr,
+    changeCountDecr,
+    changeCountAmount,
+   
+} = cartSlice.actions
 
 export default cartSlice.reducer

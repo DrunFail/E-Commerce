@@ -10,6 +10,7 @@ export default function CartList() {
 
     const [total, setTotal] = useState(0);
     const cart = useSelector(state => state.cart)
+    
 
     useEffect(() => {
         let totalPrice = cart.reduce((sum, elem) => sum += Number(elem.price * elem.count), 0)

@@ -40,7 +40,6 @@
     <Folder Include="src\components\notFoundPage\" />
     <Folder Include="src\components\promo\promoCard\" />
     <Folder Include="src\components\promo\promoListDetails\" />
-    <Folder Include="src\components\profileSettings\" />
     <Folder Include="src\components\favorite\" />
     <Folder Include="src\components\shopsList\shopsCard\" />
     <Folder Include="src\data\phones\" />
@@ -50,6 +49,7 @@
     <Folder Include="src\pages\authenticate\" />
     <Folder Include="src\pages\profile\" />
     <Folder Include="src\redux\slices\compare\" />
+    <Folder Include="src\redux\slices\user\" />
     <Folder Include="src\ui\buttons\signInButton\" />
     <Folder Include="src\ui\buttons\catalogMenuButton\" />
     <Folder Include="src\ui\filter\sort\" />

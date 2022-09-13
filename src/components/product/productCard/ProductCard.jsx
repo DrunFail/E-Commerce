@@ -10,7 +10,7 @@ import { useLocation } from 'react-router-dom';
 
 export default function ProductCard({ smart }) {
     const { propertiesPortion } = smart;
-    console.log(propertiesPortion)
+    
     const location = useLocation();
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cart)

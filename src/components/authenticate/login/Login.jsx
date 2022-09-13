@@ -2,10 +2,11 @@ import styles from './Login.module.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import users from '../../../data/users.json';
+import { useDispatch } from 'react-redux';
 
 
 export default function Login() {
-
+  
     const [loginData, setLoginData] = useState(
         {
             username: '',
@@ -16,15 +17,22 @@ export default function Login() {
     const checkUser = () => {
         const checkResult = users.find(user => user.username === loginData.username && 
             user.password === loginData.password)
+        
         if (checkResult) {
+            const { cart, favorite, compare, info } = checkResult;
+            localStorage.setItem('cart', JSON.stringify(cart))
+            localStorage.setItem('compare', JSON.stringify(compare))
+            localStorage.setItem('favorite', JSON.stringify(favorite))
+            localStorage.setItem('userData', JSON.stringify(info))
             localStorage.setItem('user', true);
-            window.location.reload()
+            
            
             setLoginData({
                 username: '',
                 password: ''
 
             })
+            
             
           
         }
@@ -34,7 +42,7 @@ export default function Login() {
       
             
             
-            <form  className={styles.form}>
+        <form onSubmit={(e) => e.preventDefault() } className={styles.form}>
                 <h1 className={styles.title}>вход в личный кабинет</h1>
                 <section>
                     <label htmlFor='username' >логин</label>

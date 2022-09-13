@@ -1,38 +1,21 @@
 import styles from './Profile.module.scss';
+import { useSelector } from 'react-redux';
+import ProfilePersonal from './profilePersonal/ProfilePersonal';
+
 
 export default function Profile() {
+    const userData = useSelector(state => state.user)
+    
     return (
         <div className={styles.container}>
-            <h1> Profile settings</h1>
-            <div className={styles.wrapper}>
-                <h2>персональная информация</h2>
-                <div>
-                    <p>image</p>
-                    <p>имя</p>
-                    <p>фамилия</p>
-
-                </div>
-               
-
+            <h1> Настройки профиля</h1>
+            <div className={styles.block }>
+                {userData.map(elem => <>
+                    <h2>{elem.name}</h2>
+                    <ProfilePersonal elem={elem} />
+                </>)}
             </div>
-            <div className={styles.contacts}>
-                <h2>contacts</h2>
-                <div>
-                    <p>телефон</p>
-                    <p>email</p>
-
-                </div>
-            </div>
-            <div className={styles.security }>
-                <h2>безопасность</h2>
-                <div>
-                <p>изменить пароль</p>
-
-                </div>
-
-
-            </div>
-
+            
 
         </div>
     );
