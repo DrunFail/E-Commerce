@@ -1,9 +1,8 @@
 .container {
     display: flex;
-
+    justify-content: space-between;
     & a {
         position: relative;
-        padding: 0.2em 0.2em;
 
         & span {
             background-color: orange;
@@ -21,8 +20,9 @@
     }
 
     & svg {
-        width: 40px;
-        height: 20px;
+        height: 1.7em;
         opacity: 0.8;
+        fill: white;
     }
+   
 }

@@ -27,7 +27,7 @@ export default function PromoSlider() {
     return (
         <div className={styles.container }>
             {promoSlider.map((img, index) =>
-                <img className={styles[`${imgActiveIndex === index ? 'active' : 'offscreen'}`]} key={index} src={process.env.PUBLIC_URL + `${img.path}`} alt='promo' />) }
+                <img  className={styles[`${imgActiveIndex === index ? 'active' : 'offscreen'}`]} key={index} src={process.env.PUBLIC_URL + `${img.path}`} alt='promo' />) }
         </div>
         );
 }

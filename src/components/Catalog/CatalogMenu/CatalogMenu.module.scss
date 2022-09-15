@@ -43,3 +43,8 @@
 .offscreen {
     display: none;
 }
+@media (min-width: 320px) and (max-width: 499px) {
+    .wrapperButton{
+        justify-self: start;
+    }
+}

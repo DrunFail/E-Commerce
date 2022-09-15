@@ -57,3 +57,14 @@
     color: black;
     
 }
+@media (min-width: 320px) and (max-width: 499px) {
+    .container{
+        display: block;
+        width: min-content;
+        padding: 0;
+    }
+    
+    .user, .bonus{
+        display: none;
+    }
+}

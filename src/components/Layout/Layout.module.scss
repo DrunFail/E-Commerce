@@ -1,6 +1,6 @@
 .main {
-    grid-row: 2/5;
-    width: 100vw;
+    grid-row: 2/3;
+
 
 
     & > div {
@@ -9,5 +9,13 @@
         min-height: 60em;
         grid-auto-rows: min-content;
         padding: 0 calc((100vw - 1500px)/2);
+    }
+}
+@media (min-width: 320px) and (max-width: 499px) {
+    .main{
+        width: 100vw;
+        & > div{
+            grid-row-gap: 1em;
+        }
     }
 }

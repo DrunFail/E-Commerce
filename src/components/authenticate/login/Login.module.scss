@@ -56,3 +56,17 @@
         }
     }
 }
+@media (min-width: 320px) and (max-width: 499px) {
+    .form{
+        width: 80vw;
+        padding: 2em 0;
+        
+        & h1{
+            text-align: center;
+        }
+        & a{
+            width: 50vw;
+            text-align: center;
+        }
+    }
+}

@@ -5,9 +5,13 @@
 
 #root {
     display: grid;
+    width: 100vw;
     justify-items: center;
-    max-width: 1500px;
     grid-row-gap: 4em;
     font-family: 'Roboto', 'Montserrat', sans-serif;
-    
+}
+@media (min-width: 320px) and (max-width: 499px) {
+    #root{
+        grid-row-gap: 1em;
+    }
 }

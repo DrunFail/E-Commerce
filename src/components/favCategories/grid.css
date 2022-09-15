@@ -1,10 +1,12 @@
 #fav {
+    width: 100%;
     display: grid;
     position: relative;
-    grid-template-columns: repeat(10, 0.2fr);
+    grid-template-columns: repeat(8, calc(100% / 8));
     border: 1px solid;
     border-radius: 1em;
     height: 5em;
+    
     
 }
 #fav h6 {
@@ -32,3 +34,9 @@
         background-color: orangered;
         cursor: pointer;
     }
+
+@media (min-width: 320px) and (max-width: 499px) {
+    #fav{
+        grid-template-columns: repeat(4, calc(100vw / 4));
+    }
+}

@@ -26,6 +26,7 @@
     display: grid;
     margin-bottom: 1em;
     row-gap: 0.5em;
+    justify-content:center;
 
     & label {
         text-transform: uppercase;
@@ -38,4 +39,11 @@
         height: 2em;
         padding-left: 1em;
     }
-}
+
+    @media (min-width: 320px) and (max-width: 499px) {
+        & input{
+            width: 70vw;
+            
+        }
+    }
+    }

@@ -1,5 +1,5 @@
 import { ReactComponent as CartSvg } from '../../assets/svg/cart.svg';
-import { ReactComponent as FavoriteSvg } from '../../assets/svg/favorite.svg';
+import { ReactComponent as FavoriteSvg } from '../../assets/svg/heart.svg';
 import { ReactComponent as CompareSvg } from '../../assets/svg/compare.svg';
 import { useSelector } from 'react-redux';
 import styles from './IconsBlock.module.scss';

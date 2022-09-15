@@ -73,3 +73,26 @@
         }
     }
 }
+@media (min-width: 320px) and (max-width: 499px) {
+    .form {
+        width: 80vw;
+        height: 488px;
+
+        & fieldset {
+            width: 95%;
+            padding: 0.4em 0.2em;
+
+            & label {
+                padding: 0.4em;
+            }
+
+            & input {
+                width: 90vw;
+            }
+        }
+
+        button[type='submit'] {
+            width: 70vw;
+        }
+    }
+}

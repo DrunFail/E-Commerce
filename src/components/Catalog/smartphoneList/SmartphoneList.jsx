@@ -5,10 +5,15 @@ import Sort from '../../../ui/filter/sort/Sort';
 import FilterPropertie from '../../../ui/filter/filterProperties/FilterPropertie';
 
 export default function SmartphoneList() {
+    const width = document.documentElement.clientWidth
     return (
         <div className={styles.main }>
             <h1>Смартфоны найдено: {mproducts.length}</h1>
-            <Sort />
+            {width <= 500 || <>
+                <Sort />
+                <FilterPropertie />
+                </>
+            }
 
             <div className={styles.container}>
                 
@@ -21,7 +26,7 @@ export default function SmartphoneList() {
                     }
                 </div>
                     
-                    <FilterPropertie />
+                    
               
                
             </div>

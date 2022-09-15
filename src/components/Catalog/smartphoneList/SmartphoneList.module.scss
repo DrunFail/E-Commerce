@@ -17,3 +17,20 @@
         }
     }
 }
+@media (min-width: 320px) and (max-width: 499px) {
+    .main{
+        width: 100vw;
+        grid-row-gap: 1em;
+        & h1{
+            text-transform: uppercase;
+            font-size: 1.2em;
+            justify-self: center;
+            font-weight: 500;
+        }
+        .container{
+            .wrapper{
+                grid-row-gap: 1em;
+            }
+        }
+    }
+}

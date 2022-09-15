@@ -27,7 +27,7 @@ export default function CatalogMenu() {
 
     return (
         <>
-            <div onClick={toggleVisible}>
+            <div className={styles.wrapperButton} onClick={toggleVisible}>
                 <CatalogMenuButton />
             </div>
            
