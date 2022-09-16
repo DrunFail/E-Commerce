@@ -71,3 +71,21 @@
         }
     }
 }
+@media (min-width: 374px) and (max-width: 499px) {
+    .container {
+        width: 100vw;
+        padding: 1em 0.2em;
+
+        & img {
+            width: 4em;
+        }
+
+        .title, .price, .total_price {
+            font-size: 0.8em;
+        }
+
+        & button {
+            display: none;
+        }
+    }
+}

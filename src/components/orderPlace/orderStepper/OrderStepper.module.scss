@@ -67,3 +67,12 @@
         }
     }
 }
+@media (min-width: 320px) and (max-width: 499px) {
+    .container {
+        & .wrapper {
+            width: 100vw;
+            margin: 0;
+        }
+    }
+    
+}

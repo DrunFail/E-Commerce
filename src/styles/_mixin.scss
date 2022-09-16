@@ -20,13 +20,22 @@
             padding-left: 1em;
         }
     }
+
+    @media (min-width: 320px) and (max-width: 499px) {
+        & section{
+            width: 80vw;
+            margin: 0 auto 1em;
+            
+            
+        }
+    }
 }
 
 @mixin form_section {
     display: grid;
     margin-bottom: 1em;
     row-gap: 0.5em;
-    justify-content:center;
+    justify-content: center;
 
     & label {
         text-transform: uppercase;
@@ -41,9 +50,8 @@
     }
 
     @media (min-width: 320px) and (max-width: 499px) {
-        & input{
+        & input {
             width: 70vw;
-            
         }
     }
-    }
+}
