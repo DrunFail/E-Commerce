@@ -42,6 +42,7 @@
     <Folder Include="src\components\promo\promoListDetails\" />
     <Folder Include="src\components\favorite\" />
     <Folder Include="src\components\shopsList\shopsCard\" />
+    <Folder Include="src\components\yandexMaps\" />
     <Folder Include="src\data\phones\" />
     <Folder Include="src\redux\slices\cart\" />
     <Folder Include="src\redux\slices\fav\" />
