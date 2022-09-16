@@ -5,7 +5,6 @@ import CompareCard from '../compareCard/CompareCard';
 
 export default function CompareList() {
     const compare = useSelector(state => state.compare)
-    console.log(compare)
     return (
         <div className={styles.container }>
             <h1>список сравнения</h1>

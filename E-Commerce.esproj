@@ -43,6 +43,7 @@
     <Folder Include="src\components\favorite\" />
     <Folder Include="src\components\shopsList\shopsCard\" />
     <Folder Include="src\components\yandexMaps\" />
+    <Folder Include="src\components\mobileNavbar\" />
     <Folder Include="src\data\phones\" />
     <Folder Include="src\redux\slices\cart\" />
     <Folder Include="src\redux\slices\fav\" />
@@ -55,5 +56,8 @@
     <Folder Include="src\ui\buttons\catalogMenuButton\" />
     <Folder Include="src\ui\filter\sort\" />
     <Folder Include="src\ui\search\" />
+    <Folder Include="src\ui\svgComponents\compare\" />
+    <Folder Include="src\ui\svgComponents\cart\" />
+    <Folder Include="src\ui\svgComponents\home\" />
   </ItemGroup>
 </Project>

@@ -50,10 +50,13 @@
         width: 100vw;
         grid-column: 1;
 
-        & div {
+
+        & > div {
             grid-template-columns: repeat(1, 1fr);
             grid-row-gap: 1em;
-            .sell{
+            margin-block-end: 4rem;
+
+            .sell {
                 row-gap: 0;
             }
         }

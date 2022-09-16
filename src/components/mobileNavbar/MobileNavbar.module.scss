@@ -1,0 +1,17 @@
+.container{
+    width: 100vw;
+    height: 4rem;
+    background-color: pink;
+    position: fixed;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+    & svg {
+        height: 2rem;
+        padding: 1rem;
+        
+    }
+}
