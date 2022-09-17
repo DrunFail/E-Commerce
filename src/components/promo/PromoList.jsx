@@ -5,8 +5,12 @@ import PromoCard from './promoCard/PromoCard';
 export default function PromoList() {
     return (
         <div className={styles.container }>
-            <h1 className={styles.title}>список акций</h1>
-            <PromoCard promoList={promoList }/>
+            <h1 className={styles.title}>Cписок акций</h1>
+            {promoList.map(promo =>
+                <PromoCard
+                    promo={promo}
+                />)}
+           
         </div>
         );
 }
