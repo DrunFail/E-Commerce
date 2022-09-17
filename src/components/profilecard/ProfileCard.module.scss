@@ -59,7 +59,6 @@
 }
 @media (min-width: 320px) and (max-width: 499px) {
     .container{
-        display: block;
         width: min-content;
         padding: 0;
     }
@@ -67,4 +66,12 @@
     .user, .bonus{
         display: none;
     }
+    .active-cont {
+       padding: 0;
+        .active {
+            width: auto;
+            top: 2.5em;
+        }
+    }
+    
 }
