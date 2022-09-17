@@ -14,30 +14,22 @@ export default function Header() {
     const check = localStorage.getItem('user')
     let width = document.documentElement.clientWidth
 
-    
-    
-
-
-
     return (
         <div className={styles.headerWrapper}>
-            <header className={styles.header}>
+            <header className={styles[width < 500 ? 'mobileHeader' : 'header']}>
                 <Logo />
-                {width <= 500 || <div className={styles.headerContent}>
+                
                     <CatalogMenu />
+                {width < 500 || <>
                     <Search />
                     <Navbar />
                     <IconsBlock />
+                </>}
+                   
                     {check === 'true' && <ProfileCard />}
                     {check === 'true' || <SignInButton text='войти' />}
-                </div>}
-                {width <= 500 &&
-                    <div className={styles.mobile }>
-                        <CatalogMenu />  
-                        {check === 'true' && <ProfileCard />}
-                        {check === 'true' || <SignInButton text='войти' />}
-                    </div>
-                    }
+               
+                
             </header>
         </div>
     );
