@@ -24,7 +24,7 @@
             justify-items: center;
             padding: .5em 0;
             
-            & a{
+            & + a{
                 grid-column: 2/3;
             }
             & div:nth-child(2){
