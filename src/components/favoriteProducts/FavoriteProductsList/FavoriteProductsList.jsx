@@ -10,7 +10,7 @@ export default function FavoriteProductsList() {
     return (
         <div className={styles.container }>
             <h1>избранные товары</h1>
-            {favorite && <EmptyFavoriteProducts /> }
+            {!favorite.length && <EmptyFavoriteProducts /> }
             {favorite.map(product => <FavoriteProductsCard key={product.id} product={product } />) }
         </div>
         );

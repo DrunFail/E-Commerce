@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './EmptyFavoriteProducts.module.scss';
 
+
 export default function EmptyFavoriteProducts() {
     return (
         <div className={styles.container} >
