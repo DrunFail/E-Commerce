@@ -1,14 +1,14 @@
 .container {
- 
-    & > h1 {
-        text-align: center;
+    display: grid;
+    padding-inline-start: 2em;
 
+    & > h1 {
         font: {
             size: 2em;
             weight: 700;
         }
 
-        text-transform: uppercase;
-        
+        ;
+        margin-block-end: 2em;
     }
 }
