@@ -59,5 +59,6 @@
     <Folder Include="src\ui\svgComponents\compare\" />
     <Folder Include="src\ui\svgComponents\cart\" />
     <Folder Include="src\ui\svgComponents\home\" />
+    <Folder Include="src\ui\svgComponents\delete\" />
   </ItemGroup>
 </Project>

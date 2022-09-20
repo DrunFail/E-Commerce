@@ -5,20 +5,18 @@
 
 
     .active {
-        max-inline-size: 100%;
-        width: auto;
+        inline-size: 100%;
+        block-size: auto;
         position: relative;
-        object-fit: fill;
-        object-position: center;
+        object-fit: cover;
+        
         
     }
 
     .offscreen {
         display: none;
-        object-position: center;
-        object-fit: fill;
+        object-fit: cover;
         max-inline-size: 100%;
-       
-        width: auto;
+        block-size: auto;
     }
 }

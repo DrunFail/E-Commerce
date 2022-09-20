@@ -1,32 +1,39 @@
 import { Link } from 'react-router-dom';
-import { ReactComponent as CartSvg } from '../../../assets/svg/cart.svg';
-import { ReactComponent as CompareSvg } from '../../../assets/svg/compare.svg';
-import { ReactComponent as FavoriteSvg } from '../../../assets/svg/heart.svg';
+import CartSvgComponent from '../../../ui/svgComponents/cart/CartSvgComponent';
+import CompareSvgComponent from '../../../ui/svgComponents/compare/CompareSvgComponent';
+import FavoriteListSvgComponent from '../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import styles from './PopProductCard.module.scss';
 
 
 export default function PopProductCard({ product }) {
-   
+
     return (
         <>
 
             <div className={styles.container}>
-                <img  alt='image' src={process.env.PUBLIC_URL + `${product.img}`} />
+                <img
+                    alt={`изображение ${product.title}`}
+                    src={process.env.PUBLIC_URL + `${product.img}.jpg`}
+                    srcSet={process.env.PUBLIC_URL + `${product.img}.jpg` + ` 1080w`,
+                        process.env.PUBLIC_URL + `${product.img}-small.jpg` + ` 480w`
+                    }
+
+                />
                 <Link
                     className={styles.titleProduct}
                     to={product.link}
                 >
                     {product.title}
                 </Link>
-                <p className={styles.priceProduct }>{product.price}</p>
-                <div className={styles.buttons }>
-                   
+                <p className={styles.priceProduct}>{product.price}</p>
+                <div className={styles.buttons}>
+
                     <div>
-                        <CompareSvg />
-                        <FavoriteSvg />
+                        <CompareSvgComponent />
+                        <FavoriteListSvgComponent />
                     </div>
-                    <button ><CartSvg /></button>
-                   
+                    <button aria-label="add to cart" ><CartSvgComponent /></button>
+
                 </div>
 
             </div>

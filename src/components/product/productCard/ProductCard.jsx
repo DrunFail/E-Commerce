@@ -4,9 +4,9 @@ import { addCart } from '../../../redux/slices/cart/cartSlice';
 import { addFavorite } from '../../../redux/slices/favorite/favoriteSlice';
 import { addCompare } from '../../../redux/slices/compare/compareSlice';
 import { nanoid } from '@reduxjs/toolkit';
-import { ReactComponent as FavoriteSvg } from '../../../assets/svg/favorite.svg';
-import { ReactComponent as CompareSvg } from '../../../assets/svg/compare.svg';
 import { useLocation } from 'react-router-dom';
+import CompareSvgComponent from '../../../ui/svgComponents/compare/CompareSvgComponent';
+import FavoriteListSvgComponent from '../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 
 export default function ProductCard({ smart }) {
     const { propertiesPortion } = smart;
@@ -59,7 +59,7 @@ export default function ProductCard({ smart }) {
 
                         ))}
 
-                    ><FavoriteSvg /></button>
+                    ><FavoriteListSvgComponent /></button>
                     <button className={styles.icons}
                         onClick={() => dispatch(addCompare({
                             id: nanoid(),
@@ -68,7 +68,7 @@ export default function ProductCard({ smart }) {
                             link: `${location.pathname}/${smart.nameTranslit}`,
                             
 
-                        }))} ><CompareSvg /></button>
+                        }))} ><CompareSvgComponent /></button>
                 </div>
             </div>
         </div>

@@ -13,7 +13,13 @@ export default function ProfileCard() {
     return (
         <div onClick={() => setVisible(!visible)}
             className={styles[visible ? 'active-cont' : 'container']}>
-            <img className={styles.profileImg} src={process.env.PUBLIC_URL + `/cat.jpeg`} alt='profile img' />
+            <img
+                className={styles.profileImg}
+                src={process.env.PUBLIC_URL + `/cat.jpeg`}
+                srcSet={process.env.PUBLIC_URL + `/cat.jpeg` + ` 1080w`,
+                    process.env.PUBLIC_URL + `/cat-small.jpg` + ` 480w`
+                }
+                alt='profile img' />
             <p className={styles.user}>{data.map(elem => elem.value )}</p>
             <p className={styles.bonus}>1500 b.</p>
             <div className={styles[visible ? 'active' : 'offscreen'] }>

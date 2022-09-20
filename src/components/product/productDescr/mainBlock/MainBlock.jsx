@@ -1,11 +1,11 @@
 import styles from './MainBlock.module.scss';
-import { ReactComponent as FavSvg } from '../../../../assets/svg/favorite.svg';
-import { ReactComponent as CompareSvg } from '../../../../assets/svg/compare.svg'; 
 import { addFavorite } from '../../../../redux/slices/favorite/favoriteSlice';
 import { addCompare } from '../../../../redux/slices/compare/compareSlice';
 import { useDispatch } from 'react-redux';
 import { addCart } from '../../../../redux/slices/cart/cartSlice';
 import { nanoid } from '@reduxjs/toolkit';
+import CompareSvgComponent from '../../../../ui/svgComponents/compare/CompareSvgComponent';
+import FavoriteListSvgComponent from '../../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 
 export default function MainBlock({ name, price }) {
     const dispatch = useDispatch();
@@ -23,8 +23,8 @@ export default function MainBlock({ name, price }) {
                 <button onClick={() => dispatch(addFavorite({
                     id: nanoid(),
                     title: name
-                })) } className={styles.icons}>{<FavSvg />}</button>
-                <button onClick={() => dispatch(addCompare)} className={styles.icons} >{<CompareSvg /> }</button>
+                })) } className={styles.icons}>{<FavoriteListSvgComponent />}</button>
+                <button onClick={() => dispatch(addCompare)} className={styles.icons} >{<CompareSvgComponent /> }</button>
             </div>
         </div>
         );
