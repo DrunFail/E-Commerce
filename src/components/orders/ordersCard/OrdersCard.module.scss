@@ -8,7 +8,7 @@
     display: grid;
     row-gap: 2em;
 
-    .block{
+    .block {
         display: grid;
         row-gap: 1em;
     }
@@ -19,28 +19,17 @@
         justify-items: center;
 
         & p {
-            font-size: 1.2em;
+            font-size: 1rem;
 
             & span {
-                
+                font-size: 1.2rem;
                 font-weight: 500;
             }
         }
 
-        & > div p:first-child {
-            font-size: 1.2em;
+        
 
-            & span {
-                text-transform: capitalize;
-                font-weight: 500;
-            }
-        }
-
-        & > div p:last-child {
-            font-style: italic;
-            font-size: 0.9em;
-        }
-        & a{
+        & a {
             justify-self: end;
         }
     }
@@ -53,5 +42,22 @@
 
     .offscreen {
         display: none;
+    }
+}
+@media (min-width: 320px) and (max-width: 499px){
+    .container {
+        padding: 1em .5em;
+
+        .main {
+            grid-template-columns: repeat(4, 1fr) 1em;
+
+            & p {
+                font-size: .7rem;
+
+                & span {
+                    font-size: .8rem;
+                }
+            }
+        }
     }
 }

@@ -3,7 +3,7 @@ import styles from './OrdersDetails.module.scss';
 export default function OrdersDetails({elem }) {
     return (
         <div className={styles.container}>
-            <img src={process.env.PUBLIC_URL + `/cat.jpeg`} />
+            <img src={process.env.PUBLIC_URL + `/popProductImg/kama-small.jpg`} />
             <p className={styles.title}>{elem.title} </p>
             <p className={styles.price}>{elem.price} </p>
                 <p> {elem.count}</p>

@@ -11,15 +11,15 @@ export default function OrdersCard({ order }) {
         <div className={styles.container}>
             <div className={styles.main}>
                 <div>
-                    <p><span>заказ:</span> {order.id}</p>
-                    <p><span>создан:</span> 14.08.2022</p>
+                    <p><span>Заказ:</span> {order.id}</p>
+                    <p>от 14.08.2022</p>
                 </div>
                
                 
-                <p><span>Дата получения: </span>{order.date}</p>
+                <p><span>Получен: </span>{order.date}</p>
                 <p><span>Сумма заказа: </span>{cart.reduce((sum, elem) => (sum += elem.price * elem.count), 0)} P</p>
-                <p><span>позиций в заказе:</span> {cart.length }</p>
-                <a onClick={() => setVisible(!visible)} href='#'>подробнее</a>
+                <p><span>Позиций:</span> {cart.length }</p>
+                <a onClick={() => setVisible(!visible)} href='#'>{`<`}</a>
             </div>
             <div className={styles.block }>
                 {visible && cart.map(elem =>

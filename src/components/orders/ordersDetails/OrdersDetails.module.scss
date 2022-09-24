@@ -1,38 +1,32 @@
 .container {
     display: grid;
-    grid-template-columns: 0.1fr 0.7fr 0.15fr 0.1fr 0.15fr 0.1fr;
+    grid-template-columns: 0.1fr 0.7fr 0.15fr 0.1fr 0.1fr;
     column-gap: 0.4em;
     align-items: center;
     justify-items: center;
     background-color: whitesmoke;
     padding: 1em;
     border-radius: 1em;
-    
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
 
     & img {
-        width: 6em;
         border-radius: 1em;
     }
 
-    & .title {
-    }
-
-    .price {
+    .price, .total_price {
         &:after {
             content: ' P'
         }
     }
+}
 
-    
-
-    .total_price {
-
-        &:after {
-            content: ' P';
-        }
+@media (min-width: 320px) and (max-width: 499px) {
+    .title, .price, .total_price {
+        font-size: 0.8rem;
     }
 
-   
+    img {
+        height: 3em;
+    }
 }
