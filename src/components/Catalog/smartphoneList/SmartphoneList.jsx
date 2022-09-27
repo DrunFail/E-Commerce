@@ -7,7 +7,8 @@ import FilterPropertie from '../../../ui/filter/filterProperties/FilterPropertie
 export default function SmartphoneList() {
     const width = document.documentElement.clientWidth
     return (
-        <div className={styles.main }>
+        <div className={styles.main}>
+            
             <h1>Смартфоны найдено: {mproducts.length}</h1>
             {width <= 500 || <>
                 <Sort />

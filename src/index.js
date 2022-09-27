@@ -39,6 +39,7 @@ root.render(
                 <Routes>
                     <Route path='/' element={<Layout />} >
                         <Route index element={<Home />} />
+                        
                         <Route path='login' element={<LoginPage />} />
                         <Route path='registration' element={<RegistrationPage />} />
                         <Route path='promo'>

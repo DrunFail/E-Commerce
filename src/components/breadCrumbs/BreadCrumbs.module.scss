@@ -1,0 +1,10 @@
+.breadCrumbs{
+    & a{
+        padding-inline-end: 1em;
+        text-decoration: none;
+    }
+    & a:last-child{
+        pointer-events: none;
+        color: black;
+    }
+}

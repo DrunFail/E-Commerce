@@ -11,7 +11,7 @@ export default function MainBlock({ name, price }) {
     const dispatch = useDispatch();
     return (
         <div className={styles.container}>
-            <h1 >{name}</h1>
+            <h1 id='title'>{name}</h1>
             <p >{price} P</p>
             <div className={styles.buttons}>
                 <button onClick={() => dispatch(addCart({
