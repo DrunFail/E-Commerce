@@ -42,7 +42,7 @@ export default function BreadCrumbs() {
             route.path === path
 
         )
-        return match?.name || titleById || pathname
+        return match?.name || titleById  || path 
     }
 
     const getLinkCrumbs = (index) => {

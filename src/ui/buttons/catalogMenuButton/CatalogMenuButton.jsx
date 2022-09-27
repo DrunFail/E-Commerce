@@ -1,7 +1,12 @@
+import MenuSvgComponent from '../../svgComponents/menu/MenuSvgComponent';
 import styles from './CatalogMenuButton.module.scss';
 
 export default function CatalogMenuButton() {
     return (
-        <button className={styles.catalog }>каталог</button>
+        <button
+            className={styles.catalog}
+        >
+            <MenuSvgComponent />каталог
+        </button>
         );
 }
