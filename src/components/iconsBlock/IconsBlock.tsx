@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAppSelector } from '../../redux/hooks';
 import { selectCart } from '../../redux/slices/cart/cartSlice';
 import { selectCompare } from '../../redux/slices/compare/compareSlice';
-import { selectFavorite } from '../../redux/slices/favorite/favoriteSlice';
+import { selectFavorite } from '../../redux/slices/favorite/favoriteProductsSlice';
 import CartSvgComponent from '../../ui/svgComponents/cart/CartSvgComponent';
 import CompareSvgComponent from '../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';

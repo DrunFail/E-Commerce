@@ -1,10 +1,9 @@
-import { useState } from 'react';
-import CategoryMenu from '../../../data/CategoryMenu.json';
-import styles from './CatalogMenu.module.scss';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import CategoryMenu from '../../../data/CategoryMenu.json';
 import CatalogMenuButton from '../../../ui/buttons/catalogMenuButton/CatalogMenuButton';
-import React from 'react';
+import styles from './CatalogMenu.module.scss';
+
 
 export default function CatalogMenu() {
 

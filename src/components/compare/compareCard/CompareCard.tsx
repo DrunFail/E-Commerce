@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppDispatch } from '../../../redux/hooks';
-import { deleteCompare } from '../../../redux/slices/compare/compareSlice';
+import { deleteItemFromCompare } from '../../../redux/slices/compare/compareSlice';
 import styles from './CompareCard.module.scss';
 
 type Compare = {
@@ -22,7 +22,7 @@ export default function CompareCard({ product }: CompareCardProps) {
         <div className={styles.container }>
             <img src={product.img} alt={product.title } />
             <Link to={product.link}>{product.title}</Link>
-            <button onClick={() => dispatch(deleteCompare(product.id)) }>delete</button>
+            <button onClick={() => dispatch(deleteItemFromCompare(product.id)) }>delete</button>
 
         </div>
         

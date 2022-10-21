@@ -18,32 +18,25 @@ const getInitialState = (): Favorite[] => {
     }
 }
 
-export const favoriteSlice = createSlice({
-    name: 'favorite',
+export const favoriteProductsSlice = createSlice({
+    name: 'favoriteProducts',
     initialState:
          getInitialState(),
 
     reducers: {
-        addFavorite(state, action) {
+        addItemToFavoriteProducts(state, action) {
             state.push(action.payload)
             localStorage.setItem('favorite', JSON.stringify(state))
         },
-        removeFavorite(state, action) {
+        removeItemFromFavoriteProducts(state, action) {
             const newState = state.filter((elem) => elem.id !== action.payload)
             localStorage.setItem('favorite', JSON.stringify(newState))
             return newState
         }
-        
-    
-
         }
-
     },
-
-
-
 )
 
-export const { addFavorite, removeFavorite } = favoriteSlice.actions
-export const selectFavorite = (state: RootState) => state.favorite
-export default favoriteSlice.reducer
+export const { addItemToFavoriteProducts, removeItemFromFavoriteProducts } = favoriteProductsSlice.actions
+export const selectFavorite = (state: RootState) => state.favoriteProducts
+export default favoriteProductsSlice.reducer

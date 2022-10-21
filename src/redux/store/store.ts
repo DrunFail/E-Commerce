@@ -1,15 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit'
 import cartReducer from '../slices/cart/cartSlice'
-import favReducer from '../slices/fav/favSlice'
-import favoriteReducer from '../slices/favorite/favoriteSlice';
+import favoriteCategoriesReducer from '../slices/fav/favoriteCategoriesSlice'
+import favoriteProductsReducer from '../slices/favorite/favoriteProductsSlice';
 import compareReducer from '../slices/compare/compareSlice';
 import userReducer from '../slices/user/userSlice';
 
 export const store = configureStore({
     reducer: {
         cart: cartReducer,
-        fav: favReducer,
-        favorite: favoriteReducer,
+        favoriteCategories: favoriteCategoriesReducer,
+        favoriteProducts: favoriteProductsReducer,
         compare: compareReducer,
         user: userReducer
     }

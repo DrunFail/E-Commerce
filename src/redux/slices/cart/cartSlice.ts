@@ -37,16 +37,20 @@ export const cartSlice = createSlice({
         
     ,
     reducers: {
-        addCart(state, action: PayloadAction<IAddCart>) {
+        addItemToCart(state, action: PayloadAction<IAddCart>) {
             state.push(action.payload)
             localStorage.setItem('cart', JSON.stringify(state))
         },
-        deleteCart(state, action: PayloadAction<string>) {
+
+
+        deleteItemFromCart(state, action: PayloadAction<string>) {
             const newState = state.filter((elem: IElem) => elem.id !== action.payload)
             localStorage.setItem('cart', JSON.stringify(newState))
             return newState
         },
-        changeCountIncr(state, action: PayloadAction<string>) {
+
+
+        incrementQuantityItems(state, action: PayloadAction<string>) {
             const ch = state.find((elem: IElem) => elem.id == action.payload)
             if (ch) {
                 ch.count += 1
@@ -54,7 +58,9 @@ export const cartSlice = createSlice({
             }
             
         },
-        changeCountDecr(state, action: PayloadAction<string>) {
+
+
+        decrementQuantityItems(state, action: PayloadAction<string>) {
             const ch = state.find((elem: IElem) => elem.id == action.payload)
             if (ch) {
                 if (ch.count == 1) {
@@ -65,10 +71,10 @@ export const cartSlice = createSlice({
                 localStorage.setItem('cart', JSON.stringify(state))
 
             }
-            
-            
         },
-        changeCountAmount(state, action: PayloadAction<IAmount>) {
+
+
+        changeQuantityItemsAmount(state, action: PayloadAction<IAmount>) {
             const ch = state.find((elem: IElem) => elem.id == action.payload.id)
             if (ch) {
                 ch.count = action.payload.amount
@@ -83,11 +89,11 @@ export const cartSlice = createSlice({
 
 })
 
-export const { addCart,
-    deleteCart,
-    changeCountIncr,
-    changeCountDecr,
-    changeCountAmount,
+export const { addItemToCart,
+    deleteItemFromCart,
+    incrementQuantityItems,
+    decrementQuantityItems,
+    changeQuantityItemsAmount,
    
 } = cartSlice.actions
 

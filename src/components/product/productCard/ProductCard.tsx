@@ -2,9 +2,9 @@ import { nanoid } from '@reduxjs/toolkit';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useAppDispatch } from '../../../redux/hooks';
-import { addCart } from '../../../redux/slices/cart/cartSlice';
-import { addCompare } from '../../../redux/slices/compare/compareSlice';
-import { addFavorite } from '../../../redux/slices/favorite/favoriteSlice';
+import { addItemToCart } from '../../../redux/slices/cart/cartSlice';
+import { addItemToCompare } from '../../../redux/slices/compare/compareSlice';
+import { addItemToFavoriteProducts } from '../../../redux/slices/favorite/favoriteProductsSlice';
 import CompareSvgComponent from '../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import styles from './ProductCard.module.scss';
@@ -53,7 +53,7 @@ export default function ProductCard({ smart }: ProductCardProps) {
 
                 <div className={styles.buttons}>
 
-                    <button onClick={() => dispatch(addCart({
+                    <button onClick={() => dispatch(addItemToCart({
                         id: nanoid(),
                         title: smart.name,
                         count: 1,
@@ -63,7 +63,7 @@ export default function ProductCard({ smart }: ProductCardProps) {
                     </button>
 
                     <button className={styles.icons}
-                        onClick={() => dispatch(addFavorite({
+                        onClick={() => dispatch(addItemToFavoriteProducts({
                             id: nanoid(),
                             title: smart.name,
                             img: `http://img.mvideo.ru/${smart.image}`,
@@ -76,7 +76,7 @@ export default function ProductCard({ smart }: ProductCardProps) {
 
                     ><FavoriteListSvgComponent /></button>
                     <button className={styles.icons}
-                        onClick={() => dispatch(addCompare({
+                        onClick={() => dispatch(addItemToCompare({
                             id: nanoid(),
                             title: smart.name,
                             img: `http://img.mvideo.ru/${smart.image}`,

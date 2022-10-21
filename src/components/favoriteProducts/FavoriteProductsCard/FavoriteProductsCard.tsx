@@ -1,5 +1,5 @@
 import styles from './FavoriteProductsCard.module.scss';
-import { removeFavorite } from '../../../redux/slices/favorite/favoriteSlice';
+import { removeItemFromFavoriteProducts } from '../../../redux/slices/favorite/favoriteProductsSlice';
 import { Link } from 'react-router-dom';
 import DeleteSvgComponent from '../../../ui/svgComponents/delete/DeleteSvgComponent';
 import React from 'react';
@@ -25,7 +25,7 @@ export default function FavoriteProductsCard({ product }: FavoriteProductsCardPr
         <div className={styles.container }>
             <img src={product.img } />
             <Link to={product.link }>{product.title}</Link>
-            <button onClick={() => dispatch(removeFavorite(product.id)) }><DeleteSvgComponent /></button>
+            <button onClick={() => dispatch(removeItemFromFavoriteProducts(product.id)) }><DeleteSvgComponent /></button>
         </div>
         );
 }

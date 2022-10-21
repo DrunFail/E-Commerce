@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { changeCountAmount, changeCountDecr, changeCountIncr, deleteCart } from '../../../redux/slices/cart/cartSlice';
+import { changeQuantityItemsAmount, decrementQuantityItems, incrementQuantityItems, deleteItemFromCart } from '../../../redux/slices/cart/cartSlice';
 import DeleteSvgComponent from '../../../ui/svgComponents/delete/DeleteSvgComponent';
 import styles from './CartItem.module.scss';
 
@@ -27,19 +27,19 @@ export default function CartList({ elem, id }: IProps) {
 
             <div className={styles.count}>
 
-                <button onClick={() => dispatch(changeCountDecr(id))} >-</button>
+                <button onClick={() => dispatch(decrementQuantityItems(id))} >-</button>
 
                 <input
                     value={elem.count}
                     onChange={(e) => {
                         const amount = +e.target.value
-                        dispatch(changeCountAmount({ id, amount }))
+                        dispatch(changeQuantityItemsAmount({ id, amount }))
                     }
                     } />
-                <button onClick={() => dispatch(changeCountIncr(id))}>+</button>
+                <button onClick={() => dispatch(incrementQuantityItems(id))}>+</button>
             </div>
             <p className={styles.total_price}>{elem.count * elem.price}</p>
-            <button onClick={() => dispatch(deleteCart(id))}><DeleteSvgComponent /></button>
+            <button onClick={() => dispatch(deleteItemFromCart(id))}><DeleteSvgComponent /></button>
         </div>
     );
 }

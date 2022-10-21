@@ -4,8 +4,8 @@ import type { RootState } from '../../store/store'
 
 
 
-export const favSlice = createSlice({
-    name: 'fav',
+export const favoriteCategoriesSlice = createSlice({
+    name: 'favoriteCategories',
     initialState:
         [
             {
@@ -22,19 +22,17 @@ export const favSlice = createSlice({
 
     ,
     reducers: {
-        addFav(state, action) {
+        addItemToFavoriteCategories(state, action) {
             state.push(action.payload)
         },
-        deleteFav(state, action) {
+
+
+        removeItemFromFavoriteCategories(state, action) {
             return state.filter((elem) => elem.title !== action.payload)
         }
-
     },
-
-
-
 })
 
-export const { addFav, deleteFav } = favSlice.actions
-export const selectFav = (state: RootState) => state.fav
-export default favSlice.reducer
+export const { addItemToFavoriteCategories, removeItemFromFavoriteCategories } = favoriteCategoriesSlice.actions
+export const selectFav = (state: RootState) => state.favoriteCategories
+export default favoriteCategoriesSlice.reducer

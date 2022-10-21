@@ -25,26 +25,20 @@ export const compareSlice = createSlice({
         getInitialState(),
 
     reducers: {
-        addCompare(state, action) {
+        addItemToCompare(state, action) {
             state.push(action.payload)
             localStorage.setItem('compare', JSON.stringify(state))
         },
-        deleteCompare(state, action) {
+
+
+        deleteItemFromCompare(state, action) {
             const newState = state.filter((elem) => elem.id !== action.payload)
             localStorage.setItem('compare', JSON.stringify(newState))
             return newState
-            
-            
         }
-
-       
-
     },
-
-
-
 })
 
-export const { addCompare, deleteCompare } = compareSlice.actions
+export const { addItemToCompare, deleteItemFromCompare } = compareSlice.actions
 export const selectCompare = (state: RootState) => state.compare
 export default compareSlice.reducer

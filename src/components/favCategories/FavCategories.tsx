@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppSelector } from '../../redux/hooks';
-import { selectFav } from '../../redux/slices/fav/favSlice';
+import { selectFav } from '../../redux/slices/fav/favoriteCategoriesSlice';
 import styles from './FavCategories.module.scss';
 
 
