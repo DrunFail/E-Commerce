@@ -1,4 +1,4 @@
-#fav {
+.fav {
     width: 100%;
     display: grid;
     position: relative;
@@ -6,21 +6,16 @@
     border: 1px solid;
     border-radius: 1em;
     height: 5em;
-    
-    
-}
-#fav h6 {
-    
-    
-    background-color: blue;
-    color: white;
-    border-radius: 1em;
-    border: 1px solid;
-    padding: 1em 1em;
-    
-    
-}
-    #fav a {
+
+    & h6 {
+        background-color: blue;
+        color: white;
+        border-radius: 1em;
+        border: 1px solid;
+        padding: 1em 1em;
+    }
+
+    & a {
         background-color: orange;
         color: white;
         border-radius: 1em;
@@ -29,14 +24,16 @@
         text-decoration: none;
         text-transform: uppercase;
         font-weight: 700;
-    }
-    #fav a:hover{
-        background-color: orangered;
-        cursor: pointer;
+
+        &:hover {
+            background-color: orangered;
+            cursor: pointer;
+        }
     }
 
-@media (min-width: 320px) and (max-width: 499px) {
-    #fav{
-        grid-template-columns: repeat(4, calc(100vw / 4));
+    @media (min-width: 320px) and (max-width: 499px) {
+        .fav {
+            grid-template-columns: repeat(4, calc(100vw / 4));
+        }
     }
 }
