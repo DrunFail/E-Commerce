@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './Sort.module.scss';
 
 export default function Sort() {

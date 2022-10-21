@@ -1,5 +1,5 @@
+import React, { useState } from 'react';
 import styles from './Search.module.scss';
-import { useState } from 'react';
 
 export default function Search() {
     const [search, setSearch] = useState('');

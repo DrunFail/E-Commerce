@@ -8,17 +8,9 @@
     <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="src\components\yandexMaps\" />
     <Folder Include="src\data\phones\" />
     <Folder Include="src\pages\authenticate\" />
     <Folder Include="src\pages\profile\" />
-    <Folder Include="src\ui\filter\sort\" />
-    <Folder Include="src\ui\search\" />
-    <Folder Include="src\ui\svgComponents\compare\" />
-    <Folder Include="src\ui\svgComponents\cart\" />
-    <Folder Include="src\ui\svgComponents\home\" />
-    <Folder Include="src\ui\svgComponents\delete\" />
-    <Folder Include="src\ui\svgComponents\menu\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="node_modules\react-scripts\config\webpack.config.js" />

@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './FilterProperties.module.scss';
 
 import InputSection from './InputSection';

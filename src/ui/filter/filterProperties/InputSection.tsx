@@ -1,6 +1,10 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-export default function InputSection({propertie }) {
+interface InputSectionProps {
+    propertie: string
+}
+
+export default function InputSection({propertie }: InputSectionProps) {
     const [visible, setVisible] = useState(false)
 
     return (
