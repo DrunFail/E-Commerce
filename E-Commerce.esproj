@@ -8,52 +8,10 @@
     <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="src\components\authenticate\login\" />
-    <Folder Include="src\components\authenticate\registration\emailRegistr\" />
-    <Folder Include="src\components\authenticate\registration\phoneRegistration\" />
-    <Folder Include="src\components\cart\CartItem\" />
-    <Folder Include="src\components\compare\compareList\" />
-    <Folder Include="src\components\compare\compareCard\" />
-    <Folder Include="src\components\compare\emptyCompare\" />
-    <Folder Include="src\components\favoriteProducts\FavoriteProductsList\" />
-    <Folder Include="src\components\favoriteProducts\emptyFavoriteProducts\" />
-    <Folder Include="src\components\orderPlace\DeliveryStep\deliveryShopsList\" />
-    <Folder Include="src\components\orderPlace\DeliveryStep\deliveryShopsCard\" />
-    <Folder Include="src\components\orderPlace\checkoutOrder\" />
-    <Folder Include="src\components\orders\ordersDetails\" />
-    <Folder Include="src\components\popProduct\popProductCard\" />
-    <Folder Include="src\components\product\productCard\" />
-    <Folder Include="src\components\forum\forumThemeCard\" />
-    <Folder Include="src\components\forum\forumThemeDetail\" />
-    <Folder Include="src\components\forum\forumMessage\" />
-    <Folder Include="src\components\forum\forumAddMessage\" />
-    <Folder Include="src\components\navbar\" />
-    <Folder Include="src\components\logo\" />
-    <Folder Include="src\components\orders\ordersList\" />
-    <Folder Include="src\components\orders\ordersCard\" />
-    <Folder Include="src\components\product\productDescr\imageBlock\" />
-    <Folder Include="src\components\product\productDescr\menuChoices\" />
-    <Folder Include="src\components\product\productDescr\productDetails\" />
-    <Folder Include="src\components\profilecard\" />
-    <Folder Include="src\components\Layout\" />
-    <Folder Include="src\components\favCategories\" />
-    <Folder Include="src\components\notFoundPage\" />
-    <Folder Include="src\components\promo\promoCard\" />
-    <Folder Include="src\components\promo\promoListDetails\" />
-    <Folder Include="src\components\favorite\" />
-    <Folder Include="src\components\shopsList\shopsCard\" />
     <Folder Include="src\components\yandexMaps\" />
-    <Folder Include="src\components\mobileNavbar\" />
     <Folder Include="src\data\phones\" />
-    <Folder Include="src\redux\slices\cart\" />
-    <Folder Include="src\redux\slices\fav\" />
-    <Folder Include="src\redux\slices\favorite\" />
     <Folder Include="src\pages\authenticate\" />
     <Folder Include="src\pages\profile\" />
-    <Folder Include="src\redux\slices\compare\" />
-    <Folder Include="src\redux\slices\user\" />
-    <Folder Include="src\ui\buttons\signInButton\" />
-    <Folder Include="src\ui\buttons\catalogMenuButton\" />
     <Folder Include="src\ui\filter\sort\" />
     <Folder Include="src\ui\search\" />
     <Folder Include="src\ui\svgComponents\compare\" />
@@ -61,5 +19,8 @@
     <Folder Include="src\ui\svgComponents\home\" />
     <Folder Include="src\ui\svgComponents\delete\" />
     <Folder Include="src\ui\svgComponents\menu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="node_modules\react-scripts\config\webpack.config.js" />
   </ItemGroup>
 </Project>
