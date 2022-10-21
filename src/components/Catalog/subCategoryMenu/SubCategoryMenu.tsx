@@ -36,8 +36,13 @@ export default function SubCategoryMenu() {
         <div className={styles.container }>
 
         {
-            subcategory.map((cate, index: number) => 
-                <Link key={index} to={cate.link}>{cate.title}</Link>
+                subcategory.map((cate, index: number) => 
+                    <div className={styles.card }>
+                        <img src={process.env.PUBLIC_URL + `subCategoryImg/${cate.link}.jpg`}
+                            />
+                        <Link key={index} to={cate.link}>{cate.title}</Link>
+                        </div>
+                
            )
         }
         </div>

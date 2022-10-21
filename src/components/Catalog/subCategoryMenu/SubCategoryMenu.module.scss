@@ -6,16 +6,25 @@
     width: 80%;
     margin: 0 auto;
 
-    & a {
+    & .card {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
         border: 1px solid;
         border-radius: 1em;
         padding: 1em 2em;
-        text-decoration: none;
-        font-size: 2em;
-        font-weight: 700;
-        &:hover{
-            background-color: orange;
-            color: white;
+
+      
+
+        & a {
+            text-decoration: none;
+            font-size: 2em;
+            font-weight: 700;
+
+            &:hover {
+                background-color: orange;
+                color: white;
+            }
         }
     }
 }
