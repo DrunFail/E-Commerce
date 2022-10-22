@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useAppSelector } from '../../../redux/hooks';
 import { Link } from 'react-router-dom';
 import CartItem from '../CartItem/CartItem';
@@ -19,17 +19,9 @@ interface IElem {
 
 export default function CartList() {
 
-    const [total, setTotal] = useState(0);
     const cart = useAppSelector(selectCart)
-    
 
-    useEffect(() => {
-        let totalPrice = cart.reduce((sum: number, elem: { price: number; count: number; }) => sum += Number(elem.price * elem.count), 0)
-        setTotal(totalPrice)
-    }, [cart])
-
-
-
+    const totalPrice = cart.reduce((sum: number, elem: { price: number; count: number; }) => sum += Number(elem.price * elem.count), 0)
 
     return (
 
@@ -39,17 +31,17 @@ export default function CartList() {
             {!cart.length && <EmptyCart />}
 
             {!cart.length || <>
-                <div className={styles.header }>
+                <div className={styles.header}>
                     <p>photo</p>
                     <p>name</p>
                     <p>price</p>
                     <p>count</p>
                     <p>total</p>
                     <p></p>
-                    
-                    
+
+
                 </div>
-                {cart.map((elem:IElem) =>
+                {cart.map((elem: IElem) =>
                     <CartItem
                         key={elem.id}
                         elem={elem}
@@ -58,7 +50,7 @@ export default function CartList() {
                 )}
 
                 <p className={styles.total}>
-                    Итого: {total}
+                    Итого: {totalPrice}
                 </p>
 
                 <Link className={styles.link}
