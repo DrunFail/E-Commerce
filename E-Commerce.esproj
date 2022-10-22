@@ -9,6 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="src\components\Catalog\subCategoryMenuCard\" />
+    <Folder Include="src\components\scrollToTop\" />
     <Folder Include="src\data\phones\" />
     <Folder Include="src\pages\authenticate\" />
     <Folder Include="src\pages\profile\" />

@@ -30,6 +30,7 @@ import PromoDetails from './pages/PromoDetails';
 import Services from './pages/Services';
 import CartPage from './pages/CartPage';
 import ComparePage from './pages/ComparePage';
+import ScrollToTop from './components/scrollToTop/ScrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
@@ -37,7 +38,9 @@ root.render(
     <Provider store={store}>
         <BrowserRouter>
             <React.StrictMode>
+                <ScrollToTop />
                 <Routes>
+                    
                     <Route path='/' element={<Layout />} >
                         <Route index element={<Home />} />
                         
@@ -87,7 +90,7 @@ root.render(
                         <Route path='posuda' element={<SubCategoryMenu />} />
                         <Route path="*" element={<NotFound />} />
                     </Route>
-
+                    
                 </Routes>
             </React.StrictMode>
         </BrowserRouter>
