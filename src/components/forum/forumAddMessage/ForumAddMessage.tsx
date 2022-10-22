@@ -14,12 +14,13 @@ interface ForumAddMessageProps {
     setListMessages: Dispatch<SetStateAction<Messages[]>>
 }
 
-export default function ForumAddMessage({listMessages, setListMessages }:ForumAddMessageProps ) {
+export default function ForumAddMessage({ listMessages, setListMessages }: ForumAddMessageProps) {
     const [message, setMessage] = useState('');
+
 
     const addMessage = () => {
         const newMessage = {
-            id: listMessages.at(-1).id + 1 ,
+            id: listMessages[listMessages.length - 1]?.id + 1 || 1,
             author: 'admin',
             value: message,
             date_create: Date()

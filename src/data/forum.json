@@ -24,12 +24,7 @@
     "create": "admin",
     "date_create": "24.08.2022",
     "messages": [
-      {
-        "id": 1,
-        "value": "hi there",
-        "author": "user2",
-        "date_create": "24.08.2022"
-      }
+      
     ]
 
   },
