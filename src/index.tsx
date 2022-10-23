@@ -6,7 +6,7 @@ import Delivery from './pages/Delivery';
 import { store } from './redux/store/store';
 import './styles/index.scss';
 
-import SubCategoryMenu from './components/Catalog/subCategoryMenu/SubCategoryMenu';
+import SubCategoryMenu from './components/catalog/subCategoryMenu/SubCategoryMenu';
 import FavoriteProductsList from './components/favoriteProducts/FavoriteProductsList/FavoriteProductsList';
 import ForumThemeDetail from './components/forum/forumThemeDetail/ForumThemeDetail';
 import Layout from './components/Layout/Layout';
