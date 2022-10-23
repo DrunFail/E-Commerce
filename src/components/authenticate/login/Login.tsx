@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import users from '../../../data/users.json';
 import styles from './Login.module.scss';
 
@@ -13,6 +13,9 @@ export default function Login() {
 
         });
 
+    const navigate = useNavigate();
+   
+
     const checkUser = () => {
         const checkResult = users.find(user => user.username === loginData.username &&
             user.password === loginData.password)
@@ -25,11 +28,15 @@ export default function Login() {
             localStorage.setItem('userData', JSON.stringify(info))
             localStorage.setItem('user', JSON.stringify('true'));
 
+            
+
             setLoginData({
                 username: '',
                 password: ''
 
             })
+            navigate('/')
+            window.location.reload()
         }
     }
 
