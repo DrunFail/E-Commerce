@@ -23,6 +23,10 @@ const routes = [
     {
         "path": "favorite",
         "name": "Избранное"
+    },
+    {
+        "path": "forum",
+        "name": "Форум"
     }
 ]
 

@@ -14,6 +14,9 @@
     <Folder Include="src\pages\profile\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="node_modules\react-scripts\config\webpack.config.js" />
+    <TypeScriptConfiguration Remove="node_modules\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="node_modules\**" />
   </ItemGroup>
 </Project>

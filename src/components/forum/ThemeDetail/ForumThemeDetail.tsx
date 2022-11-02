@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import forum from '../../../data/forum.json';
-import ForumAddMessage from '../forumAddMessage/ForumAddMessage';
-import ForumMessage from '../forumMessage/ForumMessage';
-import styles from './ForumThemeDetail.module.scss';
+import ForumAddMessage from '../AddMessage/ForumAddMessage';
+import ForumMessage from '../MessageList/ForumMessage';
+import styles from './ThemeDetail.module.scss';
 
 export default function ForumThemeDetail() {
     const params = useParams();
@@ -15,22 +15,32 @@ export default function ForumThemeDetail() {
     }
 
     const { messages } = findTheme
+    const {allowComment } = findTheme
     const [listMessages, setListMessages] = useState(messages)
     
 
     return (
         <div className={styles.container }>
-            <h1 className={styles.title }>тема: {findTheme.name}</h1>
+            <h1
+                id='title'
+                className={styles.title}>
+                {findTheme.name}
+            </h1>
             <p>создано: {findTheme.create}</p>
             <p>дата: {findTheme.date_create }</p>
             <p className={styles.value }>{findTheme.value}</p>
             <div>
                 
-                <ForumMessage listMessages={listMessages}
+                <ForumMessage
+                    listMessages={listMessages}
                                    />
                
-                <ForumAddMessage listMessages={listMessages}
-                    setListMessages={setListMessages }                />
+                {allowComment &&
+                    <ForumAddMessage
+                        listMessages={listMessages}
+                        setListMessages={setListMessages} />
+
+                }
             </div>
 
         </div>

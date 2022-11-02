@@ -1,6 +1,5 @@
-
 import React, { SetStateAction,Dispatch, useState } from 'react';
-import styles from './ForumAddMessage.module.scss';
+import styles from './AddMessage.module.scss';
 
 type Messages = {
     id: number ,
@@ -25,18 +24,36 @@ export default function ForumAddMessage({ listMessages, setListMessages }: Forum
             value: message,
             date_create: Date()
         };
-        console.log(newMessage)
         setListMessages([...listMessages, newMessage])
         setMessage('')
     }
 
     return (
         <div className={styles.container }>
-            <p className={styles.header}>добавить сообщение </p>
-            <div className={styles.addForm }>
-                <textarea value={message} onChange={(e) => setMessage(e.target.value) }/>
-                <button onClick={addMessage }>send message</button>
-            </div>
+            <form
+                className={styles.addForm}
+                onSubmit={(e) => e.preventDefault() }
+            >
+
+                <label
+                    htmlFor='newMessage'
+                >
+                    Написать сообщение
+                </label>
+
+                <textarea
+                    id='newMessage'
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                />
+
+                <button
+                    onClick={addMessage}
+                >
+                    отправить
+                </button>
+
+            </form>
         </div>
     );
 }

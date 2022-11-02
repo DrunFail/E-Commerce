@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ForumThemeCard.module.scss';
+import styles from './ThemeCard.module.scss';
 
 type Messages = {
     id: number,
