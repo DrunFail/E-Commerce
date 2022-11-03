@@ -4,7 +4,6 @@ import MessageCard from '../MessageCard/MessageCard';
 import styles from './Message.module.scss';
 
 
-
 interface ForumMessageProps {
     listMessages: Messages[]
 }

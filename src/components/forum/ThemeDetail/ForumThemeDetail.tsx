@@ -7,10 +7,6 @@ import ForumMessage from '../MessageList/ForumMessage';
 import styles from './ThemeDetail.module.scss';
 
 
-
-
-
-
 export default function ForumThemeDetail() {
     const params = useParams();
 

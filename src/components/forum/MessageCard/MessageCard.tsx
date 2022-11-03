@@ -3,7 +3,6 @@ import { Messages } from '../forumTypes';
 import styles from './MessageCard.module.scss';
 
 
-
 interface MessageCardProps {
     message: Messages
 }
