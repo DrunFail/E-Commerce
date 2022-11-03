@@ -6,7 +6,7 @@ type Messages = {
     id: number,
     value: string,
     author: string,
-    date_create: string
+    date_create: Date
 }
 
 interface ForumMessageProps {

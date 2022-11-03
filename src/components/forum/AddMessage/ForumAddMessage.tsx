@@ -5,12 +5,12 @@ type Messages = {
     id: number ,
     value: string,
     author: string,
-    date_create: string
+    date_create: Date
 }
 
 interface ForumAddMessageProps {
     listMessages: Messages[],
-    setListMessages: Dispatch<SetStateAction<Messages[]>>
+    setListMessages: Dispatch<SetStateAction<Messages[] | []>>
 }
 
 export default function ForumAddMessage({ listMessages, setListMessages }: ForumAddMessageProps) {
@@ -18,11 +18,12 @@ export default function ForumAddMessage({ listMessages, setListMessages }: Forum
 
 
     const addMessage = () => {
+        let date = new Date()
         const newMessage = {
             id: listMessages[listMessages.length - 1]?.id + 1 || 1,
             author: 'admin',
             value: message,
-            date_create: Date()
+            date_create: date
         };
         setListMessages([...listMessages, newMessage])
         setMessage('')

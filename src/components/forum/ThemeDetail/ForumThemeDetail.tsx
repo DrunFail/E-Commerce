@@ -5,36 +5,52 @@ import ForumAddMessage from '../AddMessage/ForumAddMessage';
 import ForumMessage from '../MessageList/ForumMessage';
 import styles from './ThemeDetail.module.scss';
 
+type Messages = {
+    id: number,
+    value: string,
+    author: string,
+    date_create: Date
+}
+
+
+
+
 export default function ForumThemeDetail() {
     const params = useParams();
-    
-    
+
+
     const findTheme = forum.find(elem => elem.name_translit === params.forumId)
     if (typeof findTheme === 'undefined') {
         throw new Error
     }
 
     const { messages } = findTheme
-    const {allowComment } = findTheme
-    const [listMessages, setListMessages] = useState(messages)
-    
+    const { allowComment } = findTheme
+    const [listMessages, setListMessages] = useState<Messages[] | []>(messages)
+
 
     return (
-        <div className={styles.container }>
-            <h1
-                id='title'
-                className={styles.title}>
-                {findTheme.name}
-            </h1>
-            <p>создано: {findTheme.create}</p>
-            <p>дата: {findTheme.date_create }</p>
-            <p className={styles.value }>{findTheme.value}</p>
+        <div className={styles.container}>
             <div>
-                
+                <div>
+
+                    <p>создано: {findTheme.create}</p>
+                    <p>дата: {findTheme.date_create}</p>
+                </div>
+
+                <h1
+                    id='title'
+                    className={styles.title}>
+                    {findTheme.name}
+                </h1>
+            </div>
+            <p className={styles.value}>{findTheme.value}</p>
+            <div>
+
                 <ForumMessage
                     listMessages={listMessages}
-                                   />
-               
+                />
+
                 {allowComment &&
                     <ForumAddMessage
                         listMessages={listMessages}

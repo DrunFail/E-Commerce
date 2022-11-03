@@ -6,7 +6,7 @@
     "allowComment": false,
     "value": "правила поведения на форуме fjdksjf jsadjfkj faskjfkl fjakfj kasjdfl;as djfklasfj lasfkj lkafjsdklfj laskfj ;afkjask lfjaslfkj laskdfjlasdkfj lkdfj  lorem",
     "create": "admin",
-    "date_create": "24.08.2022",
+    "date_create": "05.11.2022",
     "messages": [
       
     ]
@@ -16,12 +16,12 @@
     "id": "2",
     "name": "Вопросы и пожелания",
     "name_translit": "voprosi-i-pozhelanija",
-    "allowComment":  true,
+    "allowComment": true,
     "value": "вопросы и пожелания",
     "create": "admin",
-    "date_create": "24.08.2022",
+    "date_create": "02.10.2021",
     "messages": [
-      
+
     ]
 
   },
@@ -29,17 +29,12 @@
     "id": "3",
     "name": "Новости компании",
     "name_translit": "novosti-kompanii",
-    "allowComment":  true,
+    "allowComment": true,
     "value": "новости компании",
     "create": "admin",
-    "date_create": "24.08.2022",
+    "date_create": "11.01.2022",
     "messages": [
-      {
-        "id": 1,
-        "value": "hi there",
-        "author": "user3",
-        "date_create": "24.08.2022"
-      }
+
     ]
 
   }
