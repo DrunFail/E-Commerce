@@ -1,13 +1,9 @@
 import React from 'react';
+import { Messages } from '../forumTypes';
 import MessageCard from '../MessageCard/MessageCard';
 import styles from './Message.module.scss';
 
-type Messages = {
-    id: number,
-    value: string,
-    author: string,
-    date_create: Date
-}
+
 
 interface ForumMessageProps {
     listMessages: Messages[]

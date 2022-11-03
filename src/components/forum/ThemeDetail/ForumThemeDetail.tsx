@@ -2,15 +2,11 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import forum from '../../../data/forum.json';
 import ForumAddMessage from '../AddMessage/ForumAddMessage';
+import { Messages } from '../forumTypes';
 import ForumMessage from '../MessageList/ForumMessage';
 import styles from './ThemeDetail.module.scss';
 
-type Messages = {
-    id: number,
-    value: string,
-    author: string,
-    date_create: Date
-}
+
 
 
 

@@ -1,12 +1,8 @@
 import React, { SetStateAction,Dispatch, useState } from 'react';
+import { Messages } from '../forumTypes';
 import styles from './AddMessage.module.scss';
 
-type Messages = {
-    id: number ,
-    value: string,
-    author: string,
-    date_create: Date
-}
+
 
 interface ForumAddMessageProps {
     listMessages: Messages[],

@@ -1,13 +1,8 @@
 import React from 'react';
+import { Messages } from '../forumTypes';
 import styles from './MessageCard.module.scss';
 
 
-type Messages = {
-    id: number,
-    value: string,
-    author: string,
-    date_create: Date
-}
 
 interface MessageCardProps {
     message: Messages

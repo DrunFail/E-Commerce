@@ -1,25 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Elem } from '../forumTypes';
 import styles from './ThemeCard.module.scss';
 
-type Messages = {
-    id: number,
-    value: string,
-    author: string,
-    date_create: Date
-}
 
 
-type Elem = {
-    id: string,
-    name: string,
-    name_translit: string,
-    value: string,
-    create: string,
-    date_create: string,
-    messages: Messages[] | []
 
-}
 
 interface ForumThemeCardProps {
     elem: Elem
