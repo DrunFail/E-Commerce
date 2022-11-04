@@ -4,12 +4,12 @@ import { Elem } from '../forumTypes';
 import styles from './ThemeCard.module.scss';
 
 
-interface ForumThemeCardProps {
+interface ThemeCardProps {
     elem: Elem
 }
 
 
-export default function ForumThemeCard({elem }: ForumThemeCardProps) {
+export default function ForumThemeCard({elem }: ThemeCardProps) {
     return (
         <div className={styles.container} >
             <div className={styles.header}>

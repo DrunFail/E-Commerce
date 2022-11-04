@@ -1,9 +1,9 @@
 import React from 'react';
 import forum from '../../../data/forum.json';
-import ForumThemeCard from '../ThemeCard/ForumThemeCard';
+import ForumThemeCard from '../ThemeCard/ThemeCard';
 import styles from './ThemeList.module.scss';
 
-export default function ForumThemeList() {
+export default function ThemeList() {
     return (
         <div className={styles.container}>
             <h1>Форум</h1>

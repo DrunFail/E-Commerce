@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Forum from '../../pages/Forum';
-import ForumThemeDetail from './ThemeDetail/ForumThemeDetail';
+import ThemeDetail from './ThemeDetail/ThemeDetail';
 
 export default function ForumRoutes() {
     return (
         <Routes>
                 <Route index element={<Forum />} />
-                <Route path=':forumId' element={<ForumThemeDetail />} />
+                <Route path=':forumId' element={<ThemeDetail />} />
         </Routes>
     );
 }

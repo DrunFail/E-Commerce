@@ -1,11 +1,11 @@
 import { lazy, Suspense } from 'react';
 
-const ForumThemeList = lazy(() => import('../components/forum/ThemeList/ForumThemeList'))
+const ThemeList = lazy(() => import('../components/forum/ThemeList/ThemeList'))
 
 export default function Forum() {
     return (
         <Suspense>
-           <ForumThemeList />
+           <ThemeList />
         </Suspense>
     );
 }

@@ -4,12 +4,12 @@ import MessageCard from '../MessageCard/MessageCard';
 import styles from './Message.module.scss';
 
 
-interface ForumMessageProps {
+interface MessageListProps {
     listMessages: Messages[]
 }
 
 
-export default function ForumMessage({ listMessages }: ForumMessageProps) {
+export default function MessageList({ listMessages }: MessageListProps) {
     return (
         <div className={styles.wrapper}>
 

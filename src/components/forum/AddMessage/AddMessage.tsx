@@ -4,12 +4,12 @@ import styles from './AddMessage.module.scss';
 
 
 
-interface ForumAddMessageProps {
+interface AddMessageProps {
     listMessages: Messages[],
     setListMessages: Dispatch<SetStateAction<Messages[] | []>>
 }
 
-export default function ForumAddMessage({ listMessages, setListMessages }: ForumAddMessageProps) {
+export default function AddMessage({ listMessages, setListMessages }: AddMessageProps) {
     const [message, setMessage] = useState('');
 
 

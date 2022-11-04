@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import forum from '../../../data/forum.json';
-import ForumAddMessage from '../AddMessage/ForumAddMessage';
+import AddMessage from '../AddMessage/AddMessage';
 import { Messages } from '../forumTypes';
-import ForumMessage from '../MessageList/ForumMessage';
+import ForumMessage from '../MessageList/MessageList';
 import styles from './ThemeDetail.module.scss';
 
 
-export default function ForumThemeDetail() {
+export default function ThemeDetail() {
     const params = useParams();
 
 
@@ -44,7 +44,7 @@ export default function ForumThemeDetail() {
                 />
 
                 {allowComment &&
-                    <ForumAddMessage
+                    <AddMessage
                         listMessages={listMessages}
                         setListMessages={setListMessages} />
 
