@@ -9,7 +9,9 @@ export default function PromoDetails() {
     const findPromo = promoList.find(promo => promo.translit == params.promoId)
 
 
-    if (typeof findPromo !== 'undefined') {
+    if (typeof findPromo === 'undefined') {
+        throw new Error
+    }
         return (
             <div className={styles.container}>
                 <h1 className={styles.title}>{findPromo.name}</h1>
@@ -19,6 +21,6 @@ export default function PromoDetails() {
             </div>
         );
 
-    }
+    
     
 }
