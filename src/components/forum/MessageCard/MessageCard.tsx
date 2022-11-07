@@ -4,7 +4,7 @@ import styles from './MessageCard.module.scss';
 
 
 interface MessageCardProps {
-    message: Messages
+    message: any
 }
 
 

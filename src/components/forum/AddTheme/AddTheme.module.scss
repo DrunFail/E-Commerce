@@ -1,0 +1,56 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    & form {
+        display: grid;
+        grid-template-rows: 1fr 1fr 3fr 1fr;
+        height: 50%;
+        width: 30%;
+        position: relative;
+        top: 20%;
+        left: 40%;
+        align-items: center;
+        justify-items: center;
+        background-color: blue;
+        padding: 2rem 2rem;
+        border-radius: 1rem;
+
+        & h1 {
+            color: white;
+        }
+
+        & input, textarea, button {
+            border-radius: 1rem;
+        }
+
+        & input, textarea {
+            width: 70%;
+            padding: 0 0.5rem;
+            height: 40%;
+        }
+
+        & textarea {
+            resize: none;
+            height: 100%;
+            padding-block-start: 0.5rem;
+        }
+
+        & div {
+            display: flex;
+            justify-content: space-around;
+            align-items: end;
+            width:100%;
+            height: 100%;
+
+            & button {
+                height: 50%;
+                width: 40%;
+            }
+        }
+    }
+}
