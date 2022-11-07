@@ -9,22 +9,12 @@ interface ThemeCardProps {
 }
 
 
-export default function ForumThemeCard({elem }: ThemeCardProps) {
+export default function ThemeCard({elem }: ThemeCardProps) {
     return (
         <div className={styles.container} >
             <div className={styles.header}>
-                <Link className={styles.title} to={`/forum/${elem.name_translit}`}>{elem.name }</Link>
-                <div className={styles.creator }>
-                    <p>создано: {elem.create }</p>
-                    <p>дата: {elem.date_create}</p>
-                </div>
+                <Link className={styles.title} to={elem.name_translit}>{elem.name }</Link>
             </div>
-            {elem.messages?.length !== 0 &&
-                <div className={styles.footer}>
-                    <p>последнее сообщение от: {elem.messages?.at(-1)?.author}</p>
-                    <p>дата: {elem.messages?.at(-1)?.date_create.toLocaleString()}</p>
-                </div>
-            }
         </div>
     );
 }

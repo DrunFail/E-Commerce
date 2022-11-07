@@ -2,26 +2,25 @@ import React, { SetStateAction,Dispatch, useState } from 'react';
 import { Messages } from '../forumTypes';
 import styles from './AddMessage.module.scss';
 
-
-
 interface AddMessageProps {
-    listMessages: Messages[],
-    setListMessages: Dispatch<SetStateAction<Messages[] | []>>
+    listMessage: any,
+    setListMessage: any
 }
 
-export default function AddMessage({ listMessages, setListMessages }: AddMessageProps) {
+
+export default function AddMessage({listMessage, setListMessage }: AddMessageProps) {
     const [message, setMessage] = useState('');
 
 
     const addMessage = () => {
         let date = new Date()
         const newMessage = {
-            id: listMessages[listMessages.length - 1]?.id + 1 || 1,
+            id: listMessage[listMessage.length - 1]?.id + 1 || 1,
             author: 'admin',
             value: message,
             date_create: date
         };
-        setListMessages([...listMessages, newMessage])
+        setListMessage([...listMessage, newMessage])
         setMessage('')
     }
 
@@ -31,19 +30,15 @@ export default function AddMessage({ listMessages, setListMessages }: AddMessage
                 className={styles.addForm}
                 onSubmit={(e) => e.preventDefault() }
             >
-
-                <label
-                    htmlFor='newMessage'
-                >
-                    Написать сообщение
-                </label>
+                <div>
+               
 
                 <textarea
                     id='newMessage'
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                 />
-
+</div>
                 <button
                     onClick={addMessage}
                 >

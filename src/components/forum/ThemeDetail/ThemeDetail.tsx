@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import forum from '../../../data/forum.json';
-import AddMessage from '../AddMessage/AddMessage';
-import { Messages } from '../forumTypes';
-import ForumMessage from '../MessageList/MessageList';
+import ThemeCard from '../ThemeCard/ThemeCard';
 import styles from './ThemeDetail.module.scss';
 
 
@@ -12,44 +10,24 @@ export default function ThemeDetail() {
 
 
     const findTheme = forum.find(elem => elem.name_translit === params.forumId)
-    if (typeof findTheme === 'undefined') {
+    
+
+    const themes  = findTheme?.themes
+
+    if (themes === undefined) {
         throw new Error
     }
-
-    const { messages } = findTheme
-    const { allowComment } = findTheme
-    const [listMessages, setListMessages] = useState<Messages[] | []>(messages)
+   
 
 
     return (
         <div className={styles.container}>
-            <div>
-                <div>
-
-                    <p>создано: {findTheme.create}</p>
-                    <p>дата: {findTheme.date_create}</p>
-                </div>
-
-                <h1
-                    id='title'
-                    className={styles.title}>
-                    {findTheme.name}
-                </h1>
-            </div>
-            <p className={styles.value}>{findTheme.value}</p>
-            <div>
-
-                <ForumMessage
-                    listMessages={listMessages}
-                />
-
-                {allowComment &&
-                    <AddMessage
-                        listMessages={listMessages}
-                        setListMessages={setListMessages} />
-
-                }
-            </div>
+            <h1>{findTheme?.name }</h1>
+            {themes.map(theme =>
+                <ThemeCard
+                    key={theme.id}
+                    elem={theme} />)
+            }
 
         </div>
     );

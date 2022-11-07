@@ -1,6 +1,6 @@
 import React from 'react';
 import forum from '../../../data/forum.json';
-import ForumThemeCard from '../ThemeCard/ThemeCard';
+import ThemeCard from '../ThemeCard/ThemeCard';
 import styles from './ThemeList.module.scss';
 
 export default function ThemeList() {
@@ -8,7 +8,7 @@ export default function ThemeList() {
         <div className={styles.container}>
             <h1>Форум</h1>
             {forum.map(elem =>
-                <ForumThemeCard
+                <ThemeCard
                     key={elem.id}
                     elem={elem}
                 />

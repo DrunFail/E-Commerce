@@ -1,0 +1,12 @@
+.wrapper {
+    min-height: 50vh;
+    border: 1px solid ;
+    border-radius: 1rem;
+
+    .header {
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        padding-block-start: 2rem;
+    }
+}
