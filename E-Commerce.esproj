@@ -8,10 +8,16 @@
     <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="src\components\forum\AddTheme\" />
+    <Folder Include="src\components\forum\ThemeUser\" />
+    <Folder Include="src\components\forum\Новая папка\" />
     <Folder Include="src\components\scrollToTop\" />
     <Folder Include="src\data\phones\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="node_modules\react-scripts\config\webpack.config.js" />
+    <TypeScriptConfiguration Remove="node_modules\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="node_modules\**" />
   </ItemGroup>
 </Project>

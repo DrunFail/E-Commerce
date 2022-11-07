@@ -1,48 +1,65 @@
 [
   {
     "id": "1",
-    "name": "правила пользования форумом",
+    "name": "Правила поведения на форуме",
     "name_translit": "pravila-polzovanija-forumom",
+    "allowNesting":  false,
+    "allowComment": false,
     "value": "правила поведения на форуме fjdksjf jsadjfkj faskjfkl fjakfj kasjdfl;as djfklasfj lasfkj lkafjsdklfj laskfj ;afkjask lfjaslfkj laskdfjlasdkfj lkdfj  lorem",
     "create": "admin",
-    "date_create": "24.08.2022",
-    "messages": [
-      {
-        "id": 1,
-        "value": "hi there",
-        "author": "user",
-        "date_create": "24.08.2022"
-      }
-    ]
+    "date_create": "05.11.2022"
 
   },
   {
     "id": "2",
-    "name": "вопросы и пожелания",
+    "name": "Вопросы и пожелания",
     "name_translit": "voprosi-i-pozhelanija",
+    "allowNesting": true,
+    "allowComment":  false,
     "value": "вопросы и пожелания",
     "create": "admin",
-    "date_create": "24.08.2022",
+    "date_create": "02.10.2021",
+    "themes": [
+      {
+        "id": "1",
+        "name": "kak ustanovit vindu",
+        "name_translit": "kak-ustanovit-vindu",
+        "allowNesting": false,
+        "allowComment": true,
+        "value": "ne mogu ustanovit vindu",
+        "create": "vasya",
+        "date_create": "15.02.2022",
+        "messages": [
+
+        ]
+      },
+      {
+        "id": "2",
+        "name": "Как установить винду",
+        "name_translit": "kak-ustanovit-vinduu",
+        "allowNesting": false,
+        "allowComment": true,
+        "value": "ne mogu ustanovit vindu gdjgksj gsdkjg lksgjfkl gklsg lkghlk sg kghsgh kgh ksghk sghksgh ksgh ksghkl hg",
+        "create": "vasya",
+        "date_create": "16.02.2022",
+        "messages": [
+
+        ]
+      }
+    ],
     "messages": [
-      
+
     ]
 
   },
   {
     "id": "3",
-    "name": "новости компании",
+    "name": "Новости компании",
     "name_translit": "novosti-kompanii",
+    "allowNesting": true,
+    "allowComment": false,
     "value": "новости компании",
     "create": "admin",
-    "date_create": "24.08.2022",
-    "messages": [
-      {
-        "id": 1,
-        "value": "hi there",
-        "author": "user3",
-        "date_create": "24.08.2022"
-      }
-    ]
-
+    "date_create": "11.01.2022"
   }
 ]

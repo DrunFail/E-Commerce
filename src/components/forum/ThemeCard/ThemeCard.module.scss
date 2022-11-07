@@ -6,8 +6,7 @@
     margin: 0 auto;
     padding: 5px;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    margin-bottom: 1em;
+    height: 5rem;
 
     .header {
         display: flex;
@@ -19,18 +18,18 @@
             text-transform: uppercase;
             font-weight: 700;
             padding: .4em;
+            color: rgba(0, 0, 0, 0.7);
 
             &:hover {
-                background-color: black;
+                background-color: blue;
                 color: white;
                 border-radius: 10px;
             }
         }
 
         .creator {
-            border: 1px solid;
-            border-radius: 5px;
             padding: 0.1em;
+            text-align: center;
         }
     }
 

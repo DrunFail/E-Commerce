@@ -1,11 +1,13 @@
 .container {
-    text-align: center;
+    display: grid;
+    grid-row-gap: 1rem;
     width: 100%;
+    
 
     & h1 {
-        text-transform: uppercase;
         font-weight: 700;
         font-size: 2em;
-        margin-bottom: 2em;
+        padding-inline-start: 2rem;
+        
     }
 }

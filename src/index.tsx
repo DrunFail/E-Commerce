@@ -8,7 +8,6 @@ import './styles/index.scss';
 
 import SubCategoryMenu from './components/catalog/subCategoryMenu/SubCategoryMenu';
 import FavoriteProductsList from './components/favoriteProducts/FavoriteProductsList/FavoriteProductsList';
-import ForumThemeDetail from './components/forum/forumThemeDetail/ForumThemeDetail';
 import Layout from './components/Layout/Layout';
 import OrderStepper from './components/orderPlace/orderStepper/OrderStepper';
 import PaymentForm from './components/orderPlace/PaymentStep/PaymentForm/PaymentForm';
@@ -20,7 +19,6 @@ import AksForPlansh from './pages/Catalog/smartgadzhets/AksForPlansh';
 import AksForSmart from './pages/Catalog/smartgadzhets/AksForSmart';
 import SmartClock from './pages/Catalog/smartgadzhets/SmartClock';
 import Smartphones from './pages/Catalog/smartgadzhets/Smartphones';
-import Forum from './pages/Forum';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import ProfileOrder from './pages/profile/ProfileOrder';
@@ -31,6 +29,7 @@ import Services from './pages/Services';
 import CartPage from './pages/CartPage';
 import ComparePage from './pages/ComparePage';
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
+import ForumRoutes from './components/forum/ForumRoutes';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
@@ -55,10 +54,8 @@ root.render(
                         <Route path='shops' element={<ShopsList />} />
                         <Route path='favorite' element={<FavoriteProductsList />} />
                         <Route path='compare' element={<ComparePage />} />
-                        <Route path='forum'>
-                            <Route index element={<Forum />} />
-                            <Route path=':forumId' element={<ForumThemeDetail />} />
-                        </Route>
+                        <Route path='forum/*' element={<ForumRoutes /> } />
+                        
                         <Route path='order' element={<OrderStepper />} />
                         <Route path='payment' element={<PaymentForm /> } />
                         <Route path='cart' >
