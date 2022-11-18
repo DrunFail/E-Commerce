@@ -1,27 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from '../../store/store'
 
-interface IElem {
-    title: string,
-    price: number,
-    count: number,
-    id: string
-}
 
 interface IAmount {
-    id: string,
+    cartItemId: string,
     amount: number
 }
 
-interface IAddCart {
-    id: string,
-    title: string,
-    count: number,
-    price: number
-}
 
-
-const getInitialState = (): IAddCart[] => {
+const getInitialState = (): ShoppingCartItem[] => {
     let item = localStorage.getItem('cart')
     if (item) {
         return JSON.parse(localStorage.cart)
@@ -37,21 +24,21 @@ export const cartSlice = createSlice({
         
     ,
     reducers: {
-        addItemToCart(state, action: PayloadAction<IAddCart>) {
+        addItemToCart(state, action: PayloadAction<ShoppingCartItem>) {
             state.push(action.payload)
             localStorage.setItem('cart', JSON.stringify(state))
         },
 
 
         deleteItemFromCart(state, action: PayloadAction<string>) {
-            const newState = state.filter((elem: IElem) => elem.id !== action.payload)
+            const newState = state.filter((elem: ShoppingCartItem) => elem.id !== action.payload)
             localStorage.setItem('cart', JSON.stringify(newState))
             return newState
         },
 
 
         incrementQuantityItems(state, action: PayloadAction<string>) {
-            const ch = state.find((elem: IElem) => elem.id == action.payload)
+            const ch = state.find((elem: ShoppingCartItem) => elem.id == action.payload)
             if (ch) {
                 ch.count += 1
                 localStorage.setItem('cart', JSON.stringify(state))
@@ -61,7 +48,7 @@ export const cartSlice = createSlice({
 
 
         decrementQuantityItems(state, action: PayloadAction<string>) {
-            const ch = state.find((elem: IElem) => elem.id == action.payload)
+            const ch = state.find((elem: ShoppingCartItem) => elem.id == action.payload)
             if (ch) {
                 if (ch.count == 1) {
                     ch.count = 1
@@ -75,7 +62,7 @@ export const cartSlice = createSlice({
 
 
         changeQuantityItemsAmount(state, action: PayloadAction<IAmount>) {
-            const ch = state.find((elem: IElem) => elem.id == action.payload.id)
+            const ch = state.find((elem: ShoppingCartItem) => elem.id == action.payload.cartItemId)
             if (ch) {
                 ch.count = action.payload.amount
 

@@ -8,6 +8,7 @@
     <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="src\components\cart\interfaces\" />
     <Folder Include="src\components\forum\AddTheme\" />
     <Folder Include="src\components\forum\ThemeUser\" />
     <Folder Include="src\components\forum\Новая папка\" />

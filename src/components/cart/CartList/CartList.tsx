@@ -7,16 +7,6 @@ import styles from './CartList.module.scss';
 import { selectCart } from '../../../redux/slices/cart/cartSlice';
 
 
-
-interface IElem {
-    title: string,
-    price: number,
-    count: number,
-    id: string
-}
-
-
-
 export default function CartList() {
 
     const cart = useAppSelector(selectCart)
@@ -31,21 +21,12 @@ export default function CartList() {
             {!cart.length && <EmptyCart />}
 
             {!cart.length || <>
-                <div className={styles.header}>
-                    <p>photo</p>
-                    <p>name</p>
-                    <p>price</p>
-                    <p>count</p>
-                    <p>total</p>
-                    <p></p>
-
-
-                </div>
-                {cart.map((elem: IElem) =>
+               
+                {cart.map(elem =>
                     <CartItem
                         key={elem.id}
-                        elem={elem}
-                        id={elem.id}
+                        cartItem={elem}
+                        cartItemId={elem.id}
                     />
                 )}
 
