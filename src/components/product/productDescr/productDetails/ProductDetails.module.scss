@@ -1,6 +1,16 @@
-.container{
+.container {
     grid-column: 1/5;
     grid-row: 2/3;
+
+    .wrapper {
+        width: 50%;
+        display: grid;
+        grid-row-gap: 1rem;
+        .mainProperties {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
 
 

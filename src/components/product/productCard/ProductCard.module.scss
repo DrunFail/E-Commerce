@@ -1,70 +1,41 @@
-.productCard {
+.container {
     display: grid;
-    width: 80%;
-    grid-template-columns: 1fr 3fr;
-    text-align: center;
-    border: 2px solid;
-    padding: 1em 2em;
-    border-radius: 1em;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+        'img title buttons' 'img properties cart';
+    padding: 1rem 0;
+    border-block-start: 1px solid rgba(0, 0, 0, 0.2);
+
 
     &:hover {
-        border: 2px solid orange;
+        box-shadow: 0.3em 0.3em 0.3em rgba(0,0,0,0.3), 0.3em -0.3em 0.3em rgba(0,0,0,0.3);
     }
 
     & > img {
-        grid-column: 1/2;
-        width: 10em;
+        grid-area: img;
+        max-inline-size: 100%;
     }
 
-    .container {
-        display: grid;
-        justify-items: center;
 
-        & a {
-            text-decoration: none;
-            font-size: 1.1em;
-            font-weight: 700;
-            color: black;
-            margin-bottom: 1em;
-        }
+    .productTitle {
+        grid-area: title;
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: black;
 
-
-
-
-        .prop {
-            position: relative;
-            top: 0;
-            right: 0;
+        &:hover {
+            text-decoration: underline;
         }
     }
 
-    p {
-        font-weight: 600;
-    }
 
-    span {
-        font-weight: 500;
-    }
+    .headerButtons {
+        grid-area: buttons;
+        justify-self: center;
+        align-self: center;
 
-    .buttons {
-        display: flex;
-        align-items: center;
-
-        & button:first-child {
-            font-size: 2em;
-            border-radius: 1em;
-            padding: 0.2em 0.4em;
-            text-transform: uppercase;
-            background-color: blue;
-            color: white;
-
-            &:hover {
-                background-color: orange;
-                cursor: pointer;
-            }
-        }
-
-        .icons {
+        & button {
             height: 4em;
             width: 4em;
             padding: 0.2em 0.4em;
@@ -78,16 +49,53 @@
             }
         }
     }
+
+    .mainProperties {
+        grid-area: properties;
+        display: grid;
+        grid-row-gap: 0.1rem;
+
+        & p {
+            font-weight: 600;
+        }
+
+        & span {
+            font-weight: 500;
+        }
+    }
+
+
+
+
+    .cart {
+        grid-area: cart;
+        align-self: center;
+
+        & button {
+            font-size: 2rem;
+            border-radius: 1em;
+            padding: 0.2em 0.4em;
+            background-color: blue;
+            color: white;
+
+            &:hover {
+                background-color: orange;
+                cursor: pointer;
+            }
+        }
+    }
 }
+
 @media (min-width: 320px) and (max-width: 499px) {
     .productCard {
         width: 100vw;
-        padding: 0.3em 0.3em 0.2em ;
+        padding: 0.3em 0.3em 0.2em;
 
         .container {
             .buttons {
                 width: 100%;
                 height: 2em;
+
                 & button:first-child {
                     width: 50%;
                     font-size: 1.1em;
@@ -95,10 +103,10 @@
 
                 .icons {
                     height: 100%;
-                    & svg{
+
+                    & svg {
                         height: 100%;
                     }
-                    
                 }
             }
         }

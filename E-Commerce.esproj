@@ -11,6 +11,7 @@
     <Folder Include="src\components\forum\AddTheme\" />
     <Folder Include="src\components\forum\ThemeUser\" />
     <Folder Include="src\components\forum\Новая папка\" />
+    <Folder Include="src\components\product\productDescr\interfaces\" />
     <Folder Include="src\components\scrollToTop\" />
     <Folder Include="src\data\phones\" />
   </ItemGroup>

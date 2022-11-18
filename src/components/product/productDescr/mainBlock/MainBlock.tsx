@@ -1,5 +1,5 @@
-import { nanoid } from '@reduxjs/toolkit';
 import React from 'react';
+import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { addItemToCart } from '../../../../redux/slices/cart/cartSlice';
 import { addItemToCompare } from '../../../../redux/slices/compare/compareSlice';
@@ -8,11 +8,11 @@ import CompareSvgComponent from '../../../../ui/svgComponents/compare/CompareSvg
 import FavoriteListSvgComponent from '../../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import styles from './MainBlock.module.scss';
 
+
 interface MainBlockProps {
     name: string,
     price: string
 }
-
 
 
 export default function MainBlock({ name, price }: MainBlockProps) {

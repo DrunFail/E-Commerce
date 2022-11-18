@@ -1,9 +1,9 @@
 import React from "react";
-import ForumThemeList from "../components/forum/forumThemeList/ForumThemeList";
+import ThemeList from "../components/forum/ThemeList/ThemeList";
 
 
 export default function Forum() {
     return (
-           <ForumThemeList />
+           <ThemeList />
     );
 }

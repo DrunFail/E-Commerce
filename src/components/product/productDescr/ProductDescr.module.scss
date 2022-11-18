@@ -3,6 +3,5 @@
     grid-row: 2/5;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(30em, 5em) minmax(5em, auto);
-    row-gap: 2em;
+    grid-template-rows: 35rem minmax(30rem, auto);
 }

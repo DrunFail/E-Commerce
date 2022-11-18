@@ -1,5 +1,5 @@
 import React from "react";
-import SmartphoneList from "../../../components/catalog/smartphoneList/SmartphoneList";
+import SmartphoneList from "../../../components/product/smartphoneList/SmartphoneList";
 
 
 export default function Smartphones() {
