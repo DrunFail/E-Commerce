@@ -38,6 +38,7 @@ root.render(
         <BrowserRouter>
             <React.StrictMode>
                 <ScrollToTop />
+                
                 <Routes>
                     
                     <Route path='/' element={<Layout />} >
@@ -63,6 +64,8 @@ root.render(
                             
 
                         </Route>
+                        
+                            
                         <Route path='orders' element={<ProfileOrder />} />
                         <Route path='profile' element={<ProfileSettings />} />
                         <Route path='smartfony-i-gadzhety'  >

@@ -38,7 +38,7 @@ export const cartSlice = createSlice({
 
 
         incrementQuantityItems(state, action: PayloadAction<string>) {
-            const ch = state.find((elem: ShoppingCartItem) => elem.id == action.payload)
+            const ch = state.find((elem: ShoppingCartItem) => elem.id === action.payload)
             if (ch) {
                 ch.count += 1
                 localStorage.setItem('cart', JSON.stringify(state))
@@ -48,9 +48,9 @@ export const cartSlice = createSlice({
 
 
         decrementQuantityItems(state, action: PayloadAction<string>) {
-            const ch = state.find((elem: ShoppingCartItem) => elem.id == action.payload)
+            const ch = state.find((elem: ShoppingCartItem) => elem.id === action.payload)
             if (ch) {
-                if (ch.count == 1) {
+                if (ch.count === 1) {
                     ch.count = 1
                 } else {
                     ch.count -= 1

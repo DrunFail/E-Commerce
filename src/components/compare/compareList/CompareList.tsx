@@ -11,14 +11,14 @@ export default function CompareList() {
         <div className={styles.container }>
             <h1>список сравнения</h1>
             {!compare.length && <EmptyCompare />}
-            <div>
+            <div className={styles.compareList}>
                 {compare.map(product =>
                     <CompareCard
                         key={product.id}
                         product={product}
                     />)}
             </div>
-           
+               
         </div>
         );
 }

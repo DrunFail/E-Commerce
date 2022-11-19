@@ -1,15 +1,10 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from '../../store/store'
 
-type Favorite = {
-    id: string,
-    title: string,
-    img: string,
-    link: string
-}
 
 
-const getInitialState = (): Favorite[] => {
+
+const getInitialState = (): FavoriteProductItem[] => {
     let item = localStorage.getItem('favorite')
     if (item) {
         return JSON.parse(item)
@@ -21,14 +16,14 @@ const getInitialState = (): Favorite[] => {
 export const favoriteProductsSlice = createSlice({
     name: 'favoriteProducts',
     initialState:
-         getInitialState(),
+        getInitialState(),
 
     reducers: {
-        addItemToFavoriteProducts(state, action) {
+        addItemToFavoriteProducts(state, action: PayloadAction<FavoriteProductItem>) {
             state.push(action.payload)
             localStorage.setItem('favorite', JSON.stringify(state))
         },
-        removeItemFromFavoriteProducts(state, action) {
+        removeItemFromFavoriteProducts(state, action:PayloadAction<string>) {
             const newState = state.filter((elem) => elem.id !== action.payload)
             localStorage.setItem('favorite', JSON.stringify(newState))
             return newState

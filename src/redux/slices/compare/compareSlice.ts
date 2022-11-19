@@ -1,16 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from '../../store/store'
 
-type Compare = {
-    id: string,
-    title: string,
-    img: string,
-    link: string
-}
 
-
-
-const getInitialState = (): Compare[] => {
+const getInitialState = (): CompareItem[] => {
     let item = localStorage.getItem('compare')
     if (item) {
         return JSON.parse(item)
@@ -25,13 +17,13 @@ export const compareSlice = createSlice({
         getInitialState(),
 
     reducers: {
-        addItemToCompare(state, action) {
+        addItemToCompare(state, action: PayloadAction<CompareItem>) {
             state.push(action.payload)
             localStorage.setItem('compare', JSON.stringify(state))
         },
 
 
-        deleteItemFromCompare(state, action) {
+        deleteItemFromCompare(state, action: PayloadAction<string>) {
             const newState = state.filter((elem) => elem.id !== action.payload)
             localStorage.setItem('compare', JSON.stringify(newState))
             return newState

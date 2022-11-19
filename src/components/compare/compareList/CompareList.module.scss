@@ -1,6 +1,4 @@
 .container {
-    width: 80%;
-    margin: 0 auto 20em;
 
 
     & h1 {
@@ -11,6 +9,13 @@
         text-align: center;
         margin-bottom: 2em;
     }
-     
-       
+
+    .compareList {
+        display: grid;
+        grid-auto-flow: column;
+        grid-column-gap: 1rem;
+        overflow:hidden;
+        justify-content: center;
+        justify-items: center;
+    }
 }
