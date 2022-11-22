@@ -1,15 +1,15 @@
 .container {
+    grid-area: imgBlock;
     display: grid;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 28rem 1fr;
     grid-row-gap: 1rem;
     justify-content: center;
 
     .mainImg {
-        position: relative;
-
-        .active {
+        & > img {
+            display: block;
             max-block-size: 100%;
-            position: absolute;
+            margin: 0 auto;
         }
 
         .offscreen {

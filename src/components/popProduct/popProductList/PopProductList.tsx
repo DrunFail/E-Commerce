@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import popProduct from '../../../data/popProduct.json';
 import PopProductCard from '../popProductCard/PopProductCard';
 import styles from './PopProductList.module.scss';
 
 export default function PopProduct() {
+    const [productList] = useState<PopProduct[]>(popProduct);
+
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <h1>популярные товары</h1>
-            {popProduct.map((product, index) =>
+            {productList.map((product, index) =>
                 <PopProductCard key={index} product={product} />)}
-        </div>
+        </section>
     );
 }

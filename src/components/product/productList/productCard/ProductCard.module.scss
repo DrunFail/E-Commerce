@@ -1,3 +1,6 @@
+@import '../../../../styles/_mixin.scss';
+
+
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -86,28 +89,46 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 499px) {
-    .productCard {
-        width: 100vw;
-        padding: 0.3em 0.3em 0.2em;
+@include s {
+    .container {
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 'img title' 'img properties' 'cart buttons';
+        padding: 0.5rem 0;
 
-        .container {
-            .buttons {
-                width: 100%;
-                height: 2em;
+        .productTitle {
+            font-size: 1rem;
+        }
 
-                & button:first-child {
-                    width: 50%;
-                    font-size: 1.1em;
+        .mainProperties {
+            grid-auto-rows: min-content;
+
+            & p, span {
+                font-size: .8rem;
+                font-weight: normal;
+            }
+        }
+
+        .headerButtons {
+            justify-self: start;
+
+            & button {
+                height: 1.7rem;
+                width: 1.7rem;
+                padding: 0;
+                border-radius: 0.5rem;
+
+                & svg {
+                    height: 1rem;
+                    width: 1rem;
                 }
+            }
+        }
 
-                .icons {
-                    height: 100%;
+        .cart {
+            justify-self: end;
 
-                    & svg {
-                        height: 100%;
-                    }
-                }
+            & button {
+                font-size: 1rem;
             }
         }
     }

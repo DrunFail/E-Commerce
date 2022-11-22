@@ -1,50 +1,35 @@
-import React, { SetStateAction,Dispatch, useState } from 'react';
-import { Messages } from '../forumTypes';
+import React, { useState } from 'react';
 import styles from './AddMessage.module.scss';
 
 interface AddMessageProps {
-    listMessage: any,
-    setListMessage: any
+    addMessage: (message: string) => void
 }
 
 
-export default function AddMessage({listMessage, setListMessage }: AddMessageProps) {
+export default function AddMessage({ addMessage }: AddMessageProps) {
     const [message, setMessage] = useState('');
 
-
-    const addMessage = () => {
-        let date = new Date()
-        const newMessage = {
-            id: listMessage[listMessage.length - 1]?.id + 1 || 1,
-            author: 'admin',
-            value: message,
-            date_create: date
-        };
-        setListMessage([...listMessage, newMessage])
-        setMessage('')
-    }
-
     return (
-        <div className={styles.container }>
+        <div className={styles.container}>
             <form
                 className={styles.addForm}
-                onSubmit={(e) => e.preventDefault() }
+                onSubmit={(e) => e.preventDefault()}
             >
                 <div>
-               
-
-                <textarea
-                    id='newMessage'
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                />
-</div>
+                    <textarea
+                        id='newMessage'
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                    />
+                </div>
                 <button
-                    onClick={addMessage}
+                    onClick={() => {
+                        addMessage(message);
+                        setMessage('')
+                    }}
                 >
                     отправить
                 </button>
-
             </form>
         </div>
     );

@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import mproducts from '../../../data/mproducts.json';
 import FilterPropertie from '../../../ui/filter/filterProperties/FilterPropertie';
 import Sort from '../../../ui/filter/sort/Sort';
-import ProductCard from '../../product/productCard/ProductCard';
-import styles from './SmartphoneList.module.scss';
+import ProductCard from './productCard/ProductCard';
+import styles from './ProductList.module.scss';
 
-export default function SmartphoneList() {
-    const width = document.documentElement.clientWidth
+export default function ProductList() {
+    const width = document.documentElement.clientWidth;
+    const [productList] = useState<ProductList[]>(mproducts);
 
     return (
         <div className={styles.main}>
@@ -16,16 +17,16 @@ export default function SmartphoneList() {
             </>
             }
             <div className={styles.container}>
-                <div className={styles.wrapper}>
+                <div className={styles.cardList}>
                     {
-                        mproducts.map((smart, index) =>
+                        productList.map((product, index) =>
                             <ProductCard
                                 key={index}
-                                smart={smart} />
+                                product={product} />
                         )
                     }
                 </div>
-                <FilterPropertie />
+                {width <= 500 || <FilterPropertie />  } 
             </div>
 
         </div>

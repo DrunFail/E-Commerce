@@ -7,7 +7,8 @@
     "allowComment": false,
     "value": "правила поведения на форуме fjdksjf jsadjfkj faskjfkl fjakfj kasjdfl;as djfklasfj lasfkj lkafjsdklfj laskfj ;afkjask lfjaslfkj laskdfjlasdkfj lkdfj  lorem",
     "create": "admin",
-    "date_create": "05.11.2022"
+    "date_create": "05.11.2022",
+    "themes":  []
 
   },
   {
@@ -60,6 +61,7 @@
     "allowComment": false,
     "value": "новости компании",
     "create": "admin",
-    "date_create": "11.01.2022"
+    "date_create": "11.01.2022",
+    "themes":  []
   }
 ]

@@ -7,12 +7,7 @@ import styles from './PopProductCard.module.scss';
 
 
 interface PopProductCardProps {
-    product: {
-        title: string,
-        link: string,
-        img: string,
-        price: string
-    }
+    product: PopProduct
 }
 
 export default function PopProductCard({ product }: PopProductCardProps) {

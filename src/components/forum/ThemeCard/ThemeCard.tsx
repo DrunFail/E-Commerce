@@ -1,19 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Elem } from '../forumTypes';
 import styles from './ThemeCard.module.scss';
 
 
 interface ThemeCardProps {
-    elem: Elem
+    forumTheme: mainThemeTemplate
 }
 
 
-export default function ThemeCard({elem }: ThemeCardProps) {
+export default function ThemeCard({forumTheme }: ThemeCardProps) {
     return (
         <div className={styles.container} >
             <div className={styles.header}>
-                <Link className={styles.title} to={elem.name_translit}>{elem.name }</Link>
+                <Link
+                    className={styles.title}
+                    to={forumTheme.name_translit}>
+                    {forumTheme.name}
+                </Link>
             </div>
         </div>
     );

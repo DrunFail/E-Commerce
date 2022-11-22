@@ -11,10 +11,10 @@ import styles from './Header.module.scss';
 
 
 export default function Header() {
-
     const check = localStorage.getItem('user')
-
-    let width = document.documentElement.clientWidth
+   
+        let width =  document.documentElement.clientWidth
+    
 
     return (
         <div className={styles.headerWrapper}>

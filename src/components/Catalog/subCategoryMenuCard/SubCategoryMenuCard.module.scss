@@ -1,9 +1,16 @@
+@import '../../../styles/_mixin.scss';
+
+
 .card {
     display: grid;
+    grid-template-rows: 4fr 1fr;
     border: 2px solid;
-    border-radius: 1em;
+    border-radius: 1rem;
     padding: 1rem 2rem;
     place-items: center;
+    & img{
+        object-fit: cover;
+    }
 
     & a {
         text-decoration: none;
@@ -14,5 +21,15 @@
     &:hover {
         border-color: orange;
        background-color: antiquewhite;
+    }
+
+   
+}
+@include s {
+    .card {
+        padding: 0;
+        & a {
+            font-size: 1.2rem;
+        }
     }
 }

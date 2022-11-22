@@ -1,32 +1,12 @@
 import React from 'react';
 import styles from './ShopsCard.module.scss';
 
-interface IShop {
-    id: number,
-    name: string,
-    "address": {
-        city: string,
-        street: string,
-        dom: string,
-        korpus: string | null
-    },
-    "work_hours": {
-        start: string,
-        "obed": {
-            start: string,
-            end: string
-        },
-        end: string
-    },
-    phone: string
+
+interface ShopsCardProps {
+    shop: Shop
 }
 
-
-interface IProps {
-    shop: IShop
-}
-
-export default function ShopsCard({ shop }: IProps) {
+export default function ShopsCard({ shop }: ShopsCardProps) {
     return (
         <div
             className={styles.wrapper}>

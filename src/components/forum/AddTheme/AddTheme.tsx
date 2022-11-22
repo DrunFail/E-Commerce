@@ -3,19 +3,18 @@ import styles from './AddTheme.module.scss';
 
 
 interface AddThemeProps {
-    visibleAddThemeForm: any,
-    setVisibleAddThemeForm: any
+    closeAddThemeForm: () => void
 }
 
 
-export default function AddTheme({ visibleAddThemeForm, setVisibleAddThemeForm }: AddThemeProps) {
+export default function AddTheme({ closeAddThemeForm}: AddThemeProps) {
     const [theme, setTheme] = useState({
         name: '',
         value: ''
     })
     return (
         <div className={styles.container}>
-            <form>
+            <form onSubmit={(event) => event.preventDefault() }>
                 <h1>Добавить новую тему</h1>
                 <input
                     onChange={(e) => setTheme({ ...theme, name: e.target.value })}
@@ -27,11 +26,11 @@ export default function AddTheme({ visibleAddThemeForm, setVisibleAddThemeForm }
                 <div>
 
                     <button
-                        onClick={() => setVisibleAddThemeForm(!visibleAddThemeForm)}>
+                        onClick={closeAddThemeForm}>
                         close
                     </button>
 
-                    <button>
+                    <button onClick={closeAddThemeForm }>
                         Опубликовать
                     </button>
                 </div>

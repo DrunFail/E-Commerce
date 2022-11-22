@@ -1,6 +1,9 @@
+@import '../../../../styles/_mixin.scss';
+
 .container {
     grid-column: 1/5;
     grid-row: 2/3;
+    padding: 1rem 2rem 0;
 
     .wrapper {
         width: 50%;
@@ -45,4 +48,12 @@
         border-bottom: 1px dashed;
         width: 100%;
     }
+}
+
+@include s{
+ .container{
+     .wrapper{
+         width: 100%;
+     }
+ }
 }

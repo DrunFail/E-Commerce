@@ -1,3 +1,6 @@
+@import '_breackpoints.scss';
+
+
 @mixin form_main {
     width: 50%;
     margin: 0 auto;
@@ -20,15 +23,6 @@
             padding-left: 1em;
         }
     }
-
-    @media (min-width: 320px) and (max-width: 499px) {
-        & section{
-            width: 80vw;
-            margin: 0 auto 1em;
-            
-            
-        }
-    }
 }
 
 @mixin form_section {
@@ -48,10 +42,42 @@
         height: 2em;
         padding-left: 1em;
     }
+}
 
-    @media (min-width: 320px) and (max-width: 499px) {
-        & input {
-            width: 70vw;
-        }
+// breackpoint mixins
+
+@mixin s {
+    @media(min-width: #{$screen-s-min}) and ( max-width: #{$screen-sm-min - 1}) {
+        @content
+    }
+}
+
+@mixin sm {
+    @media(min-width: #{$screen-sm-min}) {
+        @content
+    }
+}
+
+@mixin md {
+    @media(min-width: #{$screen-md-min}) {
+        @content
+    }
+}
+
+@mixin lg {
+    @media(min-width: #{$screen-lg-min}) {
+        @content
+    }
+}
+
+@mixin xl {
+    @media(min-width: #{$screen-xl-min}) {
+        @content
+    }
+}
+
+@mixin rwd($screen){
+    @media(min-width: $screen + 'px'){
+        @content
     }
 }

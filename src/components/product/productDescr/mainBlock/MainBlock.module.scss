@@ -1,4 +1,7 @@
+@import '../../../../styles/_mixin.scss';
+
 .container {
+    grid-area: titleBlock;
     display: grid;
     justify-content: center;
     justify-items: center;
@@ -46,5 +49,10 @@
                 
             }
         }
+    }
+}
+@include s {
+    .container{
+        grid-row-gap: .2rem;
     }
 }

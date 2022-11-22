@@ -1,7 +1,9 @@
+@import '../../../styles/_mixin.scss';
+
 .main {
     display: grid;
     justify-items: center;
-    
+
 
     .container {
         display: grid;
@@ -10,26 +12,23 @@
         justify-items: center;
         margin: 0 auto;
 
-        .wrapper {
+        .cardList {
             display: grid;
             grid-auto-rows: 20rem;
             width: 100%;
         }
     }
 }
-@media (min-width: 320px) and (max-width: 499px) {
-    .main{
+
+@include s {
+    .main {
         width: 100vw;
-        grid-row-gap: 1em;
-        & h1{
-            text-transform: uppercase;
-            font-size: 1.2em;
-            justify-self: center;
-            font-weight: 500;
-        }
-        .container{
-            .wrapper{
-                grid-row-gap: 1em;
+
+        .container {
+            grid-template-columns: 1fr;
+
+            .cardList {
+                grid-auto-rows: 11rem;
             }
         }
     }

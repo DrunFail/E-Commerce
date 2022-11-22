@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import CategoryMenu from '../../../data/CategoryMenu.json';
-import SubCategoryMenuCard from '../subCategoryMenuCard/SubCategoryMenuCardd';
+import SubCategoryMenuCard from '../subCategoryMenuCard/SubCategoryMenuCard';
 import styles from './SubCategoryMenu.module.scss';
 
 interface ICate {

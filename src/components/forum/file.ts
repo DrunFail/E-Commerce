@@ -1,6 +1,8 @@
 import forum from '../../data/forum.json';
 
 
+
+
 export const mainTheme = forum.map(elem => {
    return  {
         id: elem.id,
@@ -10,8 +12,10 @@ export const mainTheme = forum.map(elem => {
 }
 })
 
-export function findTheme(id: string | undefined) {
-    let x = forum.find(elem => elem.name_translit === id)
-    return x
-    
+export function findTheme(id: string): ForumTheme {
+    const find = forum.find(elem => elem.name_translit === id)
+    if (find === undefined) {
+        throw new Error('')
+    }
+    return find
 }

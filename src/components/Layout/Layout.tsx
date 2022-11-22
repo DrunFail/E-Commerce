@@ -14,10 +14,8 @@ export default function Layout() {
             <Header />
             <main className={styles.main}>
                 
-                <div>
                     <BreadCrumbs />
                     <Outlet />
-                </div>
             </main>
             {width < 500 && <MobileNavbar /> } 
             <Footer />

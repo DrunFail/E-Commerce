@@ -1,30 +1,22 @@
 import React from 'react';
 import { nanoid } from '@reduxjs/toolkit';
-import { useLocation } from 'react-router-dom';
-import { useAppDispatch } from '../../../redux/hooks';
-import { addItemToCart } from '../../../redux/slices/cart/cartSlice';
-import { addItemToCompare } from '../../../redux/slices/compare/compareSlice';
-import { addItemToFavoriteProducts } from '../../../redux/slices/favorite/favoriteProductsSlice';
-import CompareSvgComponent from '../../../ui/svgComponents/compare/CompareSvgComponent';
-import FavoriteListSvgComponent from '../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
+import { Link, useLocation } from 'react-router-dom';
+import { useAppDispatch } from '../../../../redux/hooks';
+import { addItemToCart } from '../../../../redux/slices/cart/cartSlice';
+import { addItemToCompare } from '../../../../redux/slices/compare/compareSlice';
+import { addItemToFavoriteProducts } from '../../../../redux/slices/favorite/favoriteProductsSlice';
+import CompareSvgComponent from '../../../../ui/svgComponents/compare/CompareSvgComponent';
+import FavoriteListSvgComponent from '../../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import styles from './ProductCard.module.scss';
 
 
 interface ProductCardProps {
-    smart: {
-        name: string,
-        nameTranslit: string,
-        image: string,
-        propertiesPortion: {
-            name: string,
-            value: string
-        }[]
-    }
+    product: ProductList
 }
 
 
-export default function ProductCard({ smart }: ProductCardProps) {
-    const { propertiesPortion } = smart;
+export default function ProductCard({ product }: ProductCardProps) {
+    const { propertiesPortion } = product;
 
     const location = useLocation();
     const dispatch = useAppDispatch();
@@ -34,15 +26,15 @@ export default function ProductCard({ smart }: ProductCardProps) {
     return (
         <div className={styles.container} >
             <img
-                src={`http://img.mvideo.ru/${smart.image}`}
+                src={`http://img.mvideo.ru/${product.image}`}
                 alt='product image'
             />
-            <a
+            <Link
                 className={styles.productTitle}
-                href={`${location.pathname}/${smart.nameTranslit}`}
+                to={`${location.pathname}/${product.nameTranslit}`}
             >
-                {smart.name}
-            </a>
+                {product.name}
+            </Link>
             <div className={styles.mainProperties}>
                 {propertiesPortion.map((properties: { name: string, value: string }, index: number) =>
                     <p
@@ -57,9 +49,9 @@ export default function ProductCard({ smart }: ProductCardProps) {
                 <button 
                     onClick={() => dispatch(addItemToFavoriteProducts({
                         id: nanoid(),
-                        title: smart.name,
-                        img: `http://img.mvideo.ru/${smart.image}`,
-                        link: `${location.pathname}/${smart.nameTranslit}`
+                        title: product.name,
+                        img: `http://img.mvideo.ru/${product.image}`,
+                        link: `${location.pathname}/${product.nameTranslit}`
 
                     }
 
@@ -70,9 +62,9 @@ export default function ProductCard({ smart }: ProductCardProps) {
                 <button 
                     onClick={() => dispatch(addItemToCompare({
                         id: nanoid(),
-                        title: smart.name,
-                        img: `http://img.mvideo.ru/${smart.image}`,
-                        link: `${location.pathname}/${smart.nameTranslit}`,
+                        title: product.name,
+                        img: `http://img.mvideo.ru/${product.image}`,
+                        link: `${location.pathname}/${product.nameTranslit}`,
 
 
                     }))} ><CompareSvgComponent /></button>
@@ -83,7 +75,7 @@ export default function ProductCard({ smart }: ProductCardProps) {
             <div className={styles.cart}>
                 <button onClick={() => dispatch(addItemToCart({
                     id: nanoid(),
-                    title: smart.name,
+                    title: product.name,
                     count: 1,
                     price: 5000
                 }))}

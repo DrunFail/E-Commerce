@@ -7,6 +7,7 @@ import { addItemToFavoriteProducts } from '../../../../redux/slices/favorite/fav
 import CompareSvgComponent from '../../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import styles from './MainBlock.module.scss';
+import { useLocation } from 'react-router-dom';
 
 
 interface MainBlockProps {
@@ -17,6 +18,8 @@ interface MainBlockProps {
 
 export default function MainBlock({ name, price }: MainBlockProps) {
     const dispatch = useDispatch();
+    const location = useLocation();
+    const { pathname } = location;
     return (
         <div className={styles.container}>
             <h1 id='title'>{name}</h1>
@@ -30,7 +33,9 @@ export default function MainBlock({ name, price }: MainBlockProps) {
                 }))}>в корзину</button>
                 <button onClick={() => dispatch(addItemToFavoriteProducts({
                     id: nanoid(),
-                    title: name
+                    title: name,
+                    link: pathname
+                    
                 })) } className={styles.icons}>{<FavoriteListSvgComponent />}</button>
                 <button onClick={() => dispatch(addItemToCompare)} className={styles.icons} >{<CompareSvgComponent /> }</button>
             </div>

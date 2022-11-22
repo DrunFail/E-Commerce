@@ -13,16 +13,11 @@ export default function ImageBlock({ images }: ImageBlockProps) {
 
     return (
         <div className={styles.container}>
-            <div className={styles.mainImg}>
-                {images.map((image, index) =>
-
+            <figure className={styles.mainImg}>
                     <img
-                        key={index}
-                        className={styles[imageIndex === index ? 'active' : 'offscreen']}
-                        src={`http://img.mvideo.ru/${image}`}
+                        src={`http://img.mvideo.ru/${images[imageIndex]}`}
                         alt='product' />
-                )}
-            </div>
+            </figure>
 
             <div className={styles.small}>
                 {images.map((image, index) =>

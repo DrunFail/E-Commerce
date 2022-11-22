@@ -22,11 +22,14 @@
 }
 
 @media (min-width: 320px) and (max-width: 499px) {
-    .title, .price, .total_price {
-        font-size: 0.8rem;
-    }
+    .container {
+        .title, .price, .total_price {
+            font-size: 0.8rem;
+        }
 
-    img {
-        height: 3em;
+        & img {
+            height: 3em;
+        }
     }
+   
 }

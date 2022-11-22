@@ -2,17 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './PromoCard.module.scss';
 
-type Promo = {
-    id: string,
-    name: string,
-    translit: string,
-    value: string,
-    validity: {
-        start: string,
-        end: string
-    }
-}
-
 
 interface PromoCardProps {
     promo: Promo

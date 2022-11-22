@@ -7,7 +7,7 @@ import styles from './ProductDescr.module.scss';
 
 
 export default function ProductDescr() {
-    const [productData, setProductData] = useState<Product>(huawei)
+    const [productData] = useState<Product>(huawei)
 
     const { name, price } = productData.body
     const { key } = productData.body.properties

@@ -23,7 +23,7 @@ export default function ProductDetails({ keys, all }: ProductDetailsProps) {
                     </div>
                     
                 )}
-                <button onClick={() => setShowMoreDetailed(!showMoreDetailed) }>more detailed</button>
+                <button onClick={() => setShowMoreDetailed(!showMoreDetailed) }>Подробнее</button>
             </div>
            
             {showMoreDetailed && <>

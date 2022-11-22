@@ -2,34 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Delivery from './pages/Delivery';
 import { store } from './redux/store/store';
 import './styles/index.scss';
 
 import SubCategoryMenu from './components/catalog/subCategoryMenu/SubCategoryMenu';
 import FavoriteProductsList from './components/favoriteProducts/FavoriteProductsList/FavoriteProductsList';
+import ForumRoutes from './components/forum/ForumRoutes';
 import Layout from './components/Layout/Layout';
 import OrderStepper from './components/orderPlace/orderStepper/OrderStepper';
 import PaymentForm from './components/orderPlace/PaymentStep/PaymentForm/PaymentForm';
 import ProductDescr from './components/product/productDescr/ProductDescr';
-import ShopsList from './components/shopsList/shopsList/ShopsList';
-import LoginPage from './pages/authenticate/LoginPage';
-import RegistrationPage from './pages/authenticate/RegistrationPage';
-import AksForPlansh from './pages/Catalog/smartgadzhets/AksForPlansh';
-import AksForSmart from './pages/Catalog/smartgadzhets/AksForSmart';
-import SmartClock from './pages/Catalog/smartgadzhets/SmartClock';
-import Smartphones from './pages/Catalog/smartgadzhets/Smartphones';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
-import ProfileOrder from './pages/profile/ProfileOrder';
-import ProfileSettings from './pages/profile/ProfileSettings';
-import Promo from './pages/Promo';
-import PromoDetails from './pages/PromoDetails';
-import Services from './pages/Services';
-import CartPage from './pages/CartPage';
-import ComparePage from './pages/ComparePage';
+import ProductList from './components/product/productList/ProductList';
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
-import ForumRoutes from './components/forum/ForumRoutes';
+import ShopsList from './components/shopsList/shopsList/ShopsList';
+import Home from './pages/Home';
+import CartList from './components/cart/CartList/CartList';
+import CompareList from './components/compare/compareList/CompareList';
+import NotFoundPage from './components/notFoundPage/NotFoundPage';
+import ServiceList from './components/service/serviceList/ServiceList';
+import PromoListDetails from './components/promo/promoListDetails/PromoListDetails';
+import PromoList from './components/promo/PromoList';
+import Login from './components/authenticate/login/Login';
+import Registration from './components/authenticate/registration/Registration';
+import OrdersList from './components/orders/ordersList/OrdersList';
+import Profile from './components/profileSettings/Profile';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
@@ -38,46 +34,34 @@ root.render(
         <BrowserRouter>
             <React.StrictMode>
                 <ScrollToTop />
-                
                 <Routes>
-                    
                     <Route path='/' element={<Layout />} >
                         <Route index element={<Home />} />
-                        
-                        <Route path='login' element={<LoginPage />} />
-                        <Route path='registration' element={<RegistrationPage />} />
+                        <Route path='login' element={<Login />} />
+                        <Route path='registration' element={<Registration />} />
                         <Route path='promo'>
-                            <Route index element={<Promo />} />
-                            <Route path=':promoId' element={<PromoDetails />} />
+                            <Route index element={<PromoList />} />
+                            <Route path=':promoId' element={<PromoListDetails />} />
                         </Route>
-                        <Route path='services' element={<Services />} />
-                        <Route path='delivery' element={<Delivery />} />
+                        <Route path='services' element={<ServiceList />} />
                         <Route path='shops' element={<ShopsList />} />
                         <Route path='favorite' element={<FavoriteProductsList />} />
-                        <Route path='compare' element={<ComparePage />} />
+                        <Route path='compare' element={<CompareList />} />
                         <Route path='forum/*' element={<ForumRoutes /> } />
                         
                         <Route path='order' element={<OrderStepper />} />
                         <Route path='payment' element={<PaymentForm /> } />
                         <Route path='cart' >
-                            <Route index element={<CartPage />} />
-                            
-
+                            <Route index element={<CartList />} />
                         </Route>
-                        
-                            
-                        <Route path='orders' element={<ProfileOrder />} />
-                        <Route path='profile' element={<ProfileSettings />} />
+                        <Route path='orders' element={<OrdersList />} />
+                        <Route path='profile' element={<Profile />} />
                         <Route path='smartfony-i-gadzhety'  >
                             <Route index element={<SubCategoryMenu />} />
                             <Route path='smartfony' >
-                                <Route index element={<Smartphones />} />
+                                <Route index element={<ProductList />} />
                                 <Route path=':smartfonyId' element={<ProductDescr/>} />
                             </Route>
-                            <Route path='planshety' element={<Smartphones />} />
-                            <Route path='smart-chasy' element={<SmartClock />} />
-                            <Route path='aksess-dlja-smartfonov' element={<AksForSmart />} />
-                            <Route path='aksess-dlja-planshetov' element={<AksForPlansh />} />
                         </Route>
                         <Route path='televizory' element={<SubCategoryMenu />} />
                         <Route path='krupnaya-bytovaja-tehnika' element={<SubCategoryMenu />} />
@@ -88,9 +72,8 @@ root.render(
                         <Route path='melkaja-bytovaja-tehnika' element={<SubCategoryMenu />} />
                         <Route path='books' element={<SubCategoryMenu />} />
                         <Route path='posuda' element={<SubCategoryMenu />} />
-                        <Route path="*" element={<NotFound />} />
+                        <Route path="*" element={<NotFoundPage />} />
                     </Route>
-                    
                 </Routes>
             </React.StrictMode>
         </BrowserRouter>
