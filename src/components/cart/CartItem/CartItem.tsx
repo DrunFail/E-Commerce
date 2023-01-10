@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '../../../redux/hooks';
 import { changeQuantityItemsAmount, decrementQuantityItems, incrementQuantityItems, deleteItemFromCart } from '../../../redux/slices/cart/cartSlice';
 import DeleteSvgComponent from '../../../ui/svgComponents/delete/DeleteSvgComponent';
 import styles from './CartItem.module.scss';
@@ -10,7 +10,7 @@ interface CartListProps {
 }
 
 export default function CartList({ cartItem, cartItemId }: CartListProps) {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     return (
         <div className={styles.container}>
@@ -28,6 +28,7 @@ export default function CartList({ cartItem, cartItemId }: CartListProps) {
                 </button>
 
                 <input
+                    type='tel'
                     value={cartItem.count}
                     onChange={(e) => {
                         const amount = +e.target.value

@@ -7,22 +7,20 @@
     border-radius: 1em;
     padding: 0.8em 0.2em;
     width: 100%;
-    
+
 
     & img {
         height: 5em;
     }
 
-     .titleProduct {
+    .titleProduct {
         text-decoration: none;
         color: black;
         opacity: 90%;
         font-size: 1.2rem;
         display: block;
         height: 5em;
-        
         font-weight: 300;
-        
     }
 
     .priceProduct {
@@ -32,7 +30,6 @@
 
         &:after {
             content: ' P';
-            
         }
     }
 
@@ -61,26 +58,37 @@
             }
         }
 
+        & div {
+            .active, .non-active {
+                height: 1.5em;
+                width: 1.5em;
+                opacity: 0.4;
 
+                &:hover {
+                    opacity: 1;
+                }
+            }
 
-        & div svg {
-            height: 1.5em;
-            width: 1.5em;
-            opacity: 0.4;
-
-            &:hover {
+            .active {
                 opacity: 1;
+
+                & svg {
+                    fill: blue;
+                }
             }
         }
     }
 }
+
 @media (min-width: 320px) and (max-width: 499px) {
-    .container{
+    .container {
         width: 95%;
-        .titleProduct{
+
+        .titleProduct {
             font-size: 0.8em;
         }
-        .priceProduct{
+
+        .priceProduct {
             font-size: 1em;
         }
     }

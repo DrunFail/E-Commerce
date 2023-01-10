@@ -1,4 +1,4 @@
-.container{
+.container {
     width: 100vw;
     height: 4rem;
     background-color: pink;
@@ -9,9 +9,23 @@
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-items: center;
+
     & svg {
         height: 2rem;
         padding: 1rem;
-        
     }
-}
+
+    & a:not(:first-child) {
+        position: relative;
+        & span{
+            position: absolute;
+            background-color: blue;
+            color: white;
+            border-radius: 0.2rem;
+            padding: 0.2rem 0;
+            width: 1.5rem;
+            inset-inline-end: 0;
+        }
+
+    }
+    }

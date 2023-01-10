@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { nanoid } from '@reduxjs/toolkit';
 import { Link, useLocation } from 'react-router-dom';
-import { useAppDispatch } from '../../../../redux/hooks';
-import { addItemToCart } from '../../../../redux/slices/cart/cartSlice';
+import { useAppDispatch, useAppSelector } from '../../../../redux/hooks';
+import { addItemToCart, deleteItemFromCart, selectCart } from '../../../../redux/slices/cart/cartSlice';
 import { addItemToCompare } from '../../../../redux/slices/compare/compareSlice';
 import { addItemToFavoriteProducts } from '../../../../redux/slices/favorite/favoriteProductsSlice';
 import CompareSvgComponent from '../../../../ui/svgComponents/compare/CompareSvgComponent';
@@ -20,8 +20,8 @@ export default function ProductCard({ product }: ProductCardProps) {
 
     const location = useLocation();
     const dispatch = useAppDispatch();
-
-
+    const cart = useAppSelector(selectCart)
+    const checkCart = cart.find(item => item.title === product.name)
 
     return (
         <div className={styles.container} >
@@ -46,7 +46,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
 
             <div className={styles.headerButtons}>
-                <button 
+                <button
                     onClick={() => dispatch(addItemToFavoriteProducts({
                         id: nanoid(),
                         title: product.name,
@@ -59,7 +59,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                     ))}
 
                 ><FavoriteListSvgComponent /></button>
-                <button 
+                <button
                     onClick={() => dispatch(addItemToCompare({
                         id: nanoid(),
                         title: product.name,
@@ -73,14 +73,29 @@ export default function ProductCard({ product }: ProductCardProps) {
             </div>
 
             <div className={styles.cart}>
-                <button onClick={() => dispatch(addItemToCart({
-                    id: nanoid(),
-                    title: product.name,
-                    count: 1,
-                    price: 5000
-                }))}
-                >В корзину
-                </button>
+                {checkCart
+                    ? <button className={styles.delete }
+                        onClick={() => dispatch(deleteItemFromCart(checkCart.id))}
+                    >
+                        Убрать
+                    </button>
+
+                    : <button className={styles.add }
+                        onClick={() => dispatch(addItemToCart({
+                            id: nanoid(),
+                            title: product.name,
+                            count: 1,
+                            price: 5000
+                        }))}
+                    >
+                        Добавить
+                    </button>
+                }
+
+
+
+
+
             </div>
         </div>
     );

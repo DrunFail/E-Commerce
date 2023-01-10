@@ -1,5 +1,10 @@
+import { nanoid } from '@reduxjs/toolkit';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
+import { addItemToCart, deleteItemFromCart, selectCart } from '../../../redux/slices/cart/cartSlice';
+import { addItemToCompare, deleteItemFromCompare, selectCompare } from '../../../redux/slices/compare/compareSlice';
+import { addItemToFavoriteProducts, removeItemFromFavoriteProducts, selectFavorite } from '../../../redux/slices/favorite/favoriteProductsSlice';
 import CartSvgComponent from '../../../ui/svgComponents/cart/CartSvgComponent';
 import CompareSvgComponent from '../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
@@ -11,6 +16,52 @@ interface PopProductCardProps {
 }
 
 export default function PopProductCard({ product }: PopProductCardProps) {
+    const dispatch = useAppDispatch();
+    const cart = useAppSelector(selectCart);
+    const favorite = useAppSelector(selectFavorite);
+    const compare = useAppSelector(selectCompare);
+
+    const checkCart = cart.find(item => item.title === product.title);
+    const checkFavorite = favorite.find(item => item.title === product.title);
+    const checkCompare = compare.find(item => item.title === product.title);
+
+    const handleClickEventCart = () => {
+        if (!checkCart) {
+            return  dispatch(addItemToCart({
+                title: product.title,
+                price: product.price,
+                count: 1,
+                id: nanoid()
+            }))
+        }
+        return dispatch(deleteItemFromCart(checkCart.id))
+    }
+
+    const handleClickEventFavorite = () => {
+        if (!checkFavorite) {
+            return dispatch(addItemToFavoriteProducts({
+                id: nanoid(),
+                title: product.title,
+                link: product.link,
+                img: process.env.PUBLIC_URL + `${product.img}-small.jpg`
+            }))
+        }
+        return dispatch(removeItemFromFavoriteProducts(checkFavorite.id))
+    }
+
+    const handleClickEventCompare = () => {
+        if (!checkCompare) {
+            return dispatch(addItemToCompare({
+                id: nanoid(),
+                title: product.title,
+                link: product.link,
+                img: process.env.PUBLIC_URL + `${product.img}-small.jpg`
+            }))
+        }
+        return dispatch(deleteItemFromCompare(checkCompare.id))
+    }
+
+
 
     return (
         <>
@@ -34,10 +85,26 @@ export default function PopProductCard({ product }: PopProductCardProps) {
                 <div className={styles.buttons}>
 
                     <div>
-                        <CompareSvgComponent />
-                        <FavoriteListSvgComponent />
+                        <span
+                            className={styles[checkCompare ? 'active' : 'non-active'] }
+                            onClick={handleClickEventCompare}
+                        >
+                            <CompareSvgComponent />
+                        </span>
+
+
+                        <span
+                            className={styles[checkFavorite ? 'active' : 'non-active']}
+                            onClick={handleClickEventFavorite}
+                        >
+                            <FavoriteListSvgComponent />
+                        </span>
                     </div>
-                    <button aria-label="add to cart" ><CartSvgComponent /></button>
+                    <button
+                        aria-label="add to cart"
+                        onClick={handleClickEventCart}                    >
+                        {checkCart ? 'added' : <CartSvgComponent />}
+                    </button>
 
                 </div>
 

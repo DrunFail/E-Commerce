@@ -15,7 +15,7 @@ export default function CartList() {
 
     return (
 
-        <div className={styles.container}>
+        <section className={styles.container}>
             <h1 className={styles.title}>корзина</h1>
 
             {!cart.length && <EmptyCart />}
@@ -41,7 +41,7 @@ export default function CartList() {
                 </Link>
             </>
             }
-        </div>
+        </section>
 
     );
 }
