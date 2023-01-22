@@ -1,24 +1,12 @@
 import React from 'react';
+import { ContactsData, DeliveryData } from '../interfaces/interfaces';
 import styles from './CheckoutOrder.module.scss';
 
 
 interface CheckoutOrderProps {
-    contacts: {
-        name: string,
-        last_name: string,
-        phone: string,
-        email: string
-    },
+    contacts: ContactsData,
     payment: string,
-    delivery: {
-        delivery_method: string,
-        delivery_shop: string,
-        city: string,
-        street: string,
-        home: string,
-        home2: string,
-        home3: string
-    }
+    delivery: DeliveryData
 }
 
 

@@ -4,6 +4,7 @@ import { selectCart } from '../../../redux/slices/cart/cartSlice';
 import CheckoutOrder from '../checkoutOrder/CheckoutOrder';
 import ContactStep from '../ContactStep/ContactStep';
 import DeliveryStep from '../DeliveryStep/DeliveryStep';
+import { OrderData } from '../interfaces/interfaces';
 import PaymentStep from '../PaymentStep/PaymentStep';
 import SuccessOrder from '../successOrder/SuccessOrder';
 import styles from './OrderStepper.module.scss';
@@ -14,36 +15,7 @@ export default function OrderHead() {
 
     const cart = useAppSelector(selectCart)
     console.log(cart)
-    const [newOrderData, setNewOrderData] = useState < {
-        contacts: {
-            name: string,
-            last_name: string,
-            phone: string,
-            email: string
-        },
-        delivery: {
-            delivery_method: string,
-            delivery_shop: string,
-            city: string,
-            street: string,
-            home: string,
-            home2: string,
-            home3: string,
-        },
-
-        payment: string,
-        order: {
-            id: string,
-            title: string,
-            count: number,
-            price: number
-        } | {
-            id: string,
-            title: string,
-            count: number,
-            price: number
-        }[]
-    } >
+    const [newOrderData, setNewOrderData] = useState <OrderData >
         ({
         contacts: {
             name: '',
@@ -62,12 +34,12 @@ export default function OrderHead() {
         },
         
         payment: 'cash',
-        order: {
+        order: [{
             id: '',
             title: '',
             price: 0,
             count: 0
-        }
+        }]
         
     })
 

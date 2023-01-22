@@ -1,31 +1,11 @@
 import React from 'react';
+import { Shop } from '../../../shopsList/interfaces/interfaces';
 import styles from './DeliveryShopsCard.module.scss';
 
-type Shops = {
-    id: number,
-    name: string,
-    address: {
-        city: string,
-        street: string,
-        dom: string,
-        korpus: string | null
-    },
-    work_hours: {
-        start: string,
-        end: string,
-        obed: {
-            start: string,
-            end: string
-        }
-        
-    },
-    phone: string
 
-
-}
 
 interface DeliveryShopsCardProps {
-    shop: Shops
+    shop: Shop
 }
 
 

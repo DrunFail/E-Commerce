@@ -1,11 +1,11 @@
-interface ShopAddress {
+export interface ShopAddress {
     city: string,
     street: string,
     dom: string,
     korpus: string | null
 }
 
-interface WorkHours {
+export interface WorkHours {
     start: string,
     obed: {
         start: string,
@@ -14,7 +14,7 @@ interface WorkHours {
     end: string
 }
 
-interface Shop {
+export interface Shop {
     id: number,
     name: string,
     address: ShopAddress,
