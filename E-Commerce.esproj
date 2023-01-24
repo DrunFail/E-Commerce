@@ -15,6 +15,8 @@
     <Folder Include="src\components\forum\ThemeUser\" />
     <Folder Include="src\components\forum\interfaces\" />
     <Folder Include="src\components\orderPlace\interfaces\" />
+    <Folder Include="src\components\orderPlace\buttonBlock\" />
+    <Folder Include="src\components\orderPlace\headerStepper\" />
     <Folder Include="src\components\popProduct\interfaces\" />
     <Folder Include="src\components\product\productDescr\interfaces\" />
     <Folder Include="src\components\product\productList\interfaces\" />
@@ -22,6 +24,7 @@
     <Folder Include="src\components\scrollToTop\" />
     <Folder Include="src\components\shopsList\interfaces\" />
     <Folder Include="src\data\phones\" />
+    <Folder Include="src\ui\textInput\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptConfiguration Remove="node_modules\**" />

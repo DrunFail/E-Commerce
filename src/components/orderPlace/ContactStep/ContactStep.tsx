@@ -1,102 +1,54 @@
 import React from "react";
-import { ContactsData, OrderData } from "../interfaces/interfaces";
-
-
-
+import TextInput from "../../../ui/textInput/TextInput";
+import { OrderData } from "../interfaces/interfaces";
 
 
 interface ContactFormProps {
-    contacts:ContactsData,
-    newOrderData: OrderData,
-    setNewOrderData: any
+    data: OrderData,
+    handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 
-export default function ContactForm({ newOrderData, setNewOrderData, contacts }: ContactFormProps) {
-    const addName = (e: React.ChangeEvent<HTMLInputElement>) => {
-        contacts.name = e.target.value
-        setNewOrderData({ ...newOrderData, contacts })
-    }
+export default function ContactForm({ data, handleChange }: ContactFormProps) {
 
     return (
         <>
-            
-            <section>
-                <label
-                    htmlFor='name'>
-                    имя
-                </label>
-                <input
-                    id='name'
-                    name='name'
-                    type='text'
-                    placeholder="имя"
-                    required
-                    value={contacts.name}
-                    onChange={addName}
-                />
-            </section>
+            <TextInput
+                label={"Имя"}
+                type={"text"}
+                name={"name"}
+                value={data.name}
+                onChange={handleChange}
+                placeholder={"имя"}
+                required />
 
-            <section>
+            <TextInput
+                label={'фамилия'}
+                type={'text'}
+                name={'last_name'}
+                value={data.last_name}
+                onChange={handleChange}
+                placeholder={'фамилия'}
+                required />
 
-                <label
-                    htmlFor='last_name'>
-                    фамилия
-                </label>
-                <input
-                    id='last_name'
-                    name='last_name'
-                    type='text'
-                    placeholder="фамилия"
-                    value={contacts.last_name}
-                    onChange={(e) => {
-                        contacts.last_name = e.target.value
-                        setNewOrderData({ ...newOrderData, contacts })
-                    }}
-                    required
-                />
-            </section>
+            <TextInput
+                label={"телефон"}
+                type={"tel"}
+                name={"phone"}
+                value={data.phone}
+                onChange={handleChange}
+                placeholder={"телефон"}
+                required />
 
-            <section>
+            <TextInput
+                label={"email"}
+                type={"email"}
+                name={"email"}
+                value={data.email}
+                onChange={handleChange}
+                placeholder={"email"}
+                required />
 
-                <label
-                    htmlFor='phone'>
-                    телефон
-                </label>
-                <input
-                    id='phone'
-                    name='phone'
-                    placeholder="телефон"
-                    type='tel'
-                    value={contacts.phone}
-                    onChange={(e) => {
-                        contacts.phone = e.target.value
-                        setNewOrderData({ ...newOrderData, contacts })
-                    }}
-                    required
-                />
-            </section>
-
-            <section>
-                <label
-                    htmlFor='email'>
-                    email
-                </label>
-                <input
-                    id='email'
-                    name='email'
-                    placeholder="email"
-                    type='email'
-                    value={contacts.email}
-                    onChange={(e) => {
-                        contacts.email = e.target.value
-                        setNewOrderData({ ...newOrderData, contacts })
-                    }}
-                    required
-                />
-            </section>
-            </>
-
-
+        </>
     );
 }

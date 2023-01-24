@@ -25,9 +25,6 @@ export interface OrderItem {
 
 
 
-export interface OrderData {
-    contacts: ContactsData,
-    delivery: DeliveryData,
-    order: OrderItem[],
+export interface OrderData extends ContactsData,DeliveryData, OrderItem {
     payment: string
 }

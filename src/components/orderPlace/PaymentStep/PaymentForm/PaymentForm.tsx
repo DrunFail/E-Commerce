@@ -3,8 +3,8 @@ import styles from './PaymentForm.module.scss';
 
 export default function PaymentForm() {
     return (
-        <form className={styles.container }>
-            
+        <form className={styles.container}>
+
             <section>
                 <label htmlFor='card'>номер карты</label>
                 <input
@@ -16,8 +16,6 @@ export default function PaymentForm() {
                     required
                 />
             </section>
-
-           
 
             <section>
                 <label htmlFor='owner'>владелец</label>
@@ -54,11 +52,7 @@ export default function PaymentForm() {
             </section>
 
             <button>оплатить заказ</button>
-            </form>
-            
+        </form>
 
-
-
-        
     );
 }

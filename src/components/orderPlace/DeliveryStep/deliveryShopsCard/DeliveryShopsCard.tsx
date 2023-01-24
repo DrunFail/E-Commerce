@@ -3,19 +3,17 @@ import { Shop } from '../../../shopsList/interfaces/interfaces';
 import styles from './DeliveryShopsCard.module.scss';
 
 
-
 interface DeliveryShopsCardProps {
     shop: Shop
 }
 
 
-
 export default function DeliveryShopsCard({ shop }: DeliveryShopsCardProps) {
     return (
         <div className={styles.wrapper}>
-           
+
             <input
-                defaultChecked={shop.id === 1 ? true : false }
+                defaultChecked={shop.id === 1 ? true : false}
                 value={shop.name}
                 type='radio'
                 id={`${shop.id}`}
@@ -23,7 +21,7 @@ export default function DeliveryShopsCard({ shop }: DeliveryShopsCardProps) {
                 required
             />
 
-            <label  htmlFor={`${shop.id}`} >
+            <label htmlFor={`${shop.id}`} >
                 <div>
                     <h2>{shop.name}</h2>
                     <p><span> Адрес:</span> {shop.address.city},
@@ -37,7 +35,7 @@ export default function DeliveryShopsCard({ shop }: DeliveryShopsCardProps) {
 
                 </div>
             </label>
-            </div>
-       
-        );
+        </div>
+
+    );
 }
