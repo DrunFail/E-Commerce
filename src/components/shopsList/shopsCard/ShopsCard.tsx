@@ -1,4 +1,5 @@
 import React from 'react';
+import { Shop } from '../interfaces/interfaces';
 import styles from './ShopsCard.module.scss';
 
 

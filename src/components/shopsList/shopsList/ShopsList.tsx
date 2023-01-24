@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import shopsList from '../../../data/shopsList.json';
+import { Shop } from '../interfaces/interfaces';
 import ShopsCard from '../shopsCard/ShopsCard';
 import styles from './ShopsList.module.scss';
 

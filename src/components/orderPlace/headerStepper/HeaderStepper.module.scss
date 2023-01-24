@@ -1,0 +1,32 @@
+.head {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1em;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2em;
+    align-items: center;
+
+    & > p {
+        padding: 0.4em;
+        border-radius: 1em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .active {
+        font-style: italic;
+        font-weight: 700;
+        font-size: 0.8em;
+    }
+
+    .current {
+        font-weight: 700;
+        background-color: orange;
+        color: white;
+    }
+
+    .non_active {
+        font-size: .8em;
+    }
+}
