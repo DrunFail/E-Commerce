@@ -11,6 +11,7 @@
     <Folder Include="src\components\cart\interfaces\" />
     <Folder Include="src\components\compare\interfaces\" />
     <Folder Include="src\components\favoriteProducts\interfaces\" />
+    <Folder Include="src\components\footer\footerLink\" />
     <Folder Include="src\components\forum\AddTheme\" />
     <Folder Include="src\components\forum\ThemeUser\" />
     <Folder Include="src\components\forum\interfaces\" />

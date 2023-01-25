@@ -1,47 +1,31 @@
-import { Link } from 'react-router-dom';
-import styles from './FooterCardMenu.module.scss';
-import { useState } from 'react';
 import React from 'react';
+import FooterLink from '../footerLink/FooterLink';
+import { FooterItem } from '../interfaces/interfaces';
+import styles from './FooterCardMenu.module.scss';
 
 
-interface ILink {
-    name: string,
-    link: string
-}
-
-interface IMenu {
-    title: string,
-    links: ILink[]
-}
-
-interface IProps {
-    menu: IMenu
+interface FooterCardMenuProps {
+    menu: FooterItem
 }
 
 
-export default function FooterCardMenu({ menu }: IProps) {
-    const width = document.documentElement.clientWidth
-    const [showMenu, setShowMenu] = useState(width < 500 ? false : true)
+export default function FooterCardMenu({ menu }: FooterCardMenuProps) {
     return (
         <div className={styles.sell}>
-            <div
-                onClick={() => setShowMenu(!showMenu)}
-                className={styles[showMenu ? 'showMenu' : 'offscreen']}
-            >
-                <p
-                    className={styles.title}
-                >
-                    {menu.title}
-                </p>
-                {width < 500 && <p >{`<` }</p>}
-            </div>
-            
-            
-            {showMenu &&
-                menu.links.map((lin: any, index: number) =>
-                    <Link key={index} className={styles.link} to={lin.link}>{lin.name}</Link>
-                )
-            }
+            <p className={styles.title}>
+                {menu.title}
+            </p>
+
+            <ul>
+                {menu.links
+                    .map((elem, index: number) =>
+                        <FooterLink
+                            key={index}
+                            link={elem} />
+                    )
+                }
+            </ul>
+
         </div>
-        );
+    );
 }
