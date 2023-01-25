@@ -1,0 +1,16 @@
+.li {
+    line-height: 1.5;
+    font-size: inherit;
+
+    .link {
+        text-decoration: none;
+        color: white;
+        padding: 0.2em;
+
+        &:hover {
+            color: white;
+            background: black;
+            border-radius: 0.5em;
+        }
+    }
+}

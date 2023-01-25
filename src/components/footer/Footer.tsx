@@ -1,30 +1,20 @@
-import styles from './Footer.module.scss';
+import React, { useState } from 'react';
 import footerMenu from '../../data/footerMenu.json';
+import styles from './Footer.module.scss';
 import FooterCardMenu from './footerCardMenu/FooterCardMenu';
-import React from 'react';
-
-interface ILink {
-    name: string,
-    link: string
-}
-
-interface IMenu {
-    title: string,
-    links: ILink[]
-}
-
+import { FooterItem } from './interfaces/interfaces';
 
 
 export default function Footer() {
+    const [footerData] = useState<FooterItem[]>(footerMenu)
 
     return (
-        <footer className={styles.footer}>
-            <div>
-                {footerMenu.map((menu, index) =>
+        <div className={styles.wrapper}>
+            <footer className={styles.footer }>
+                {footerData.map((menu, index) =>
                     <FooterCardMenu key={index} menu={menu} />
                 )}
-            </div>
-
-        </footer>
+            </footer>
+        </div>
     );
 }
