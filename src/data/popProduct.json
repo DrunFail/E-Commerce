@@ -60,6 +60,42 @@
     "price": 8555
   },
   {
+    "title": "Смартфон HUAWEI nova Y70 Midnight Black (MGA-LX9N)",
+    "link": "smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n",
+    "img": "popProductImg/huawei2",
+    "price": 18890
+  },
+  {
+    "title": "Ультрабук Huawei MateBook X Pro 13.9",
+    "link": "smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n",
+    "img": "popProductImg/huawei",
+    "price": 52000
+  },
+  {
+    "title": "Tелевизор Samsung UE50TU7002UXRU",
+    "link": "smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n",
+    "img": "popProductImg/samsung",
+    "price": 15000
+  },
+  {
+    "title": "Чайник электрический SunWind SUN-K-001",
+    "link": "smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n",
+    "img": "popProductImg/sunwind",
+    "price": 500
+  },
+  {
+    "title": "Холодильник Beko CNMV5335E20VXR двухкамерный",
+    "link": "smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n",
+    "img": "popProductImg/beko",
+    "price": 50000
+  },
+  {
+    "title": "Летние шины КАМА Нк-132 Кама Breeze",
+    "link": "smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n",
+    "img": "popProductImg/kama",
+    "price": 8555
+  },
+  {
     "title": "Дрель-шуруповерт Вихрь ДА-18Л-2КА 1.5Ач",
     "link": "smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n",
     "img": "popProductImg/vihr",
@@ -70,5 +106,18 @@
     "link": "smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n",
     "img": "popProductImg/huter",
     "price": 8555
+  },
+  {
+    "title": "Холодильник Beko CNMV5335E20VXR двухкамерный",
+    "link": "smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n",
+    "img": "popProductImg/beko",
+    "price": 50000
+  },
+  {
+    "title": "Летние шины КАМА Нк-132 Кама Breeze",
+    "link": "smartfony-i-gadzhety/smartfony/smartfon-huawei-nova-y70-midnight-black-mga-lx9n",
+    "img": "popProductImg/kama",
+    "price": 8555
   }
+
 ]
