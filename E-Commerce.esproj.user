@@ -6,9 +6,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>LaunchJsonDebugger</DebuggerFlavor>
     <LaunchJsonTarget>{
+  "name": "localhost (Edge)",
   "type": "edge",
   "request": "launch",
-  "name": "localhost (Edge)",
   "url": "http://localhost:3000",
   "webRoot": "C:\\Users\\Andrew\\source\\repos\\E-Commerce"
 }</LaunchJsonTarget>

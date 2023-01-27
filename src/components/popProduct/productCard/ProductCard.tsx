@@ -8,14 +8,14 @@ import { addItemToFavoriteProducts, removeItemFromFavoriteProducts, selectFavori
 import CartSvgComponent from '../../../ui/svgComponents/cart/CartSvgComponent';
 import CompareSvgComponent from '../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
-import styles from './PopProductCard.module.scss';
+import styles from './ProductCard.module.scss';
 
 
-interface PopProductCardProps {
+interface ProductCardProps {
     product: PopProduct
 }
 
-export default function PopProductCard({ product }: PopProductCardProps) {
+export default function ProductCard({ product }: ProductCardProps) {
     const dispatch = useAppDispatch();
     const cart = useAppSelector(selectCart);
     const favorite = useAppSelector(selectFavorite);
@@ -68,7 +68,7 @@ export default function PopProductCard({ product }: PopProductCardProps) {
 
             <div className={styles.container}>
                 <img
-                    alt={`изображение ${product.title}`}
+                    alt={product.title}
                     src={process.env.PUBLIC_URL + `${product.img}.jpg`}
                     srcSet={(process.env.PUBLIC_URL + `${product.img}.jpg` + ` 1080w`,
                         process.env.PUBLIC_URL + `${product.img}-small.jpg` + ` 480w`
@@ -102,7 +102,8 @@ export default function PopProductCard({ product }: PopProductCardProps) {
                     </div>
                     <button
                         aria-label="add to cart"
-                        onClick={handleClickEventCart}                    >
+                        onClick={handleClickEventCart}>
+
                         {checkCart ? 'added' : <CartSvgComponent />}
                     </button>
 
