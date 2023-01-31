@@ -18,7 +18,6 @@ export default function CartList({ cartItem, cartItemId }: CartListProps) {
 
             <p className={styles.title}>{cartItem.title} </p>
 
-            <p className={styles.price}>{cartItem.price} </p>
 
             <div className={styles.count}>
 
@@ -42,7 +41,7 @@ export default function CartList({ cartItem, cartItemId }: CartListProps) {
             </div>
             <p
                 className={styles.totalPrice}>
-                {cartItem.count * cartItem.price}
+                {`${cartItem.count * cartItem.price} P`}
             </p>
             <button
                 onClick={() => dispatch(deleteItemFromCart(cartItemId))}>

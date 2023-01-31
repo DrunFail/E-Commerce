@@ -1,15 +1,4 @@
 .main {
-    grid-row: 2/3;
-    min-height: 45rem;
+    width: 100%;
     max-width: 1500px;
-}
-
-@media (min-width: 320px) and (max-width: 499px) {
-    .main{
-        width: 100vw;
-        & > div{
-            grid-row-gap: 1em;
-            grid-auto-flow: row;
-        }
-    }
 }

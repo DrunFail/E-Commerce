@@ -8,6 +8,7 @@ export default function Logo() {
             className={styles.logo}
             to='/'>
             E-commerce
+            
         </Link>
         );
 }

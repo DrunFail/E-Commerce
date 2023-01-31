@@ -1,0 +1,24 @@
+:root {
+    /*    main colors */
+    --black: black;
+    --white: white;
+    --blue: blue;
+    --orange: orange;
+    --red: red;
+
+
+    --clr-primary-brand: var(--blue);
+    --clr-secondary-brand: var(--orange);
+    /*    typography */
+    --clr-text-main: var(--black);
+    --clr-text-secondary: var(--white);
+    --clr-link:var(--white);
+    --clr-link-bg: var(--orange);
+    --clr-link-active: var(--red);
+    
+    --clr-link-product: var(--black);
+    /*buttons*/
+    --clr-button: var(--clr-secondary-brand);
+    --clr-button-hover: var(--clr-primary-brand);
+    --clr-button-hover-text: var(--clr-text-secondary);
+}

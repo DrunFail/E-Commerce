@@ -2,7 +2,6 @@
     display: grid;
     text-transform: capitalize;
     align-content: start;
-    font-size: 1.2rem;
 
     .title {
         padding-top: 0.2em;
@@ -11,4 +10,9 @@
         margin-bottom: .5em;
         color: white;
     }
+}
+@media (max-width: 768px){
+    .sell ul {
+            display: none;
+        }
 }

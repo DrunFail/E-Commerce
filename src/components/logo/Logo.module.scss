@@ -1,13 +1,16 @@
-.logo{
-    font-size: 2em;
-    font-weight: 700;
+@import '../../styles/_mixin.scss';
+
+.logo {
     text-decoration: none;
+    padding: .5rem 1rem;
+    font-weight: 700;
     text-transform: uppercase;
-    color: white;
+    color: var(--clr-text-secondary);
+
+    
+
+    &:hover {
+        background-color: var(--clr-secondary-brand);
+        border-radius: 1rem;
+    }
 }
-@media (min-width: 320px) and (max-width: 499px) {
-    .logo{
-        font-size: 1.5em;
-        text-align: center;
-    }
-    }
