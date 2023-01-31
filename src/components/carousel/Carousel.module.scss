@@ -1,61 +1,70 @@
 $gapSlide: 2rem;
 
 .main {
-    max-width: 1500px;
+    width: 100%;
+    overflow: hidden;
     padding: 1rem 0;
 
     & h1 {
-        font-size: 2em;
         font-weight: 700;
         text-transform: uppercase;
         justify-self: start;
     }
 
-    .container {
+    .section {
+        display: grid;
+        grid-auto-flow: column;
+        grid-column-gap: $gapSlide;
+        justify-items: center;
+        grid-auto-columns: 100%;
         overflow: hidden;
         padding: .5rem 0;
 
-
-
-        .section {
+        .slide {
             display: grid;
             grid-auto-flow: column;
+            grid-auto-columns: 1fr;
             grid-column-gap: $gapSlide;
-            justify-items: center;
-            grid-auto-columns: 100%;
-
-            .slide {
-                display: grid;
-                grid-auto-flow: column;
-                grid-auto-columns: 1fr;
-                grid-column-gap: $gapSlide;
-                max-width: 1500px;
-                position: relative;
-                padding: 0 3.5rem;
+            position: relative;
+            padding: 0 3.5rem;
+            
 
 
-                & > a {
-                    position: absolute;
-                    font-size: 2rem;
 
-                    &:nth-child(1) {
-                        left: 0;
-                        bottom: 50%;
-                    }
 
-                    &:last-child {
-                        right: 0;
-                        bottom: 50%;
-                    }
+            & > button {
+                position: absolute;
+
+                &:nth-child(1) {
+                    left: 0;
+                    bottom: 50%;
+                }
+
+                &:last-child {
+                    right: 0;
+                    bottom: 50%;
                 }
             }
         }
     }
 }
-@media (max-width: 499px) {
-    .main .container {
-       overflow-x: scroll;
 
-       
+@media (max-width: 1000px) {
+    .main {
+
+        .section {
+            grid-auto-columns: auto;
+            grid-column-gap: 0;
+            overflow-x: scroll;
+
+            .slide {
+                padding: 0 1rem;
+                grid-column-gap: 1rem;
+
+                & > button {
+                    display: none;
+                }
+            }
+        }
     }
 }

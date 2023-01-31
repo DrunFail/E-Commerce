@@ -2,16 +2,14 @@
     display: grid;
     grid-row-gap: 1rem;
     position: relative;
-    width: 80%;
-    margin: 0 auto 20em;
+    max-width: 1000px;
+    margin: 0 auto 6rem;
 
 
     .title {
         justify-self: center;
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 2em;
-        text-align: center;
         margin-bottom: 2em;
     }
 
@@ -19,7 +17,6 @@
     .total {
         text-align: end;
         text-transform: uppercase;
-        font-size: 1em;
         font-weight: 700;
         margin-bottom: 2em;
     }
@@ -40,6 +37,6 @@
 }
 @media (min-width: 374px) and (max-width: 499px) {
     .container{
-        width: 100vw;
+        
     }
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import { useAppSelector } from '../../../redux/hooks';
 import { Link } from 'react-router-dom';
+import { useAppSelector } from '../../../redux/hooks';
+import { selectCart } from '../../../redux/slices/cart/cartSlice';
 import CartItem from '../CartItem/CartItem';
 import EmptyCart from '../emptyCart/EmptyCart';
 import styles from './CartList.module.scss';
-import { selectCart } from '../../../redux/slices/cart/cartSlice';
 
 
 export default function CartList() {

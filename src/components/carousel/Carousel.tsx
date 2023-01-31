@@ -23,14 +23,14 @@ export default function Carousel({ name, idKey }: CarouselProps) {
 
     const newArray = () => {
         let start = 0;
-        let end = 5;
+        let end = 7;
         let arr: PopProduct[][] = [];
 
-        for (let i = 0; i < productList.length / 5; i++) {
+        for (let i = 0; i < productList.length / 7; i++) {
             let a = productList.slice(start, end);
             arr = [...arr, a];
-            end = end + 5;
-            start = start + 5;
+            end = end + 7;
+            start = start + 7;
         }
         return arr
     }
@@ -39,7 +39,6 @@ export default function Carousel({ name, idKey }: CarouselProps) {
     return (
         <div className={styles.main}>
             <h1>{name}</h1>
-            <section className={styles.container}>
 
                 <div className={styles.section}>
                     {newArray().map((elem, index) =>
@@ -54,7 +53,6 @@ export default function Carousel({ name, idKey }: CarouselProps) {
                     )
                     }
                 </div>
-            </section>
         </div>
     );
 }

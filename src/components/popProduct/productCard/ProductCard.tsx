@@ -76,12 +76,12 @@ export default function ProductCard({ product }: ProductCardProps) {
 
                 />
                 <Link
-                    className={styles.titleProduct}
+                    
                     to={product.link}
                 >
-                    {product.title}
+                    <p className={styles.titleProduct}>{product.title}</p>
                 </Link>
-                <p className={styles.priceProduct}>{product.price}</p>
+                <p>{`${product.price} P`}</p>
                 <div className={styles.buttons}>
 
                     <div>

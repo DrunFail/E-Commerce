@@ -12,19 +12,21 @@
 
     & svg {
         height: 2rem;
-        padding: 1rem;
+        width: 2rem;
     }
 
     & a:not(:first-child) {
         position: relative;
         & span{
             position: absolute;
+            top: -10px;
+            right: -15px;
             background-color: blue;
             color: white;
             border-radius: 0.2rem;
-            padding: 0.2rem 0;
-            width: 1.5rem;
-            inset-inline-end: 0;
+            padding: 0.2rem;
+            width: 1rem;
+            text-align: center;
         }
 
     }

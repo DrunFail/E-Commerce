@@ -1,26 +1,27 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 7fr 2fr 1fr 2fr 1fr;
-    column-gap: 0.4em;
+    grid-template-columns: minmax(2.5rem, 1fr) minmax(10rem, 7fr) minmax(2.5rem, 1fr) minmax(6rem, 1fr) 1rem;
+    column-gap: .5em;
     align-items: center;
     justify-items: center;
     background-color: whitesmoke;
-    padding: 1em;
     border-radius: 1em;
 
 
     & img {
         max-inline-size: 100%;
+        width: auto;
+        object-fit: contain;
         border-radius: 1em;
     }
 
-    & .title {
+    .title {
+        justify-self: flex-start;
     }
 
-    .price, .totalPrice {
-        &:after {
-            content: ' P'
-        }
+     .totalPrice {
+        justify-self: flex-end;
+      
     }
 
     .count {
@@ -62,17 +63,8 @@
         }
     }
 }
-@media (min-width: 374px) and (max-width: 499px) {
-    .container {
-        width: 100vw;
-        padding: 1em 0.2em;
-
-        & img {
-            width: 4em;
-        }
-
-        .title, .price, .totalPrice {
-            font-size: 0.8em;
-        }
+@media (max-width: 1000px){
+    .container .count button{
+        display: none;
     }
 }
