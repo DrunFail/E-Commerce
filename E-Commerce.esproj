@@ -26,6 +26,7 @@
     <Folder Include="src\components\shopsList\interfaces\" />
     <Folder Include="src\data\phones\" />
     <Folder Include="src\ui\textInput\" />
+    <Folder Include="src\hooks\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptConfiguration Remove="node_modules\**" />

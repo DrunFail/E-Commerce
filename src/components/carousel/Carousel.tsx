@@ -40,7 +40,7 @@ export default function Carousel({ name, idKey }: CarouselProps) {
         <div className={styles.main}>
             <h1>{name}</h1>
 
-                <div className={styles.section}>
+            <div className={styles.section}>
                     {newArray().map((elem, index) =>
 
                         <div className={styles.slide} id={`${idKey}${index}`}>
