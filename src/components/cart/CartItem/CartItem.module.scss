@@ -1,44 +1,67 @@
 .container {
     display: grid;
-    grid-template-columns: minmax(2.5rem, 1fr) minmax(10rem, 7fr) minmax(2.5rem, 1fr) minmax(6rem, 1fr) 1rem;
-    column-gap: .5em;
+    grid-template-columns: 1fr 4fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'image title count price'
+    'image . . delete';
+    grid-column-gap: 2rem;
     align-items: center;
     justify-items: center;
     background-color: whitesmoke;
     border-radius: 1em;
-
-
-    & img {
+    min-height: 150px;
+    padding: 1rem 2rem;
+    /*    & img {
         max-inline-size: 100%;
         width: auto;
         object-fit: contain;
         border-radius: 1em;
     }
+*/
 
-    .title {
-        justify-self: flex-start;
+    .image {
+        grid-area: image;
+
+        & img {
+            max-inline-size: 100%;
+            width: auto;
+            object-fit: contain;
+            border-radius: 1em;
+        }
     }
 
-     .totalPrice {
-        justify-self: flex-end;
-      
+    .title {
+        grid-area: title;
+        justify-self: flex-start;
+        font-size: 1rem;
+    }
+
+    .totalPrice {
+        grid-area: price;
+        justify-self: flex-start;
+        font-size: 1.5rem;
     }
 
     .count {
         display: flex;
-        justify-content: space-around;
-        width: 5em;
+        align-content: center;
+        grid-area: count;
 
         input {
-            width: 1.9em;
-            border-radius: 0.4em;
+            width: 2rem;
+            border-radius: 0.1rem;
             border: 1px solid;
+            height: 2rem;
+            padding-inline-start: 0.5rem;
         }
 
         button {
-            width: 1.5em;
+            width: 2rem;
             border: 1px solid;
-            border-radius: 0.4em;
+            border-radius: 0.1em;
+            height: 2rem;
+            font-weight: 700;
+            font-size: 1rem;
 
             &:hover {
                 background-color: orange;
@@ -49,6 +72,7 @@
 
 
     & > button {
+        grid-area: delete;
         align-self: center;
         max-inline-size: 100%;
         border: none;
@@ -63,8 +87,20 @@
         }
     }
 }
-@media (max-width: 1000px){
-    .container .count button{
-        display: none;
+
+@media screen and (max-width: 1025px){
+    .container {
+        grid-template-areas: 'image title title title delete'
+            'image price price price count';
+        grid-template-columns: 1fr max-content 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 1rem;
+        padding-inline: 0.5rem;
+        .count{
+            justify-self: center;
+        }
+        & > button{
+            justify-self: center;
+        }
     }
 }

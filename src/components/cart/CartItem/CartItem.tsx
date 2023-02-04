@@ -13,8 +13,11 @@ export default function CartList({ cartItem, cartItemId }: CartListProps) {
     const dispatch = useAppDispatch();
 
     return (
-        <div className={styles.container}>
-            <img src={process.env.PUBLIC_URL + `/cat.jpeg`} />
+        <article className={styles.container}>
+            <div className={styles.image }>
+                <img src={process.env.PUBLIC_URL + `/cat.jpeg`} />
+            </div>
+            
 
             <p className={styles.title}>{cartItem.title} </p>
 
@@ -47,6 +50,6 @@ export default function CartList({ cartItem, cartItemId }: CartListProps) {
                 onClick={() => dispatch(deleteItemFromCart(cartItemId))}>
                 <DeleteSvgComponent />
             </button>
-        </div>
+        </article>
     );
 }
