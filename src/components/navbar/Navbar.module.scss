@@ -1,9 +1,8 @@
 .nav > ul {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: repeat(auto-fill, 1fr);
-    grid-column-gap: 4%;
     align-items: center;
+    text-align: start;
 
     .link {
         text-decoration: none;
