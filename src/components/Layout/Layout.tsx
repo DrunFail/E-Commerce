@@ -1,23 +1,32 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import { useResize } from '../../hooks/useResize';
+import HeaderWrapper from '../../ui/headerWrapper/HeaderWrapper';
 import BreadCrumbs from '../breadCrumbs/BreadCrumbs';
 import Footer from "../footer/Footer";
-import Header from "../header/Header";
+import DesktopHeader from '../header/desktop/DesktopHeader';
+import MobileHeader from '../header/mobile/MobileHeader';
 import MobileNavbar from '../mobileNavbar/MobileNavbar';
 import styles from './Layout.module.scss';
 
 export default function Layout() {
-    const width = document.documentElement.clientWidth
+    const width = useResize();
 
     return (
         <>
-            <Header />
+            <HeaderWrapper>
+                {width < 1025
+                    ? <MobileHeader />
+                    : <DesktopHeader />}
+            </HeaderWrapper>
+
+
             <main className={styles.main}>
-                
-                    <BreadCrumbs />
-                    <Outlet />
+                <BreadCrumbs />
+                <Outlet />
             </main>
-            {width < 500 && <MobileNavbar /> } 
+
+            {width < 1025 && <MobileNavbar />}
             <Footer />
         </>
     );
