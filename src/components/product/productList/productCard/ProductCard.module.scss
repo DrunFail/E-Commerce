@@ -1,30 +1,27 @@
-@import '../../../../styles/_mixin.scss';
-
-
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 3fr;
     grid-template-areas:
-        'img title buttons' 'img properties cart';
+        'img title buttons'
+        'img properties cart';
     padding: 1rem 0;
     border-block-start: 1px solid rgba(0, 0, 0, 0.2);
 
 
-    &:hover {
-        box-shadow: 0.3em 0.3em 0.3em rgba(0,0,0,0.3), 0.3em -0.3em 0.3em rgba(0,0,0,0.3);
-    }
 
     & > img {
         grid-area: img;
-        max-inline-size: 100%;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
     }
 
 
     .productTitle {
         grid-area: title;
         text-decoration: none;
-        font-size: 1.4rem;
+        font-weight: 700;
         color: black;
 
         &:hover {
@@ -35,28 +32,62 @@
 
     .headerButtons {
         grid-area: buttons;
-        justify-self: center;
-        align-self: center;
-
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 3fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
         & button {
-            height: 4em;
-            width: 4em;
+            height: 3rem;
+            width: 3rem;
             padding: 0.2em 0.4em;
             background-color: blue;
             fill: white;
-            border-radius: 1em;
+
+            & svg {
+                height: 2em;
+                width: 2em;
+            }
 
             &:hover {
                 background-color: orange;
                 cursor: pointer;
             }
         }
+
+        .cart {
+            align-self: center;
+            width: 100%;
+
+            .add, .delete {
+                font-size: 1.5rem;
+                padding: 0.2em 0.4em;
+                background-color: blue;
+                color: white;
+                width: 100%;
+
+                &:hover {
+                    background-color: orange;
+                    cursor: pointer;
+                }
+            }
+
+            .delete {
+                background-color: orange;
+            }
+
+            & svg {
+                fill: white;
+            }
+        }
     }
 
-    .mainProperties {
+    .details {
         grid-area: properties;
         display: grid;
-        grid-row-gap: 0.1rem;
+        grid-auto-flow: row;
+        grid-auto-rows: 2rem;
+        font-size: .8rem;
 
         & p {
             font-weight: 600;
@@ -66,42 +97,24 @@
             font-weight: 500;
         }
     }
-
-
-
-
-    .cart {
-        grid-area: cart;
-        align-self: center;
-
-        .add, .delete {
-            font-size: 2rem;
-            border-radius: 1em;
-            padding: 0.2em 0.4em;
-            background-color: blue;
-            color: white;
-
-            &:hover {
-                background-color: orange;
-                cursor: pointer;
-            }
-        }
-    }
 }
 
-@include s {
+@media screen and (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr 2fr;
-        grid-template-areas: 'img title' 'img properties' 'cart buttons';
+        grid-template-columns:  repeat(3, 1fr);
+        grid-template-areas: 'img title title' 'img properties properties' 'img buttons buttons';
+        grid-template-rows: min-content 2fr 1fr;
         padding: 0.5rem 0;
+        grid-row-gap: .5rem;
+        min-height: 13rem;
 
         .productTitle {
             font-size: 1rem;
         }
 
-        .mainProperties {
+        .details {
             grid-auto-rows: min-content;
-
+            grid-row-gap: 0.5rem;
             & p, span {
                 font-size: .8rem;
                 font-weight: normal;
@@ -109,26 +122,27 @@
         }
 
         .headerButtons {
-            justify-self: start;
+            justify-self: flex-start;
 
             & button {
-                height: 1.7rem;
-                width: 1.7rem;
+                height: 3rem;
+                width: 3rem;
                 padding: 0;
                 border-radius: 0.5rem;
 
                 & svg {
-                    height: 1rem;
-                    width: 1rem;
+                    height: 2rem;
+                    width: 2rem;
                 }
             }
         }
 
         .cart {
-            justify-self: end;
+            justify-self: start;
 
             & button {
                 font-size: 1rem;
+                height: 3rem;
             }
         }
     }

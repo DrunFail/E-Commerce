@@ -1,35 +1,12 @@
-@import '../../../styles/_mixin.scss';
-
-.main {
-    display: grid;
-    justify-items: center;
-
-
     .container {
         display: grid;
-        grid-template-columns: 4fr 1fr;
-        width: 100%;
+        max-width: 1000px;
         justify-items: center;
         margin: 0 auto;
 
-        .cardList {
+        .list {
             display: grid;
-            grid-auto-rows: 20rem;
+            grid-auto-flow: row;
             width: 100%;
         }
     }
-}
-
-@include s {
-    .main {
-        width: 100vw;
-
-        .container {
-            grid-template-columns: 1fr;
-
-            .cardList {
-                grid-auto-rows: 11rem;
-            }
-        }
-    }
-}
