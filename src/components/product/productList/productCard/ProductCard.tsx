@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { nanoid } from '@reduxjs/toolkit';
 import { Link, useLocation } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../../redux/hooks';
@@ -24,19 +24,21 @@ export default function ProductCard({ product }: ProductCardProps) {
     const checkCart = cart.find(item => item.title === product.name)
 
     return (
-        <div className={styles.container} >
+        <article className={styles.container} >
             <img
                 src={`http://img.mvideo.ru/${product.image}`}
-                alt='product image'
+                alt={product.name }
             />
+
             <Link
                 className={styles.productTitle}
                 to={`${location.pathname}/${product.nameTranslit}`}
             >
                 {product.name}
             </Link>
-            <div className={styles.mainProperties}>
-                {propertiesPortion.map((properties: { name: string, value: string }, index: number) =>
+
+            <div className={styles.details}>
+                {propertiesPortion.map((properties, index: number) =>
                     <p
                         key={index}>
                         {properties.name}:  <span>{properties.value}</span>
@@ -46,15 +48,36 @@ export default function ProductCard({ product }: ProductCardProps) {
 
 
             <div className={styles.headerButtons}>
+
+                <div className={styles.cart}>
+                    {checkCart
+                        ? <button className={styles.delete}
+                            onClick={() => dispatch(deleteItemFromCart(checkCart.id))}
+                        >
+                            Убрать
+                        </button>
+
+                        : <button className={styles.add}
+                            onClick={() => dispatch(addItemToCart({
+                                id: nanoid(),
+                                title: product.name,
+                                count: 1,
+                                price: 5000
+                            }))}
+                        >
+                            Добавить
+                        </button>
+                    }
+
+                </div>
+
                 <button
                     onClick={() => dispatch(addItemToFavoriteProducts({
                         id: nanoid(),
                         title: product.name,
                         img: `http://img.mvideo.ru/${product.image}`,
                         link: `${location.pathname}/${product.nameTranslit}`
-
                     }
-
 
                     ))}
 
@@ -69,34 +92,8 @@ export default function ProductCard({ product }: ProductCardProps) {
 
                     }))} ><CompareSvgComponent /></button>
 
-
             </div>
 
-            <div className={styles.cart}>
-                {checkCart
-                    ? <button className={styles.delete }
-                        onClick={() => dispatch(deleteItemFromCart(checkCart.id))}
-                    >
-                        Убрать
-                    </button>
-
-                    : <button className={styles.add }
-                        onClick={() => dispatch(addItemToCart({
-                            id: nanoid(),
-                            title: product.name,
-                            count: 1,
-                            price: 5000
-                        }))}
-                    >
-                        Добавить
-                    </button>
-                }
-
-
-
-
-
-            </div>
-        </div>
+        </article>
     );
-}
+};
