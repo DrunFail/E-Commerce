@@ -43,7 +43,10 @@ export default function Carousel({ name, idKey }: CarouselProps) {
             <div className={styles.section}>
                     {newArray().map((elem, index) =>
 
-                        <div className={styles.slide} id={`${idKey}${index}`}>
+                        <div
+                            key={index }
+                            className={styles.slide}
+                            id={`${idKey}${index}`}>
                             <ArrowLeft handler={handleClick} id={`${idKey}${index - 1}` } />
                             {elem.map((product, index) =>
                                 <PopProductCard key={index} product={product} />
