@@ -15,17 +15,18 @@ export default function ProductDetails({ keys, all }: ProductDetailsProps) {
 
     return (
         <div className={styles.container} >
-            <div className={styles.wrapper }>
+            <div className={styles.wrapper}>
                 {keys.map((prop, index: number) =>
-                    <div className={styles.mainProperties }>
-                        <p key={index}>{prop.properties[0].name}</p>
+                    <div className={styles.mainProperties}
+                        key={index}>
+                        <p >{prop.properties[0].name}</p>
                         <p>{prop.properties[0].value}{prop.properties[0].measure}</p>
                     </div>
-                    
+
                 )}
-                <button onClick={() => setShowMoreDetailed(!showMoreDetailed) }>Подробнее</button>
+                <button onClick={() => setShowMoreDetailed(!showMoreDetailed)}>Подробнее</button>
             </div>
-           
+
             {showMoreDetailed && <>
                 {
                     all.map((prop, index: number) =>
@@ -46,5 +47,5 @@ export default function ProductDetails({ keys, all }: ProductDetailsProps) {
 
                     )}</>}
         </div>
-        );
+    );
 }
