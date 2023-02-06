@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAppDispatch } from '../../../redux/hooks';
-import { changeQuantityItemsAmount, decrementQuantityItems, incrementQuantityItems, deleteItemFromCart } from '../../../redux/slices/cart/cartSlice';
 import DeleteSvgComponent from '../../../ui/svgComponents/delete/DeleteSvgComponent';
+import { changeQuantityCartItem, decrementCartItem, deleteCartItem, incrementCartItem } from '../redux/cartSlice';
 import styles from './CartItem.module.scss';
 
 interface CartListProps {
@@ -25,7 +25,7 @@ export default function CartList({ cartItem, cartItemId }: CartListProps) {
             <div className={styles.count}>
 
                 <button
-                    onClick={() => dispatch(decrementQuantityItems(cartItemId))} >
+                    onClick={() => dispatch(decrementCartItem(cartItemId))} >
                     -
                 </button>
 
@@ -34,11 +34,11 @@ export default function CartList({ cartItem, cartItemId }: CartListProps) {
                     value={cartItem.count}
                     onChange={(e) => {
                         const amount = +e.target.value
-                        dispatch(changeQuantityItemsAmount({ cartItemId, amount }))
+                        dispatch(changeQuantityCartItem({ cartItemId, amount }))
                     }
                     } />
                 <button
-                    onClick={() => dispatch(incrementQuantityItems(cartItemId))}>
+                    onClick={() => dispatch(incrementCartItem(cartItemId))}>
                     +
                 </button>
             </div>
@@ -47,7 +47,7 @@ export default function CartList({ cartItem, cartItemId }: CartListProps) {
                 {`${cartItem.count * cartItem.price} P`}
             </p>
             <button
-                onClick={() => dispatch(deleteItemFromCart(cartItemId))}>
+                onClick={() => dispatch(deleteCartItem(cartItemId))}>
                 <DeleteSvgComponent />
             </button>
         </article>

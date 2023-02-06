@@ -2,12 +2,12 @@ import React from 'react';
 import { nanoid } from '@reduxjs/toolkit';
 import { Link, useLocation } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../../redux/hooks';
-import { addItemToCart, deleteItemFromCart, selectCart } from '../../../../redux/slices/cart/cartSlice';
 import { addItemToCompare } from '../../../../redux/slices/compare/compareSlice';
 import { addItemToFavoriteProducts } from '../../../../redux/slices/favorite/favoriteProductsSlice';
 import CompareSvgComponent from '../../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import styles from './ProductCard.module.scss';
+import { addCartItem, deleteCartItem, selectCart } from '../../../cart/redux/cartSlice';
 
 
 interface ProductCardProps {
@@ -17,7 +17,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
     const { propertiesPortion } = product;
-
+    const price = '5000';
     const location = useLocation();
     const dispatch = useAppDispatch();
     const cart = useAppSelector(selectCart)
@@ -52,18 +52,16 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div className={styles.cart}>
                     {checkCart
                         ? <button className={styles.delete}
-                            onClick={() => dispatch(deleteItemFromCart(checkCart.id))}
+                            onClick={() => dispatch(deleteCartItem(checkCart.id))}
                         >
                             Убрать
                         </button>
 
                         : <button className={styles.add}
-                            onClick={() => dispatch(addItemToCart({
-                                id: nanoid(),
-                                title: product.name,
-                                count: 1,
-                                price: 5000
-                            }))}
+                            onClick={() => dispatch(addCartItem(
+                                product.name,
+                                price
+                            ))}
                         >
                             Добавить
                         </button>

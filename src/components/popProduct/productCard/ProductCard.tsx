@@ -2,12 +2,12 @@ import { nanoid } from '@reduxjs/toolkit';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
-import { addItemToCart, deleteItemFromCart, selectCart } from '../../../redux/slices/cart/cartSlice';
 import { addItemToCompare, deleteItemFromCompare, selectCompare } from '../../../redux/slices/compare/compareSlice';
 import { addItemToFavoriteProducts, removeItemFromFavoriteProducts, selectFavorite } from '../../../redux/slices/favorite/favoriteProductsSlice';
 import CartSvgComponent from '../../../ui/svgComponents/cart/CartSvgComponent';
 import CompareSvgComponent from '../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
+import { addCartItem, deleteCartItem, selectCart } from '../../cart/redux/cartSlice';
 import styles from './ProductCard.module.scss';
 
 
@@ -27,14 +27,12 @@ export default function ProductCard({ product }: ProductCardProps) {
 
     const handleClickEventCart = () => {
         if (!checkCart) {
-            return  dispatch(addItemToCart({
-                title: product.title,
-                price: product.price,
-                count: 1,
-                id: nanoid()
-            }))
+            return  dispatch(addCartItem(
+                product.title,
+                product.price
+            ))
         }
-        return dispatch(deleteItemFromCart(checkCart.id))
+        return dispatch(deleteCartItem(checkCart.id))
     }
 
     const handleClickEventFavorite = () => {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppSelector } from '../../../redux/hooks';
-import { selectCart } from '../../../redux/slices/cart/cartSlice';
 import CartItem from '../CartItem/CartItem';
 import EmptyCart from '../emptyCart/EmptyCart';
+import { selectCart } from '../redux/cartSlice';
 import styles from './CartList.module.scss';
 
 

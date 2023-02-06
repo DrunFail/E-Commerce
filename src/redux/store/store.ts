@@ -1,9 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import cartReducer from '../slices/cart/cartSlice'
 import favoriteCategoriesReducer from '../slices/fav/favoriteCategoriesSlice'
 import favoriteProductsReducer from '../slices/favorite/favoriteProductsSlice';
 import compareReducer from '../slices/compare/compareSlice';
 import userReducer from '../slices/user/userSlice';
+import cartReducer from '../../components/cart/redux/cartSlice';
+
 
 export const store = configureStore({
     reducer: {
