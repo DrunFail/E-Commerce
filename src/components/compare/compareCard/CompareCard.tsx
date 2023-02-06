@@ -1,18 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppDispatch } from '../../../redux/hooks';
-import { deleteItemFromCompare } from '../../../redux/slices/compare/compareSlice';
+import { CompareItem } from '../interfaces/interfaces';
+import { removeCompareItem } from '../redux/compareSlice';
 import styles from './CompareCard.module.scss';
 
-type Compare = {
-    id: string,
-    title: string,
-    img: string,
-    link: string
-}
 
 interface CompareCardProps {
-    product: Compare
+    product: CompareItem
 }
 
 
@@ -22,7 +17,7 @@ export default function CompareCard({ product }: CompareCardProps) {
         <div className={styles.container }>
             <img src={product.img} alt={product.title } />
             <Link to={product.link}>{product.title}</Link>
-            <button onClick={() => dispatch(deleteItemFromCompare(product.id)) }>delete</button>
+            <button onClick={() => dispatch(removeCompareItem(product.id)) }>delete</button>
 
         </div>
         

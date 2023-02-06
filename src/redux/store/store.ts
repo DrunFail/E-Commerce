@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import favoriteCategoriesReducer from '../slices/fav/favoriteCategoriesSlice'
-import compareReducer from '../slices/compare/compareSlice';
+import compareReducer from '../../components/compare/redux/compareSlice';
 import userReducer from '../slices/user/userSlice';
 import cartReducer from '../../components/cart/redux/cartSlice';
 import favoriteProductsReducer from '../../components/favoriteProducts/redux/favoriteProductsSlice';

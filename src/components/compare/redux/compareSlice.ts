@@ -1,9 +1,10 @@
 import { createSlice, nanoid, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../../../redux/store/store'
+import { CompareItem } from '../interfaces/interfaces'
 
 
-const initialState = (): FavoriteProductItem[] => {
-    let item = localStorage.getItem('favorite')
+const initialState = (): CompareItem[] => {
+    let item = localStorage.getItem('compare')
     if (item) {
         return JSON.parse(item)
     } else {
@@ -11,17 +12,15 @@ const initialState = (): FavoriteProductItem[] => {
     }
 }
 
-
-export const favoriteProductsSlice = createSlice({
-    name: 'favoriteProducts',
+export const compareSlice = createSlice({
+    name: 'compare',
     initialState,
 
     reducers: {
-
-        addFavoriteItem: {
-            reducer(state, action: PayloadAction<FavoriteProductItem>) {
+        addCompareItem: {
+            reducer(state, action: PayloadAction<CompareItem>) {
                 state.push(action.payload)
-                localStorage.setItem('favorite', JSON.stringify(state))
+                localStorage.setItem('compare', JSON.stringify(state))
             },
             prepare(title, img, link) {
                 return {
@@ -34,16 +33,15 @@ export const favoriteProductsSlice = createSlice({
                 }
             }
         },
-        removeFavoriteItem(state, action: PayloadAction<string>) {
+
+        removeCompareItem(state, action: PayloadAction<string>) {
             const newState = state.filter((elem) => elem.id !== action.payload)
-            localStorage.setItem('favorite', JSON.stringify(newState))
+            localStorage.setItem('compare', JSON.stringify(newState))
             return newState
         }
-    }
+    },
 })
 
-export const { addFavoriteItem, removeFavoriteItem } = favoriteProductsSlice.actions
-
-export const selectFavorite = (state: RootState) => state.favoriteProducts
-
-export default favoriteProductsSlice.reducer
+export const { addCompareItem, removeCompareItem } = compareSlice.actions
+export const selectCompare = (state: RootState) => state.compare
+export default compareSlice.reducer

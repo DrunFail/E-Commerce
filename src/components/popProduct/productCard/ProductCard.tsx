@@ -2,11 +2,11 @@ import { nanoid } from '@reduxjs/toolkit';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
-import { addItemToCompare, deleteItemFromCompare, selectCompare } from '../../../redux/slices/compare/compareSlice';
 import CartSvgComponent from '../../../ui/svgComponents/cart/CartSvgComponent';
 import CompareSvgComponent from '../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import { addCartItem, deleteCartItem, selectCart } from '../../cart/redux/cartSlice';
+import { addCompareItem, removeCompareItem, selectCompare } from '../../compare/redux/compareSlice';
 import { addFavoriteItem, removeFavoriteItem, selectFavorite } from '../../favoriteProducts/redux/favoriteProductsSlice';
 import styles from './ProductCard.module.scss';
 
@@ -39,7 +39,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         if (!checkFavorite) {
             return dispatch(addFavoriteItem(
                 product.title,
-                process.env.PUBLIC_URL + `${product.img}-small.jpg`,
+                 process.env.PUBLIC_URL + `${product.img}-small.jpg` ,
                 product.link
             ))
         }
@@ -48,14 +48,13 @@ export default function ProductCard({ product }: ProductCardProps) {
 
     const handleClickEventCompare = () => {
         if (!checkCompare) {
-            return dispatch(addItemToCompare({
-                id: nanoid(),
-                title: product.title,
-                link: product.link,
-                img: process.env.PUBLIC_URL + `${product.img}-small.jpg`
-            }))
+            return dispatch(addCompareItem(
+                product.title,
+                process.env.PUBLIC_URL + `${product.img}-small.jpg`,
+                product.link,
+            ))
         }
-        return dispatch(deleteItemFromCompare(checkCompare.id))
+        return dispatch(removeCompareItem(checkCompare.id))
     }
 
 

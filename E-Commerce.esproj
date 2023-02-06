@@ -26,7 +26,6 @@
     <Folder Include="src\components\scrollToTop\" />
     <Folder Include="src\components\shopsList\interfaces\" />
     <Folder Include="src\data\phones\" />
-    <Folder Include="src\redux\slices\favorite\" />
     <Folder Include="src\ui\textInput\" />
     <Folder Include="src\ui\headerWrapper\" />
   </ItemGroup>

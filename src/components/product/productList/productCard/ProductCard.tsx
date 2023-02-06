@@ -2,12 +2,12 @@ import React from 'react';
 import { nanoid } from '@reduxjs/toolkit';
 import { Link, useLocation } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../../redux/hooks';
-import { addItemToCompare } from '../../../../redux/slices/compare/compareSlice';
 import CompareSvgComponent from '../../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import styles from './ProductCard.module.scss';
 import { addCartItem, deleteCartItem, selectCart } from '../../../cart/redux/cartSlice';
 import { addFavoriteItem } from '../../../favoriteProducts/redux/favoriteProductsSlice';
+import { addCompareItem } from '../../../compare/redux/compareSlice';
 
 
 interface ProductCardProps {
@@ -79,14 +79,14 @@ export default function ProductCard({ product }: ProductCardProps) {
 
                 ><FavoriteListSvgComponent /></button>
                 <button
-                    onClick={() => dispatch(addItemToCompare({
-                        id: nanoid(),
-                        title: product.name,
-                        img: `http://img.mvideo.ru/${product.image}`,
-                        link: `${location.pathname}/${product.nameTranslit}`,
+                    onClick={() => dispatch(addCompareItem(
+                        product.name,
+                        `http://img.mvideo.ru/${product.image}`,
+                        `${location.pathname}/${product.nameTranslit}`,
 
-
-                    }))} ><CompareSvgComponent /></button>
+                    ))} >
+                    <CompareSvgComponent />
+                </button>
 
             </div>
 

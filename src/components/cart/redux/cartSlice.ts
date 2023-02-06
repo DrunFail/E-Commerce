@@ -19,7 +19,7 @@ const initialState = (): ShoppingCartItem[] => {
 
 export const cartSlice = createSlice({
     name: 'cart',
-    initialState: initialState,
+    initialState,
     reducers: {
 
         addCartItem: {

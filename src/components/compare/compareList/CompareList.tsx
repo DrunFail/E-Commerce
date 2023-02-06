@@ -1,8 +1,8 @@
 import React from 'react';
 import { useAppSelector } from '../../../redux/hooks';
-import { selectCompare } from '../../../redux/slices/compare/compareSlice';
 import CompareCard from '../compareCard/CompareCard';
 import EmptyCompare from '../emptyCompare/EmptyCompare';
+import { selectCompare } from '../redux/compareSlice';
 import styles from './CompareList.module.scss';
 
 export default function CompareList() {
