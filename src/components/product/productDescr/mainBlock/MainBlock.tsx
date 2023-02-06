@@ -1,13 +1,12 @@
 import React from 'react';
-import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import { addItemToCart } from '../../../../redux/slices/cart/cartSlice';
-import { addItemToCompare } from '../../../../redux/slices/compare/compareSlice';
-import { addItemToFavoriteProducts } from '../../../../redux/slices/favorite/favoriteProductsSlice';
 import CompareSvgComponent from '../../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import styles from './MainBlock.module.scss';
 import { useLocation } from 'react-router-dom';
+import { addCartItem } from '../../../cart/redux/cartSlice';
+import { addFavoriteItem } from '../../../favoriteProducts/redux/favoriteProductsSlice';
+import { addCompareItem } from '../../../compare/redux/compareSlice';
 
 
 interface MainBlockProps {
@@ -25,22 +24,26 @@ export default function MainBlock({ name, price }: MainBlockProps) {
             <h1 id='title'>{name}</h1>
             <p >{price} P</p>
             <div className={styles.buttons}>
-                <button onClick={() => dispatch(addItemToCart({
-                    id: nanoid(),
-                    title: name,
-                    count: 1,
-                    price: 5000
-                }))}>в корзину</button>
-                <button onClick={() => dispatch(addItemToFavoriteProducts({
-                    id: nanoid(),
-                    title: name,
-                    link: pathname
-                    
-                })) } className={styles.icons}>{<FavoriteListSvgComponent />}</button>
-                <button onClick={() => dispatch(addItemToCompare)} className={styles.icons} >{<CompareSvgComponent /> }</button>
+                <button
+                    onClick={() =>
+                        dispatch(addCartItem(name, price = '5000'
+                        ))
+                    }>
+                    в корзину
+                </button>
+                <button
+                    onClick={() => dispatch(addFavoriteItem(
+                        name,
+                        undefined,
+                        pathname
+                    ))}
+                    className={styles.icons}>
+                    {<FavoriteListSvgComponent />}
+                </button>
+                <button onClick={() => dispatch(addCompareItem)} className={styles.icons} >{<CompareSvgComponent />}</button>
             </div>
         </div>
-        );
+    );
 
 }
 

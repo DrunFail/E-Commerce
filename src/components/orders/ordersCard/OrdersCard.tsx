@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAppSelector } from '../../../redux/hooks';
-import { selectCart } from '../../../redux/slices/cart/cartSlice';
+import { selectCart } from '../../cart/redux/cartSlice';
 import OrdersDetails from '../ordersDetails/OrdersDetails';
 import styles from './OrdersCard.module.scss';
 

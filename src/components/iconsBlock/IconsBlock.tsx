@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppSelector } from '../../redux/hooks';
-import { selectCart } from '../../redux/slices/cart/cartSlice';
-import { selectCompare } from '../../redux/slices/compare/compareSlice';
-import { selectFavorite } from '../../redux/slices/favorite/favoriteProductsSlice';
 import CartSvgComponent from '../../ui/svgComponents/cart/CartSvgComponent';
 import CompareSvgComponent from '../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
+import { selectCart } from '../cart/redux/cartSlice';
+import { selectCompare } from '../compare/redux/compareSlice';
+import { selectFavorite } from '../favoriteProducts/redux/favoriteProductsSlice';
 import styles from './IconsBlock.module.scss';
 
 export default function IconsBlock() {

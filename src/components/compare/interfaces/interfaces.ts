@@ -1,4 +1,4 @@
-interface CompareItem {
+export interface CompareItem {
     id: string,
     title: string,
     img: string,

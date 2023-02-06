@@ -2,12 +2,12 @@ import React from 'react';
 import { nanoid } from '@reduxjs/toolkit';
 import { Link, useLocation } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../../redux/hooks';
-import { addItemToCart, deleteItemFromCart, selectCart } from '../../../../redux/slices/cart/cartSlice';
-import { addItemToCompare } from '../../../../redux/slices/compare/compareSlice';
-import { addItemToFavoriteProducts } from '../../../../redux/slices/favorite/favoriteProductsSlice';
 import CompareSvgComponent from '../../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import styles from './ProductCard.module.scss';
+import { addCartItem, deleteCartItem, selectCart } from '../../../cart/redux/cartSlice';
+import { addFavoriteItem } from '../../../favoriteProducts/redux/favoriteProductsSlice';
+import { addCompareItem } from '../../../compare/redux/compareSlice';
 
 
 interface ProductCardProps {
@@ -17,7 +17,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
     const { propertiesPortion } = product;
-
+    const price = '5000';
     const location = useLocation();
     const dispatch = useAppDispatch();
     const cart = useAppSelector(selectCart)
@@ -27,7 +27,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <article className={styles.container} >
             <img
                 src={`http://img.mvideo.ru/${product.image}`}
-                alt={product.name }
+                alt={product.name}
             />
 
             <Link
@@ -52,18 +52,16 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div className={styles.cart}>
                     {checkCart
                         ? <button className={styles.delete}
-                            onClick={() => dispatch(deleteItemFromCart(checkCart.id))}
+                            onClick={() => dispatch(deleteCartItem(checkCart.id))}
                         >
                             Убрать
                         </button>
 
                         : <button className={styles.add}
-                            onClick={() => dispatch(addItemToCart({
-                                id: nanoid(),
-                                title: product.name,
-                                count: 1,
-                                price: 5000
-                            }))}
+                            onClick={() => dispatch(addCartItem(
+                                product.name,
+                                price
+                            ))}
                         >
                             Добавить
                         </button>
@@ -72,25 +70,23 @@ export default function ProductCard({ product }: ProductCardProps) {
                 </div>
 
                 <button
-                    onClick={() => dispatch(addItemToFavoriteProducts({
-                        id: nanoid(),
-                        title: product.name,
-                        img: `http://img.mvideo.ru/${product.image}`,
-                        link: `${location.pathname}/${product.nameTranslit}`
-                    }
+                    onClick={() => dispatch(addFavoriteItem(
+                        product.name,
+                        `http://img.mvideo.ru/${product.image}`,
+                        `${location.pathname}/${product.nameTranslit}`
 
                     ))}
 
                 ><FavoriteListSvgComponent /></button>
                 <button
-                    onClick={() => dispatch(addItemToCompare({
-                        id: nanoid(),
-                        title: product.name,
-                        img: `http://img.mvideo.ru/${product.image}`,
-                        link: `${location.pathname}/${product.nameTranslit}`,
+                    onClick={() => dispatch(addCompareItem(
+                        product.name,
+                        `http://img.mvideo.ru/${product.image}`,
+                        `${location.pathname}/${product.nameTranslit}`,
 
-
-                    }))} ><CompareSvgComponent /></button>
+                    ))} >
+                    <CompareSvgComponent />
+                </button>
 
             </div>
 
