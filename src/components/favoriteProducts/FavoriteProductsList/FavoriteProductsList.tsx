@@ -1,8 +1,8 @@
 import React from 'react';
 import { useAppSelector } from '../../../redux/hooks';
-import { selectFavorite } from '../../../redux/slices/favorite/favoriteProductsSlice';
 import EmptyFavoriteProducts from '../emptyFavoriteProducts/EmptyFavoriteProducts';
 import FavoriteProductsCard from '../FavoriteProductsCard/FavoriteProductsCard';
+import { selectFavorite } from '../redux/favoriteProductsSlice';
 import styles from './FavoriteProductsList.module.scss';
 
 export default function FavoriteProductsList() {

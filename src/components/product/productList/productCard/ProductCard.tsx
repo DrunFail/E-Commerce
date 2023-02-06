@@ -3,11 +3,11 @@ import { nanoid } from '@reduxjs/toolkit';
 import { Link, useLocation } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../../redux/hooks';
 import { addItemToCompare } from '../../../../redux/slices/compare/compareSlice';
-import { addItemToFavoriteProducts } from '../../../../redux/slices/favorite/favoriteProductsSlice';
 import CompareSvgComponent from '../../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import styles from './ProductCard.module.scss';
 import { addCartItem, deleteCartItem, selectCart } from '../../../cart/redux/cartSlice';
+import { addFavoriteItem } from '../../../favoriteProducts/redux/favoriteProductsSlice';
 
 
 interface ProductCardProps {
@@ -27,7 +27,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <article className={styles.container} >
             <img
                 src={`http://img.mvideo.ru/${product.image}`}
-                alt={product.name }
+                alt={product.name}
             />
 
             <Link
@@ -70,12 +70,10 @@ export default function ProductCard({ product }: ProductCardProps) {
                 </div>
 
                 <button
-                    onClick={() => dispatch(addItemToFavoriteProducts({
-                        id: nanoid(),
-                        title: product.name,
-                        img: `http://img.mvideo.ru/${product.image}`,
-                        link: `${location.pathname}/${product.nameTranslit}`
-                    }
+                    onClick={() => dispatch(addFavoriteItem(
+                        product.name,
+                        `http://img.mvideo.ru/${product.image}`,
+                        `${location.pathname}/${product.nameTranslit}`
 
                     ))}
 

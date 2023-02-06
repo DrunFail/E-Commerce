@@ -2,12 +2,12 @@ import React from 'react';
 import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { addItemToCompare } from '../../../../redux/slices/compare/compareSlice';
-import { addItemToFavoriteProducts } from '../../../../redux/slices/favorite/favoriteProductsSlice';
 import CompareSvgComponent from '../../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import styles from './MainBlock.module.scss';
 import { useLocation } from 'react-router-dom';
 import { addCartItem } from '../../../cart/redux/cartSlice';
+import { addFavoriteItem } from '../../../favoriteProducts/redux/favoriteProductsSlice';
 
 
 interface MainBlockProps {
@@ -32,7 +32,7 @@ export default function MainBlock({ name, price }: MainBlockProps) {
                     }>
                     в корзину
                 </button>
-                <button onClick={() => dispatch(addItemToFavoriteProducts({
+                <button onClick={() => dispatch(addFavoriteItem({
                     id: nanoid(),
                     title: name,
                     link: pathname

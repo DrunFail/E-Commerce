@@ -3,11 +3,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
 import { addItemToCompare, deleteItemFromCompare, selectCompare } from '../../../redux/slices/compare/compareSlice';
-import { addItemToFavoriteProducts, removeItemFromFavoriteProducts, selectFavorite } from '../../../redux/slices/favorite/favoriteProductsSlice';
 import CartSvgComponent from '../../../ui/svgComponents/cart/CartSvgComponent';
 import CompareSvgComponent from '../../../ui/svgComponents/compare/CompareSvgComponent';
 import FavoriteListSvgComponent from '../../../ui/svgComponents/favoriteList/FavoriteListSvgComponent';
 import { addCartItem, deleteCartItem, selectCart } from '../../cart/redux/cartSlice';
+import { addFavoriteItem, removeFavoriteItem, selectFavorite } from '../../favoriteProducts/redux/favoriteProductsSlice';
 import styles from './ProductCard.module.scss';
 
 
@@ -27,7 +27,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
     const handleClickEventCart = () => {
         if (!checkCart) {
-            return  dispatch(addCartItem(
+            return dispatch(addCartItem(
                 product.title,
                 product.price
             ))
@@ -37,14 +37,13 @@ export default function ProductCard({ product }: ProductCardProps) {
 
     const handleClickEventFavorite = () => {
         if (!checkFavorite) {
-            return dispatch(addItemToFavoriteProducts({
-                id: nanoid(),
-                title: product.title,
-                link: product.link,
-                img: process.env.PUBLIC_URL + `${product.img}-small.jpg`
-            }))
+            return dispatch(addFavoriteItem(
+                product.title,
+                process.env.PUBLIC_URL + `${product.img}-small.jpg`,
+                product.link
+            ))
         }
-        return dispatch(removeItemFromFavoriteProducts(checkFavorite.id))
+        return dispatch(removeFavoriteItem(checkFavorite.id))
     }
 
     const handleClickEventCompare = () => {
@@ -74,7 +73,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
                 />
                 <Link
-                    
+
                     to={product.link}
                 >
                     <p className={styles.titleProduct}>{product.title}</p>
@@ -84,7 +83,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
                     <div>
                         <span
-                            className={styles[checkCompare ? 'active' : 'non-active'] }
+                            className={styles[checkCompare ? 'active' : 'non-active']}
                             onClick={handleClickEventCompare}
                         >
                             <CompareSvgComponent />
